@@ -9,7 +9,9 @@ import MyBook from "./components/MyBook";
 
 export default function App() {
   const [showBook, setShowBook] = useState(false);
-  const bookClicked = () => {
+  const bookClicked = (event) => {
+    console.log(event.target.id);
+    // document.getElementById(event.target.id).style.cssText = "width:300%;rotate:20deg;margin:-20%;margin-left: -30%";
     setShowBook(!showBook);
   };
   // function bookClicked(e) {
@@ -80,7 +82,7 @@ export default function App() {
       >
         <img
           onClick={bookClicked}
-          id="book"
+          id="book1"
           className="books"
           src="src\assets\tulip-img.png"
         />

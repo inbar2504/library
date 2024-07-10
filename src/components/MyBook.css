@@ -1,14 +1,3 @@
-
-/* #flip-book {
-    width: 50vw !important;
-    height: 90vh;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin-top: -20%;
-
-} */
 html,
 body {
   height: 100%;
@@ -27,8 +16,6 @@ body {
     text-align: center;
     color: rgb(255, 255, 255);
     /* margin: 4%; */
-
-    
     position: absolute;
     left: 50%;
     top: 50%;
@@ -40,13 +27,16 @@ body {
     position: absolute;
     transform-style: preserve-3d;
     background-color: #d3d0d0;
+    /* width: 10vw !important;
+    height: 5vh !important; */
     width: 100vw !important;
-    height: 75vh !important;
+    height: 70vh !important;
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%,-50%) !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
+    animation: example 4s ease-in;
+    /* -webkit-animation: example 4s; */
 }
 .cover {
     background-color: #2dbdbd;
@@ -76,25 +66,80 @@ Page {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) !important;
-    width: 90vw !important;
-    height: 70vh !important;
-    
-    /* box-shadow: 15px 15px 15px 10px black; */
+    /* width: 90vw !important;
+    height: 70vh !important; */
+    animation: example 4s ease-in-out;
+    -webkit-animation: example 4s ease-in-out;
 }
 button {
     z-index: 3;
     position: absolute;
     top: 15%;
 }
-ul {
+.dl1 {
     position: relative;
-    top: 10vh;
-    left: 0%;
+    top: 0vh;
+    left: -15%;
     direction: rtl;
-    font-size: 9vmin;
-    margin-top: -10%;
+    font-size: 4.5vmax;
+    /* margin-top: -20%; */
+    font-weight: lighter;
+}
+.dl2 {
+    position: relative;
+    top: -58vh;
+    left: 15vw;
+    direction: ltr;
+    font-size: 4.5vmax;
+    /* margin-top: -20%; */
+    font-weight: lighter;
 }
 h1 {
     font-size: 13vmin;
     text-align: center;
 }
+@keyframes example {
+    0%{
+        
+        width: 10vw !important;
+        height: 5vh !important;
+    }
+    50%{
+        width: 50vw !important;
+        height: 35vh !important;
+    }
+    100% {
+        width: 100vw !important;
+        height: 70vh !important;
+    }
+  }
+@-webkit-keyframes example {
+    0%{
+        
+        width: 10vw !important;
+        height: 5vh !important;
+    }
+    50%{
+        width: 50vw !important;
+        height: 35vh !important;
+    }
+    100% {
+        width: 100vw !important;
+        height: 70vh !important;
+    }
+    /* 0% {
+        transition: width 2s height 2s;
+        width: 10%;
+        height: 5%;
+    }
+    50% {
+        transition: width 2s height 2s;
+        width:50%;
+        height: 40%;
+    }
+    100% {
+        transition: width 2s height 2s;
+        width: 100%;
+        height: 70%;
+    } */
+  }

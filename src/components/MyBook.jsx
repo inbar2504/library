@@ -19,12 +19,19 @@ const Page = React.forwardRef((props, ref) => {
   return (
     <div className="page" ref={ref}>
       <h1>{props.header}</h1>
-      <h1>{props.menu}</h1>
-       {/* <ul>
+      {/* <h1>{props.menu}</h1> */}
+       <dl className="dl1">
           {props.menu.map((option, index) => (
-            <li key={index}>{option}</li>
+            <dt key={index}>{option}</dt>
+            
           ))}
-      </ul> */}
+      </dl>
+      <dl className="dl2">
+          {props.menu.map((option, index) => (
+            <dt key={index}>{index}</dt>
+
+          ))}
+      </dl>
       {/* {menu.map(name=> (
           <ul>
             {name}
@@ -64,7 +71,6 @@ export default function MyBook(props) {
     setText(inputText);
     setInputElement("");
   };
-
   const cars = [
     {id: 1, brand: 'שלישות'},
     {id: 2, brand: 'רפואה'},
@@ -106,7 +112,7 @@ export default function MyBook(props) {
             <hr></hr>
             <p contentEditable="true">ここは編集可能です</p>
           </Page>
-          <Page number="2">
+          {/* <Page number="2">
             <hr></hr>
             <p>{text}</p>
           </Page>
@@ -115,7 +121,7 @@ export default function MyBook(props) {
           </Page>
           <Page number="4">
             <hr></hr>
-          </Page>
+          </Page> */}
           <PageCover className="color-cover">see you</PageCover>
         </HTMLFlipBook>
         {/* <ul>

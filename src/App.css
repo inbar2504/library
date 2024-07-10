@@ -1,38 +1,73 @@
-.App {
+@font-face {
+  font-family: "horev";
+  src: url("./assets/font/horevclm-heavy-webfont.ttf");
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #EFF1E4;
+  font-family: "horev";
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+#header {
+  font-size: 19vmin;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  width: 80%;
+  color: #6f5f57;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+  position: relative;
+  top: 0vh;
 }
-
-.App-link {
-  color: #61dafb;
+.books {
+  margin-top: 40vh;
+  width: 90%;
+  /* height: 30vh; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#top-books {
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  
+}
+#bottom-books {
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  transform: rotate(180deg);
+}
+.react-multiple-carousel__arrow--right {
+  right: calc(4% + 1px);
+  display: none;
+}
+.react-multiple-carousel__arrow--left {
+  right: calc(4% + 1px);
+  display: none;
 }

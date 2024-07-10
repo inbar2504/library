@@ -64,10 +64,10 @@ body {
   transform: rotate(180deg);
 }
 .react-multiple-carousel__arrow--right {
-  right: calc(4% + 1px);
+  /* right: calc(4% + 1px); */
   display: none;
 }
 .react-multiple-carousel__arrow--left {
-  right: calc(4% + 1px);
+  /* right: calc(4% + 1px); */
   display: none;
 }

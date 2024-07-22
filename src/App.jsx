@@ -109,15 +109,9 @@ import MyBook from "./components/MyBook";
 export default function App() {
   const [showBook, setShowBook] = useState(false);
   const bookClicked = (event) => {
-    console.log(event.target.id);
     setShowBook(!showBook);
   };
-  // function bookClicked(e) {
-  //   console.log(e.currentTarget.getAttribute("id"));
-  //   return(
-  //     <MyBook />
-  //   );
-  // }
+
   return (
     <>
       <img src="src/assets/frame-books.png" id="top-books" />

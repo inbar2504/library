@@ -573,6 +573,7 @@ export default function MyBook(props) {
           className={"open-book"}
           mobileScrollSupport={true}
           onChangeState={ onChangeState }
+
         >
           <PageCover>
             <b id="header-book">קליטת חייל חדש</b>

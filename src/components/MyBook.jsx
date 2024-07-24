@@ -21,38 +21,44 @@ const Page = React.forwardRef((props, ref) => {
     ["שלישות", "1"],
     ["רפואה", "2"],
     ["תורנויות", "3"],
-    ["היסעים", "4"],
-    ['ת"ש', "5"],
-    ["טלפונים חשובים", "6"],
-    ['יוהל"ם', "7"],
-    ['שק"ם', "8"],
-    ["נהלי יחידה", "9"],
-    ["בריכה", "10"],
-    ['חד"א', "11"],
-    ["חדר אוכל", "12"],
+    ["היסעים", "5"],
+    ['ת"ש', "7"],
+    ["טלפונים חשובים", "8"],
+    ['יוהל"ם', "9"],
+    ['שק"ם', "10"],
+    ["נהלי יחידה", "11"],
+    ["בריכה", "13"],
+    ['חד"א', "15"],
+    ["חדר אוכל", "16"],
   ];
 
+const book = props.book;
+console.log(book);
   return (
     <div className="page" ref={ref}>
       <h1>{props.header}</h1>
       <div>
         {props.showMenu ? (
-          <Table heading={heading} bodyy={bodyy} book={props.book} />
+          <Table heading={heading} bodyy={bodyy} book={book} />
         ) : (
           ""
         )}
-        {props.showPage === 1 ? <Information1 /> : ""}
-        {props.showPage === 2 ? <Information2 /> : ""}
-        {props.showPage === 3 ? <Information3 /> : ""}
-        {props.showPage === 4 ? <Information4 /> : ""}
-        {props.showPage === 5 ? <Information5 /> : ""}
-        {props.showPage === 6 ? <Information6 /> : ""}
-        {props.showPage === 7 ? <Information7 /> : ""}
-        {props.showPage === 8 ? <Information8 /> : ""}
-        {props.showPage === 9 ? <Information9 /> : ""}
-        {props.showPage === 10 ? <Information10 /> : ""}
-        {props.showPage === 11 ? <Information11 /> : ""}
-        {props.showPage === 12 ? <Information12 /> : ""}
+        {props.showPage === 1 ? <Information1 book={book} /> : ""}
+        {props.showPage === 2 ? <Information2 book={book} /> : ""}
+        {props.showPage === 3 ? <Information3 book={book} /> : ""}
+        {props.showPage === 5 ? <Information4 book={book} /> : ""}
+        {props.showPage === 7 ? <Information5 book={book} /> : ""}
+        {props.showPage === 8 ? <Information6 book={book} /> : ""}
+        {props.showPage === 9 ? <Information7 book={book} /> : ""}
+        {props.showPage === 10 ? <Information8 book={book} /> : ""}
+        {props.showPage === 11 ? <Information9 book={book} /> : ""}
+        {props.showPage === 13 ? <Information10 book={book} /> : ""}
+        {props.showPage === 15 ? <Information11 book={book} /> : ""}
+        {props.showPage === 16 ? <Information12 book={book} /> : ""}
+        {props.showPage === 4 ? <Information13 book={book} /> : ""}
+        {props.showPage === 6 ? <Information14 book={book} /> : ""}
+        {props.showPage === 12 ? <Information15 book={book} /> : ""}
+        {props.showPage === 14 ? <Information16 book={book} /> : ""}
         {/* <Table heading={heading} bodyy={bodyy} book={props.book}/>, */}
       </div>
     </div>
@@ -61,6 +67,7 @@ const Page = React.forwardRef((props, ref) => {
 const Table = React.forwardRef((props, ref) => {
   const heading = props.heading;
   const bodyy = props.bodyy;
+
   return (
     <table>
       {/* style={{ width: 500 }} */}
@@ -83,6 +90,7 @@ const Table = React.forwardRef((props, ref) => {
 const TableRow = React.forwardRef((props, ref) => {
   const row = props.rowContent;
   const book = props.book;
+
   return (
     <tr>
       {row.map((val, rowID) => (
@@ -97,8 +105,20 @@ const TableRow = React.forwardRef((props, ref) => {
   );
 });
 const Information1 = React.forwardRef((props, ref) => {
+  const book = props.book;
+  const showMenu = props.showMenu;
+  console.log(book);
+
+  const [showCover, setShowCover] = useState(false); 
+  const menu = () => {
+    console.log(props.book);
+    book.current.pageFlip().flip(1);
+  }
+  
+
   return (
     <div className="Information1" ref={ref}>
+      <div className="close-book" onClick={() => showBook===false}>✖</div>
       <div className="applications">
         <div className="apps">
           <p className="font-header">דוח 1</p>
@@ -153,13 +173,16 @@ const Information1 = React.forwardRef((props, ref) => {
           </a>
         </div>
       </div>
-      {/* <button className="home-icon" onClick={() => <Page header="תוכן עניינים" id="page1" number="1" book={book} showMenu={true}>         
-        </Page>}>heyyy</button> */}
-      <img className="home-icon" src="src\assets\home-icon.png" />
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
+
+      {/* <img className="home-icon" src="src\assets\home-icon.png" /> */}
     </div>
   );
 });
 const Information2 = React.forwardRef((props, ref) => {
+  const book = props.book;
   return (
     <div className="Information2" ref={ref}>
       <div className="imagess">
@@ -173,12 +196,16 @@ const Information2 = React.forwardRef((props, ref) => {
           <img className="imgs" src="src\assets\torim.png" />
         </a>
       </div>
+      <button className="home-icon" onClick={() => book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
 const Information3 = React.forwardRef((props, ref) => {
   return (
     <div className="Information3" ref={ref}>
+      <b className="header-base">תל נוף</b>
       <div className="sub">
         <p className="turanuyot-header">
           <b>רס"ר</b>
@@ -205,13 +232,17 @@ const Information3 = React.forwardRef((props, ref) => {
           21:00-1:30/1:30-6:00
         </p>
       </div>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
 const Information4 = React.forwardRef((props, ref) => {
   return (
     <div className="Information4" ref={ref}>
-      <p>
+      <b className="header-base">תל נוף</b>
+      <p id="p-width">
         בכדי להגיע למחנה תל נוף יש לקחת אוטובוס אגד מרחובות עד לצומת,ויש לרדת
         בצומת מחנה תל נוף/מזכרת בתיה
       </p>
@@ -236,6 +267,9 @@ const Information4 = React.forwardRef((props, ref) => {
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
         </p>
       </div>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
@@ -342,6 +376,9 @@ const Information5 = React.forwardRef((props, ref) => {
           </CopyToClipboard>
         </p>
       </div>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
@@ -381,6 +418,9 @@ const Information6 = React.forwardRef((props, ref) => {
           </button>
         </CopyToClipboard>
       </div>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
@@ -399,6 +439,9 @@ const Information7 = React.forwardRef((props, ref) => {
       </p>
 
       <img id="img-yoalam" src="src\assets\yohalam.png" />
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
@@ -406,22 +449,36 @@ const Information8 = React.forwardRef((props, ref) => {
   return (
     <div className="Information8" ref={ref}>
       <div id="shekem-text">
-        שעות פתיחה
+        <b>תל נוף</b>
         <br />
+        {/* שעות פתיחה */}
+        {/* <br /> */}
         בימי א'-ד': 7:15-16:30
         <br />
         ביום ה': 7:15-15:50
         <br />
         ביום ו': 7:15-12:30
         <br />
+        <br />
+        <b>פלמחים</b>
+        <br />
+        {/* שעות פתיחה */}
+        {/* <br /> */}
+        9:00-21:00
+        <br />
+        עם הפסקות משתנות
       </div>
-      <img id="shekem-img" src="src\assets\food-icons.png" />
+      <img id="shekem-img" src="src\assets\caveret-icon.png" />
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
 const Information9 = React.forwardRef((props, ref) => {
   return (
     <div className="Information9" ref={ref}>
+      <p className="header-base">תל נוף</p>
       <img id="clothes-icon" src="src\assets\clothes.png" />
       <p id="clothes-text">
         ביחידה לובשים חצי ב' ,דיונים וכנסים על ב' מלא לארוחת ערב ניתן לבוא על
@@ -432,12 +489,16 @@ const Information9 = React.forwardRef((props, ref) => {
         בימי שני וחמישי יש מסדר במגורים ובחמישי יש מסדר במבנה ביה"ס
       </p>
       <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
 const Information10 = React.forwardRef((props, ref) => {
   return (
     <div className="Information10" ref={ref}>
+      <p className="header-base">תל נוף</p>
       <p id="pool-text">
         ימי א',ג',ד
         <br />
@@ -456,6 +517,9 @@ const Information10 = React.forwardRef((props, ref) => {
         בימי ג' יש שחייה לילית: 20:30-22:00
       </p>
       <img id="pool" src="src\assets\pool.webp" />
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
@@ -478,7 +542,9 @@ const Information11 = React.forwardRef((props, ref) => {
         <p className="morning-text">
           צהריים
           <br />
-          12:30-13:30
+          12:30-14:00 :תל נוף
+          <br />
+          פלמחים: 12:00-13:30
         </p>
       </div>
       <br />
@@ -487,9 +553,12 @@ const Information11 = React.forwardRef((props, ref) => {
         <p className="morning-text">
           ערב
           <br />
-          18:30-19:30
+          18:00-19:30
         </p>
       </div>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
@@ -497,6 +566,8 @@ const Information12 = React.forwardRef((props, ref) => {
   return (
     <div className="Information12" ref={ref}>
       <p id="gym-text">
+        -תל נוף-
+        <br />
         'ימי א'-ד
         <br />
         19:00-22:00
@@ -506,8 +577,125 @@ const Information12 = React.forwardRef((props, ref) => {
         <br />
         'ימי א'-ג <br />
         :שעת בנים 19:00-20:00 &#x2642;
+        <br />
+        -פלמחים-
+        <br />
+        7:00-22:00
       </p>
       <img id="gym-img" src="src\assets\gym.png" />
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
+    </div>
+  );
+});
+const Information13 = React.forwardRef((props, ref) => {
+  return (
+    <div className="Information3" ref={ref}>
+      <b className="header-base">פלמחים</b>
+      <div className="sub">
+        <p className="turanuyot-header">
+          <b>רס"ר</b>
+        </p>
+        <p className="text-toranuyot">
+          רס"ר- עושים על חצי ב נמצאים בתורנות שבוע שלם פעמיים בשירות{" "}
+        </p>
+      </div>
+      <div className="sub">
+        <p className="turanuyot-header">מטבח</p>
+        <p className="text-toranuyot">
+          מטבח-עושים על חצי ב
+          <br />
+          7:00-17:30 |8:30-20:30 | 10:30-22:30
+        </p>
+      </div>
+      <div className="sub">
+        <p className="turanuyot-header">שמירות תומכ"ל</p>
+        <p className="text-toranuyot">
+          שמירות תומכ"ל- שמירה על ב' מלא
+          <br />
+          10:00-14:00+22:00-2:00
+          <br />
+          14:00-18:00+2:00-6:00
+          <br />
+          6:00-10:00+18:00-22:00
+        </p>
+      </div>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
+    </div>
+  );
+});
+const Information14 = React.forwardRef((props, ref) => {
+  return (
+    <div className="Information4" ref={ref}>
+      <b className="header-base">פלמחים</b>
+      <p className="p-width">
+        בכדי להגיע למחנה תל נוף יש לקחת אוטובוס אגד מרחובות עד לצומת ויש לרדת
+        בצומת מחנה תל נוף\מזכרת בתיה
+      </p>
+
+      <a
+        className="link-driving"
+        href="https://drive.google.com/file/d/1HV71YMXPuzIDkyg0U2kHOJWH-Mthy4-5/view"
+      >
+        קישורים לשאטלים נוסעים בפלמחים
+      </a>
+      <br />
+      <img id="bus-img" src="src\assets\bus.png" />
+      <br />
+
+      <div id="warning">
+        <p id="warning-text">
+          ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
+        </p>
+      </div>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
+    </div>
+  );
+});
+const Information15 = React.forwardRef((props, ref) => {
+  return (
+    <div className="Information9" ref={ref}>
+      <p className="header-base">פלמחים</p>
+      <img id="clothes-icon" src="src\assets\clothes.png" />
+      <p id="clothes-text">ביחידה לובשים אזרחי</p>
+      <img id="bin-icon" src="src\assets\bin.png" />
+      <p id="bin-text">ביום חמישי מסדר בביס"ק ב13:00 במגורים בשעה משתנה</p>
+      <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
+    </div>
+  );
+});
+const Information16 = React.forwardRef((props, ref) => {
+  return (
+    <div className="Information10" ref={ref}>
+      <p className="header-base">פלמחים</p>
+      <p id="pool-text">
+        ימי א',ג'
+        <br />
+        6:00-8:00, 15:00-19:00
+        <br />
+        'ימי ב', ד', ה<br />
+        9:00-13:00, 16:00-20:00
+        <br />
+        'יום ו<br />
+        7:00-8:00, 10:00-13:00, 15:00-19:00
+        <br />
+        יום שבת
+        <br />
+        10:00-14:00, 15:00-19:00
+      </p>
+
+      <img id="pool" src="src\assets\pool.webp" />
+      <button className="home-icon" onClick={() => props.book.current.pageFlip().flip(1) }>
+      🏠︎
+     </button>
     </div>
   );
 });
@@ -548,10 +736,7 @@ export default function MyBook(props) {
   //   { id: 11, brand: "חדר אוכל" },
   //   { id: 12, brand: "חדר כושר" },
   // ];
-  const onChangeState = (e) => {
-    const direction = e.object.flipController.app.render.direction;
-    console.log(direction);
-  };
+
   //const menu=["חדר כושר",'חד"א',"בריכה","נהלי יחידה",'שק"ם','יוהל"ם',"טלפונים חשובים",'ת"ש',"היסעים","תורנויות","רפואה","שלישות"];
   return (
     <>
@@ -572,11 +757,9 @@ export default function MyBook(props) {
           ref={book}
           className={"open-book"}
           mobileScrollSupport={true}
-          onChangeState={ onChangeState }
-
         >
           <PageCover>
-            <b id="header-book">קליטת חייל חדש</b>
+            <b id="header-book">מידעון לחייל חדש</b>
           </PageCover>
           <Page
             header="תוכן עניינים"
@@ -584,45 +767,76 @@ export default function MyBook(props) {
             number="1"
             book={book}
             showMenu={true}
-          >
-            {/* menu={menu}  */}
-          </Page>
-          <Page header="שלישות" showPage={1} number="2" showMenu={false}></Page>
-          <Page header="רפואה" showPage={2} number="3" showMenu={false}></Page>
+          ></Page>
+          <Page header="שלישות" showPage={1} number="2" book={book} showMenu={false}></Page>
+          <Page header="רפואה" showPage={2} number="3" book={book} showMenu={false}></Page>
 
           <Page
             header="תורנויות"
             showPage={3}
             number="4"
+            book={book}
             showMenu={false}
           ></Page>
-          <Page header="היסעים" showPage={4} number="5" showMenu={false}></Page>
-          <Page header='ת"ש' showPage={5} number="6" showMenu={false}></Page>
+          <Page
+            header="תורנויות"
+            showPage={4}
+            number="5"
+            book={book}
+            showMenu={false}
+          ></Page>
+          <Page header="היסעים" showPage={5} number="6" book={book} showMenu={false}></Page>
+          <Page header="היסעים" showPage={6} number="7" book={book} showMenu={false}></Page>
+          <Page header='ת"ש' showPage={7} number="8" book={book} showMenu={false}></Page>
           <Page
             header="טלפונים חשובים"
-            showPage={6}
-            number="7"
+            showPage={8}
+            number="9"
+            book={book}
             showMenu={false}
           ></Page>
-          <Page header='יוהל"ם' showPage={7} number="8" showMenu={false}></Page>
-          <Page header='שק"ם' showPage={8} number="9" showMenu={false}></Page>
           <Page
-            header="נהלי יחידה"
+            header='יוהל"ם'
             showPage={9}
             number="10"
+            book={book}
+            showMenu={false}
+          ></Page>
+          <Page header='שק"ם' showPage={10} book={book} number="11" showMenu={false}></Page>
+          <Page
+            header="נהלי יחידה"
+            showPage={11}
+            number="12"
+            book={book}
+            showMenu={false}
+          ></Page>
+          <Page
+            header="נהלי יחידה"
+            showPage={12}
+            number="13"
+            book={book}
             showMenu={false}
           ></Page>
           <Page
             header="בריכה"
-            showPage={10}
-            number="11"
+            showPage={13}
+            number="14"
+            book={book}
             showMenu={false}
           ></Page>
-          <Page header='חד"א' showPage={11} number="12" showMenu={false}></Page>
+          <Page
+            header="בריכה"
+            showPage={14}
+            number="15"
+            book={book}
+            showMenu={false}
+          ></Page>
+          <Page header='חד"א' showPage={15} book={book} number="16" showMenu={false}></Page>
           <Page
             header="חדר כושר"
-            showPage={12}
-            number="13"
+            showPage={16}
+            number="17"
+            book={book}
             showMenu={false}
           ></Page>
           <PageCover>

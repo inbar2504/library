@@ -46,16 +46,16 @@ transform: translateX(-50%);
 }
 #shekem-img {
   width: 100vw;
-  transform: rotate(180deg);
-  opacity: 0.3;
-  height: 35vh;
+  /* transform: rotate(180deg); */
+  opacity: 0.2;
+  /* height: 35vh; */
   position: absolute;
-  top: 30%;
+  top: 15%;
 }
 #shekem-text {
   position: relative;
   text-align: center;
-  top: 14vh;
+  top: 5vh;
   font-size: 11vmin;
 }
 /* .phone {
@@ -123,12 +123,17 @@ transform: translateX(-50%);
 .Information4  {
   text-align: center;
   font-size: 4vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #warning-text {
-  font-size: 5vmax;
+  margin-top: 2vh;
+  font-size: 4vmax;
   text-align: center;
   color: rgb(195, 6, 6);
   animation: warningAnimation 4s ease forwards;
+  width: 90vw;
 }
 #warning-icon {
   width: 20%;
@@ -139,6 +144,14 @@ transform: translateX(-50%);
   border-radius: 20px;
   text-align: center;
   margin-top: 2%;
+}
+.header-base {
+  font-size: 8vmin;
+margin-top: -35px;
+text-align: center;
+}
+.p-width {
+  width: 90vw;
 }
 .link-driving {
   color: #2dbdbd;
@@ -238,6 +251,7 @@ transform: translateX(-50%);
   align-items: center;
   /* transform: scaleX(-1); */
   /* transform: translateX(-50%); */
+  /* transform: rotateY(180deg); */
 
 }
 
@@ -367,8 +381,8 @@ h1 {
 }
 #pool {
   position: absolute;
-  top: 55%;
-  width: 70%;
+  top: 65%;
+  width: 50%;
   left: 50%;
   transform:translateX(-50%)
 }
@@ -433,20 +447,32 @@ h1 {
 /* margin-top: -6vh; */
     width: 70vw;
     position: relative;
-    bottom: 8vh;
+    bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
 
 }
 .home-icon {
-  position: relative;
-  bottom:10vh;
-  width: 15%;
-  margin-left: 1px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 13vmin;
+  left: 3vw;
+  direction: ltr;
+  border: #ffffff00;
+  height: 10vh;
+  top: 85%;
+}
+.close-book{
+  direction: rtl;
+  font-size: 8vmin;
+  position: absolute;
+  top: 2vh;
+  right: 5vw;
 }
 #gym-text {
-  font-size: 9vmin;
+  font-size: 8vmin;
   text-align: center;
+  margin-top: -2vh;
 }
 Table {
   font-size: 7.5vmin;

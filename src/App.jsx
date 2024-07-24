@@ -171,7 +171,7 @@ export default function App() {
             onClick={bookClicked}
             id="book1"
             className="books"
-            src="src\assets\tulip-img.png"
+            src="src\assets\tuli-img.png"
           />
           <img className="books" src="src\assets\brown-img.png" />
           <img className="books" src="src\assets\blue-img.png" />

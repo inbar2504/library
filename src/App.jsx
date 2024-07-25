@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <>
-      <img src="C:/Users/tural/OneDrive/מסמכים/inbar_projects/new-soldier/src/assets/frame-books.png" id="top-books" />
+      <img src="public\frame-books.png" id="top-books" />
       <h1 id="header">ספריית השלישות</h1>
       {!showBook ? (
         <Carousel

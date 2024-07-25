@@ -176,7 +176,7 @@ text-align: center;
 }
 #private-special {
   display: block;
-  font-size: 3.5vmax;
+  font-size: 6.5vmin;
 }
 #economy-special {
   display: none;
@@ -467,7 +467,9 @@ h1 {
   font-size: 8vmin;
   position: absolute;
   top: 2vh;
-  right: 5vw;
+  right: 85vw;
+  border: #ffffff00;
+  background-color: #ffffff00;
 }
 #gym-text {
   font-size: 8vmin;

@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <>
-      <img src="public\frame-books.png" id="top-books" />
+      <img src="assets/frame-books.png" id="top-books" />
       <h1 id="header">ספריית השלישות</h1>
       {!showBook ? (
         <Carousel
@@ -71,18 +71,18 @@ export default function App() {
             onClick={bookClicked}
             id="book1"
             className="books"
-            src="src\assets\tuli-img.png"
+            src="assets/tuli-img.png"
           />
-          <img className="books" src="src\assets\brown-img.png" />
-          <img className="books" src="src\assets\blue-img.png" />
-          <img className="books" src="src\assets\bezh-img.png" />
-          <img className="books" src="src\assets\dark-img.png" />
+          <img className="books" src="assets/brown-img.png" />
+          <img className="books" src="assets/blue-img.png" />
+          <img className="books" src="assets/bezh-img.png" />
+          <img className="books" src="assets/dark-img.png" />
         </Carousel>
       ) : (
         " "
       )}
 
-      <img src="src/assets/frame-books.png" id="bottom-books" />
+      <img src="assets/frame-books.png" id="bottom-books" />
       {showBook ? <MyBook setShowBook={setShowBook} /> : ""}
     </>
   );

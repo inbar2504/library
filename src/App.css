@@ -1,7 +1,10 @@
 @font-face {
   font-family: "horev";
-  src: url("./assets/font/horevclm-heavy-webfont.ttf");
+  src: url("/assets/font/horevclm-heavy-webfont.ttf");
+  font-weight: 100;
+  font-weight: bold;
 }
+
 
 #root {
   height: 100%;

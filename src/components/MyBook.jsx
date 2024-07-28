@@ -439,7 +439,7 @@ const Information7 = React.forwardRef((props, ref) => {
         <br />
         <br />
         <img className="phone" src="assets/icon-phone.png"></img>
-        ממונת יוהל”ם מאיה דליות 0526408885
+        ממונת יוהל”ם מירי שחורי 0512980576
         <br /> <img className="phone" src="assets/icon-phone.png"></img>
         מהות- 039482600 שלוחה 5 ואז שלוחה 2
       </p>

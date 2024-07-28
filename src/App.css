@@ -1,6 +1,7 @@
 @font-face {
   font-family: "horev";
   src: url("/assets/font/horevclm-heavy-webfont.ttf");
+  font-weight: bold;
 }
 
 

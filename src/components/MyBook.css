@@ -263,7 +263,6 @@ button {
   position: absolute;
   top: 15%;
   color: black;
-
 }
 .dl1 {
   position: relative;
@@ -465,12 +464,11 @@ h1 {
 .close-book {
   direction: rtl;
   font-size: 8vmin;
-  position: relative;
-  top: -12vh;
-  right: 0%;
+  position: absolute;
+  top: 2vh;
+  right: 85vw;
   border: #ffffff00;
   background-color: #ffffff00;
-  width: 10%;
 }
 #gym-text {
   font-size: 8vmin;

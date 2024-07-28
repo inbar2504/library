@@ -262,6 +262,8 @@ button {
   z-index: 3;
   position: absolute;
   top: 15%;
+  color: black;
+  
 }
 .dl1 {
   position: relative;

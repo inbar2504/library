@@ -171,7 +171,7 @@ const Information1 = React.forwardRef((props, ref) => {
       </div>
 
 
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
 
 
       {/* <img className="home-icon" src="assets/home-icon.png" /> */}
@@ -196,7 +196,7 @@ const Information2 = React.forwardRef((props, ref) => {
           <img className="imgs" src="assets/torim.png" />
         </a>
       </div>
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
 
     </div>
   );
@@ -234,7 +234,7 @@ const Information3 = React.forwardRef((props, ref) => {
           21:00-1:30/1:30-6:00
         </p>
       </div>
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -270,7 +270,7 @@ const Information4 = React.forwardRef((props, ref) => {
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
         </p>
       </div>
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -380,7 +380,7 @@ const Information5 = React.forwardRef((props, ref) => {
           </CopyToClipboard>
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -423,7 +423,7 @@ const Information6 = React.forwardRef((props, ref) => {
           </button>
         </CopyToClipboard>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -445,7 +445,7 @@ const Information7 = React.forwardRef((props, ref) => {
       </p>
 
       <img id="img-yoalam" src="assets/yohalam.png" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -472,7 +472,7 @@ const Information8 = React.forwardRef((props, ref) => {
         עם הפסקות משתנות
       </div>
       <img id="shekem-img" src="assets/caveret-icon.png" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -493,7 +493,7 @@ const Information9 = React.forwardRef((props, ref) => {
         בימי שני וחמישי יש מסדר במגורים ובחמישי יש מסדר במבנה ביה"ס
       </p>
       <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -522,7 +522,7 @@ const Information10 = React.forwardRef((props, ref) => {
         בימי ג' יש שחייה לילית: 20:30-22:00
       </p>
       <img id="pool" src="assets/pool.webp" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -562,7 +562,7 @@ const Information11 = React.forwardRef((props, ref) => {
           18:00-19:30
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -590,7 +590,7 @@ const Information12 = React.forwardRef((props, ref) => {
         7:00-22:00
       </p>
       <img id="gym-img" src="assets/gym.png" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -629,7 +629,7 @@ const Information13 = React.forwardRef((props, ref) => {
           6:00-10:00+18:00-22:00
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -660,7 +660,7 @@ const Information14 = React.forwardRef((props, ref) => {
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -676,7 +676,7 @@ const Information15 = React.forwardRef((props, ref) => {
       <img id="bin-icon" src="assets/bin.png" />
       <p id="bin-text">ביום חמישי מסדר בביס"ק ב13:00 במגורים בשעה משתנה</p>
       <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -704,7 +704,7 @@ const Information16 = React.forwardRef((props, ref) => {
       </p>
 
       <img id="pool" src="assets/pool.webp" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });

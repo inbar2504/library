@@ -4,6 +4,7 @@ import "./MyBook.css";
 import "intro.js/introjs.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import HomeIcon from "./HomeIcon";
+import { Event } from "@mui/icons-material";
 
 const PageCover = React.forwardRef((props, ref) => {
   return (
@@ -19,18 +20,18 @@ const Page = React.forwardRef((props, ref) => {
   // const list=["חדר כושר",'חד"א',"בריכה","נהלי יחידה",'שק"ם','יוהל"ם',"טלפונים חשובים",'ת"ש',"היסעים","תורנויות","רפואה","שלישות"];
   const heading = ["לחצו על הנושא כדי להגיע לעמוד שלו במהירות", ""];
   const bodyy = [
-    ["שלישות", "1"],
-    ["רפואה", "2"],
-    ["תורנויות", "3"],
-    ["היסעים", "5"],
-    ['ת"ש', "7"],
-    ["טלפונים חשובים", "8"],
-    ['יוהל"ם', "9"],
-    ['שק"ם', "10"],
-    ["נהלי יחידה", "11"],
-    ["בריכה", "13"],
-    ['חד"א', "15"],
-    ["חדר אוכל", "16"],
+    ["שלישות", "2"],
+    ["רפואה", "3"],
+    ["תורנויות", "4"],
+    ["היסעים", "6"],
+    ['ת"ש', "8"],
+    ["טלפונים חשובים", "9"],
+    ['יוהל"ם', "10"],
+    ['שק"ם', "11"],
+    ["נהלי יחידה", "12"],
+    ["בריכה", "14"],
+    ['חדר אוכל', "16"],
+    ["חדר כושר", "17"],
   ];
 
   const book = props.book;
@@ -95,7 +96,7 @@ const TableRow = React.forwardRef((props, ref) => {
           key={rowID}
           onClick={() => props.book.current.pageFlip().flip(Number(row[1]))}
         >
-          {val}
+         <button className="btns">{val}</button> 
         </td>
       ))}
     </tr>
@@ -117,35 +118,45 @@ const Information1 = React.forwardRef((props, ref) => {
       </button>
       <div className="applications">
         <div className="apps">
-          <p className="font-header">דוח 1</p>
+        
           <a href="https://one.prat.idf.il/login" target="_blank">
+          
+          <a className="font-header">דוח 1</a>
+          <br /><br />
             <img className="applications-images" src="assets/doch.png" />
           </a>
         </div>
         <div className="apps">
-          <p className="font-header">זוזו</p>
+          
           <a href="https://zuzu.prat.idf.il/" target="_blank">
+          <a className="font-header" target="_blank">זוזו</a>
+          <br /><br />
             <img className="applications-images" src="assets/zuzu.png" />
           </a>
         </div>
         <div className="apps">
-          <p className="font-header">אתר כוכבים</p>
+          
           <a href="https://idf.mltp.co.il" target="_blank">
+          <a className="font-header">אתר כוכבים</a>
+          <br /><br />
             <img className="applications-images" src="assets/stars.png" />
           </a>
         </div>
         <br />
         <div className="apps">
-          <p className="font-header">קליטה דיגיטלית</p>
           <a
             href="https://www.prat.idf.il/%D7%9B%D7%95%D7%9B%D7%91%D7%99%D7%9D-%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%95%D7%93%D7%9C%D7%A7/%D7%9C%D7%95%D7%9E%D7%93%D7%95%D7%AA-%D7%93%D7%A4%D7%99-%D7%A0%D7%97%D7%99%D7%AA%D7%94/%D7%A7%D7%9C%D7%99%D7%98%D7%94-%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99%D7%AA/?returnUrl=%2f%d7%9b%d7%95%d7%9b%d7%91%d7%99%d7%9d-%d7%a0%d7%a7%d7%95%d7%93%d7%95%d7%aa-%d7%95%d7%93%d7%9c%d7%a7%2f%d7%9c%d7%95%d7%9e%d7%93%d7%95%d7%aa-%d7%93%d7%a4%d7%99-%d7%a0%d7%97%d7%99%d7%aa%d7%94%2f%d7%a7%d7%9c%d7%99%d7%98%d7%94-%d7%93%d7%99%d7%92%d7%99%d7%98%d7%9c%d7%99%d7%aa%2f"
-            target="_blank"
-          >
+            target="_blank">
+              <button className="shalishut-btns">
+             <a className="font-header">קליטה דיגיטלית</a>
+             <br /><br />
             <img className="applications-images" src="assets/solider.png" />
+            </button>
           </a>
         </div>
         <div className="apps">
-          <p className="font-header">לוח חופשות</p>
+          <a className="font-header">לוח חופשות</a>
+          <br /><br />
           <a
             href="https://www.idf.il/%D7%9B%D7%AA%D7%91%D7%95%D7%AA-%D7%95%D7%A2%D7%93%D7%9B%D7%95%D7%A0%D7%99%D7%9D/2024/%D7%99%D7%A0%D7%95%D7%90%D7%A8/%D7%9C%D7%95%D7%97-%D7%97%D7%95%D7%A4%D7%A9%D7%95%D7%AA-%D7%A6%D7%94%D7%9C-2024/"
             target="_blank"
@@ -157,7 +168,8 @@ const Information1 = React.forwardRef((props, ref) => {
           </a>
         </div>
         <div className="apps">
-          <p className="font-header">טופס חול</p>
+          <a className="font-header">טופס חול</a>
+          <br /><br />
           <a
             href="https://www.prat.idf.il/%D7%94%D7%A9%D7%9B%D7%A8-%D7%A9%D7%9C%D7%99/%D7%AA%D7%95%D7%A6%D7%90%D7%95%D7%AA-%D7%97%D7%99%D7%A4%D7%95%D7%A9/?search=%D7%97%D7%95%22%D7%9C&population="
             target="_blank"
@@ -186,13 +198,18 @@ const Information2 = React.forwardRef((props, ref) => {
         ✖
       </button>
       <div className="imagess">
-        <a href="https://meditik.medical.idf.il/home">
+        <a href="https://meditik.medical.idf.il/home" target="_blank">
           <img className="imgs" src="assets/afnayot.png" />
         </a>
-        <a>
-          <img className="imgs" src="assets/portral.png" />
+        <a id="portal">
+        <CopyToClipboard text="055555555">
+          <button type="submit">
+            <img className="imgs" src="assets/portral.png" />
+            </button>
+        </CopyToClipboard>
+          
         </a>
-        <a href="https://torim.prat.idf.il/login">
+        <a href="https://torim.prat.idf.il/login" target="_blank">
           <img className="imgs" src="assets/torim.png" />
         </a>
       </div>
@@ -213,13 +230,13 @@ const Information3 = React.forwardRef((props, ref) => {
           <b>רס"ר</b>
         </p>
         <p className="text-toranuyot">
-          רס"ר-עושים על ב' מלא ומתחילים בשעה 7:30 -ללא שעת סיום מוגדרת{" "}
+          רס"ר-עושים על ב' מלא ומתחילים בשעה 7:30 {" "}
         </p>
       </div>
       <div className="sub">
         <p className="turanuyot-header">מטבח</p>
         <p className="text-toranuyot">
-          מטבח-עושים על חצי ב' ומתחילים בשעה 7:15 -ללא שעת סיום מוגדרת
+          מטבח-עושים על חצי ב' ומתחילים בשעה 7:15 
         </p>
       </div>
       <div className="sub">
@@ -244,12 +261,9 @@ const Information4 = React.forwardRef((props, ref) => {
        <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
+     
       <b className="header-base">תל נוף</b>
-      <p id="p-width">
-        בכדי להגיע למחנה תל נוף יש לקחת אוטובוס אגד מרחובות עד לצומת,ויש לרדת
-        בצומת מחנה תל נוף/מזכרת בתיה
-      </p>
-
+      <br />
       <a
         className="link-driving"
         href="https://drive.google.com/file/d/1iUZCQBJJvF5USPaYwRe499nNEaeFFzBu/view"
@@ -265,6 +279,7 @@ const Information4 = React.forwardRef((props, ref) => {
       >
         קישור להסעות מרחבי הארץ
       </a>
+      <br />
       <div id="warning">
         <p id="warning-text">
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
@@ -281,8 +296,8 @@ const Information5 = React.forwardRef((props, ref) => {
     document.getElementById(b).style.display = "none";
     document.getElementById(c).style.display = "none";
     document.getElementById(d).style.backgroundColor = "#2dbdbd";
-    document.getElementById(e).style.backgroundColor = "white";
-    document.getElementById(f).style.backgroundColor = "white";
+    document.getElementById(e).style.backgroundColor = "rgb(214 215 215)";
+    document.getElementById(f).style.backgroundColor = "rgb(214 215 215)";
   };
   return (
     <div className="Information5" ref={ref}>
@@ -342,32 +357,32 @@ const Information5 = React.forwardRef((props, ref) => {
           עבור חייל שנתקבל בקושי כלכלי ומעוניין לצאת לעבוד. על החייל להיות בעל
           היתר עבודה פרטית בתוקף
           <br />
-          <b>גורם מאשר</b>
+          <b>--גורם מאשר--</b>
           <br />
-          עד 30 ימים-רס"ן
+          משך זמן של עד 30 ימים - רס"ן
           <br />
-          הארכה למיוחדת של 45 ימים -סא"ל
+הארכת משך הזמן למיוחדת של 45 ימים- סא"ל 
           <br />
-          <b>אישורים נדרשים</b>
+          <b>--אישורים נדרשים--</b>
           <br />
           עובר ושב 3 חודשים אחרונים של החייל+ הורים פירוט כרטיס אשראי 3 חודשים
           אחרונים של החייל
         </p>
-        <p id="private-special">
+        <div id="private-special">
           <h2>מיוחדת אישית</h2>
-          עבור חייל אשר נתקל בבעיה אישית אשר אינה ניתנת למענה ע"י מיוחדת מסוג
-          אחר.
+          עבור חייל אשר נתקל בבעיה אישית שאינה ניתנת למענה ע"י מיוחדת מסוג
+אחר
           <br />
-          <b>גורם מאשר</b>
+          <b>--גורם מאשר--</b>
           <br />
-          עד 30 ימים-רס"ן
+          משך זמן של עד 30 ימים - רס"ן
           <br />
-          הארכה למיוחדת של 45 ימים -סא"ל
+הארכת משך הזמן למיוחדת של 45 ימים- סא"ל 
           <br />
-          <b>אישורים נדרשים</b>
+          <b>--אישורים נדרשים--</b>
           <br />
           מכתב אישי\ כל אישור אחר שמסביר את הצורך במיוחדת
-        </p>
+        </div>
         <p id="tash-phones">
           <h2>קצינת ת"ש כנף-שירה</h2>
           <CopyToClipboard text="0509532202">
@@ -392,35 +407,35 @@ const Information6 = React.forwardRef((props, ref) => {
       </button>
       <div>
         <CopyToClipboard text="0587009400">
-          <button className="important-phones">
+          <p className="important-phones">
             רלשית מפקד יחידה-נעמה בן גל &#9990; 058-7009400
-          </button>
+          </p>
         </CopyToClipboard>
         <CopyToClipboard text="0556629527">
-          <button className="important-phones">
+          <p className="important-phones">
             רלשית סגן מפקד יחידה-לירז זלצמן &#9990; 055-993-9856
-          </button>
+          </p>
         </CopyToClipboard>
         <CopyToClipboard text="0542557290">
-          <button className="important-phones">
+          <p className="important-phones">
             {" "}
             שלישה-מיקה זית &#9990; 054-2557290
-          </button>
+          </p>
         </CopyToClipboard>
         <CopyToClipboard text="0587009400">
-          <button className="important-phones">
+          <p className="important-phones">
             מבצעים &#9990; 07-33636669
-          </button>
+          </p>
         </CopyToClipboard>
         <CopyToClipboard text="086443397">
-          <button className="important-phones">
+          <p className="important-phones">
             נוהל 9 &#9990; 08-6443397
-          </button>
+          </p>
         </CopyToClipboard>
         <CopyToClipboard text="0529253137">
-          <button className="important-phones">
+          <p className="important-phones">
             רב בח"א 8 &#9990; 052-9253137
-          </button>
+          </p>
         </CopyToClipboard>
       </div>
  <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
@@ -492,7 +507,7 @@ const Information9 = React.forwardRef((props, ref) => {
       <p id="bin-text">
         בימי שני וחמישי יש מסדר במגורים ובחמישי יש מסדר במבנה ביה"ס
       </p>
-      <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
+      <p className="no-camera-text">חל איסור צילום בגבולות היחידה</p>
  <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
@@ -640,11 +655,7 @@ const Information14 = React.forwardRef((props, ref) => {
         ✖
       </button>
       <b className="header-base">פלמחים</b>
-      <p className="p-width">
-        בכדי להגיע למחנה תל נוף יש לקחת אוטובוס אגד מרחובות עד לצומת ויש לרדת
-        בצומת מחנה תל נוף\מזכרת בתיה
-      </p>
-
+<br />
       <a
         className="link-driving"
         href="https://drive.google.com/file/d/1HV71YMXPuzIDkyg0U2kHOJWH-Mthy4-5/view"
@@ -654,7 +665,7 @@ const Information14 = React.forwardRef((props, ref) => {
       <br />
       <img id="bus-img" src="assets/bus.png" />
       <br />
-
+<br />
       <div id="warning">
         <p id="warning-text">
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
@@ -675,8 +686,8 @@ const Information15 = React.forwardRef((props, ref) => {
       <p id="clothes-text">ביחידה לובשים אזרחי</p>
       <img id="bin-icon" src="assets/bin.png" />
       <p id="bin-text">ביום חמישי מסדר בביס"ק ב13:00 במגורים בשעה משתנה</p>
-      <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <p className="no-camera-text">חל איסור צילום בגבולות היחידה</p>
+       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
     </div>
   );
 });
@@ -892,7 +903,7 @@ export default function MyBook(props) {
             setShowBook = {props.setShowBook}
           ></Page>
           <Page
-            header='חד"א'
+            header='חדר אוכל'
             showPage={15}
             book={book}
             number="16"

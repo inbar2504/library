@@ -114,6 +114,11 @@ body {
   width: 35vw;
   padding: 0.5vh;
 }
+.shalishut-btns {
+  border: #ffffff00;
+  background-color: #ffffff00;
+  font-family: "horev";
+}
 .imagess {
   display: flex;
   flex-direction: column;
@@ -135,7 +140,7 @@ body {
   margin-top: 2vh;
   font-size: 4vmax;
   text-align: center;
-  color: rgb(195, 6, 6);
+  color: #865840;
   animation: warningAnimation 4s ease forwards;
   width: 90vw;
 }
@@ -143,7 +148,7 @@ body {
   width: 20%;
 }
 .sub {
-  border: 4px solid #2dbdbd;
+  border: 2px solid #2dbdbd;
   width: 80vw;
   border-radius: 20px;
   text-align: center;
@@ -158,7 +163,7 @@ body {
   width: 90vw;
 }
 .link-driving {
-  color: #2dbdbd;
+  color: #537C8E;
   font-size: 4vmax;
 }
 #bus-img {
@@ -169,7 +174,8 @@ body {
   border: 3px solid #2dbdbd;
   font-size: 3vmax;
   text-align: center;
-  width: 100%;
+  width: 99%;
+  margin-top: -2px;
 }
 
 #buttons-specials {
@@ -180,15 +186,18 @@ body {
 }
 #private-special {
   display: block;
-  font-size: 6.5vmin;
+  font-size: 7vmin;
+  margin: 15px;
 }
 #economy-special {
   display: none;
-  font-size: 3.5vmax;
+  font-size: 7vmin;
+  margin: 15px;
 }
 #tash-phones {
   display: none;
-  font-size: 3.5vmax;
+  font-size: 7vmin;
+  margin: 15px;
 }
 #private {
   position: relative;
@@ -197,6 +206,7 @@ body {
   font-size: 4vmax;
   font-family: "horev";
   background-color: #2dbdbd;
+  
 }
 #economy {
   position: relative;
@@ -204,6 +214,7 @@ body {
   border: 2px solid #2dbdbd;
   font-size: 4vmax;
   font-family: "horev";
+  background-color: rgb(214 215 215);
 }
 #tash {
   position: relative;
@@ -211,6 +222,7 @@ body {
   border: 2px solid #2dbdbd;
   font-size: 4vmax;
   font-family: "horev";
+  background-color: rgb(214 215 215);
 }
 .text-toranuyot {
   font-size: 3.5vmax;
@@ -223,6 +235,10 @@ body {
 .font-header {
   font-size: 4vmax;
   margin: 7%;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 .apps {
   width: 45vw;
@@ -260,9 +276,16 @@ body {
 
 button {
   z-index: 3;
-  position: absolute;
+  position: relative;
   top: 15%;
   color: black;
+ 
+}
+.btns {
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  font-size: 7vmin;
+  font-family: "horev";
 }
 .dl1 {
   position: relative;
@@ -372,7 +395,7 @@ h1 {
   left: 80%;
   width: 20vw;
 }
-#no-camera-text {
+.no-camera-text {
   position: relative;
   left: 50%;
   font-size: 11vmin;
@@ -380,6 +403,7 @@ h1 {
   transform: translateX(-50%);
   animation: noCameraAnimation 3s ease forwards;
   text-align: center;
+  width: 80vw;
 }
 #pool {
   position: absolute;

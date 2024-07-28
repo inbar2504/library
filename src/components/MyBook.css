@@ -1,5 +1,4 @@
-
-  html,
+html,
 body {
   height: 100%;
 }
@@ -7,8 +6,7 @@ body {
 body {
   background-size: 100% 100%;
   overflow-y: hidden;
-  /* background-color: #2dbdbd; */
-  /* transform: scaleX(-1); */
+  color: black;
 }
 
 #header-book {
@@ -27,22 +25,22 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   margin-top: 1vh;
 }
 #yoalam {
   font-size: 8vmin;
- direction: rtl;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%,-50%);
- width: 85%;
+  direction: rtl;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
 }
 #img-yoalam {
-position: relative;
-left: 50%;
-transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #shekem-img {
   width: 100vw;
@@ -90,37 +88,43 @@ transform: translateX(-50%);
 
   /* height: 70vh !important; */
   /* display: flex !important; */
-
 }
 
 .applications-images {
   width: 30%;
 }
 .numbers-page {
-    position: absolute;
-    top: 1%;
+  position: absolute;
+  top: 1%;
 }
 #header-board {
   margin-top: -2px;
   text-align: center;
+  color: #2dbdbd;
+}
+.header-page {
+  font-size: 13vmin;
+  text-align: center;
+  width: 55vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .imgs {
   width: 35vw;
   padding: 0.5vh;
-
 }
 .imagess {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 .Information3 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.Information4  {
+.Information4 {
   text-align: center;
   font-size: 4vmax;
   display: flex;
@@ -147,8 +151,8 @@ transform: translateX(-50%);
 }
 .header-base {
   font-size: 8vmin;
-margin-top: -35px;
-text-align: center;
+  margin-top: -35px;
+  text-align: center;
 }
 .p-width {
   width: 90vw;
@@ -208,9 +212,9 @@ text-align: center;
   font-size: 4vmax;
   font-family: "horev";
 }
-.text-toranuyot{
-      font-size: 3.5vmax;
-      margin: 3px;
+.text-toranuyot {
+  font-size: 3.5vmax;
+  margin: 3px;
 }
 .turanuyot-header {
   font-size: 4vmax;
@@ -238,11 +242,11 @@ text-align: center;
   height: 60vh;
   width: 100vw;
 }
-.menu-container{
-    display: flex;
-    position: absolute;
-    top: 10%;
-    left: 5%;
+.menu-container {
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 5%;
 }
 .book-container {
   height: 100%;
@@ -252,7 +256,6 @@ text-align: center;
   /* transform: scaleX(-1); */
   /* transform: translateX(-50%); */
   /* transform: rotateY(180deg); */
-
 }
 
 button {
@@ -307,8 +310,8 @@ h1 {
 }
 @keyframes busAnimation {
   0% {
-  opacity: 0;  
-}
+    opacity: 0;
+  }
   50% {
     opacity: 0.5;
   }
@@ -318,18 +321,17 @@ h1 {
 }
 @keyframes noCameraAnimation {
   0% {
-  font-size: 11vmin; 
-}
+    font-size: 11vmin;
+  }
   50% {
-    font-size: 8vmin; 
+    font-size: 8vmin;
   }
   100% {
-    font-size: 11vmin; 
+    font-size: 11vmin;
   }
 }
 
 .open-book {
-
   animation: upscaleAnimation 1s ease forwards;
 }
 #clothes-icon {
@@ -377,19 +379,18 @@ h1 {
   transform: translateX(-50%);
   animation: noCameraAnimation 3s ease forwards;
   text-align: center;
-
 }
 #pool {
   position: absolute;
   top: 65%;
   width: 50%;
   left: 50%;
-  transform:translateX(-50%)
+  transform: translateX(-50%);
 }
 #sun-img {
   position: relative;
   left: 50%;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
   /* position: relative; */
   width: 20%;
   margin-top: 5%;
@@ -398,7 +399,7 @@ h1 {
 #half-sun-img {
   position: relative;
   left: 50%;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
   /* position: relative; */
   width: 25%;
   margin-top: 5%;
@@ -407,7 +408,7 @@ h1 {
 #moon-img {
   position: relative;
   left: 50%;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
   /* position: relative; */
   width: 17%;
   margin-top: 5%;
@@ -416,7 +417,7 @@ h1 {
 #pool-text {
   font-size: 7vmin;
   text-align: center;
-  
+
   /* filter: drop-shadow(0 0 3.75rem white); */
 }
 .morning-text {
@@ -426,7 +427,6 @@ h1 {
   transform: translateX(-50%);
   text-align: center;
   margin-top: 2px;
-
 }
 .morning-div {
   margin-top: -50px;
@@ -434,7 +434,6 @@ h1 {
 #school-icon {
   width: 20%;
   margin: 15px;
-  
 }
 .Information11 {
   display: flex;
@@ -444,16 +443,15 @@ h1 {
   align-items: stretch;
 }
 #gym-img {
-/* margin-top: -6vh; */
-    width: 70vw;
-    position: relative;
-    bottom: 10vh;
-    left: 50%;
-    transform: translateX(-50%);
-
+  /* margin-top: -6vh; */
+  width: 70vw;
+  position: relative;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .home-icon {
-  position: absolute;
+  position: absolute !important;
   background-color: rgba(255, 255, 255, 0);
   font-size: 13vmin;
   left: 3vw;
@@ -462,7 +460,7 @@ h1 {
   height: 10vh;
   top: 85%;
 }
-.close-book{
+.close-book {
   direction: rtl;
   font-size: 8vmin;
   position: absolute;
@@ -496,8 +494,10 @@ Table {
   text-align: center;
   margin-bottom: 3vh;
   position: relative;
-  background-color: #ffffff00; 
+  background-color: #ffffff00;
   border: 0cm;
-  width: 100vw;
+  width: 90vw;
   font-family: "horev";
+  left: 50%;
+  transform: translateX(-50%);
 }

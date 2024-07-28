@@ -3,12 +3,13 @@ import HTMLFlipBook from "react-pageflip";
 import "./MyBook.css";
 import "intro.js/introjs.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import HomeIcon from "./HomeIcon";
 
 const PageCover = React.forwardRef((props, ref) => {
   return (
     <div className="cover" ref={ref} data-density="hard">
       <div>
-        <img id="school-icon" src="src\assets\school-icon.png" />
+        <img id="school-icon" src="assets/school-icon.png" />
         <h2>{props.children}</h2>
       </div>
     </div>
@@ -33,10 +34,9 @@ const Page = React.forwardRef((props, ref) => {
   ];
 
   const book = props.book;
-  console.log(book);
   return (
     <div className="page" ref={ref}>
-      <h1>{props.header}</h1>
+      <h1 class="header-page">{props.header}</h1>
       <div>
         {props.showMenu ? (
           <Table heading={heading} bodyy={bodyy} book={book} />
@@ -104,11 +104,9 @@ const TableRow = React.forwardRef((props, ref) => {
 const Information1 = React.forwardRef((props, ref) => {
   const book = props.book;
   const showMenu = props.showMenu;
-  console.log(book);
 
   const [showCover, setShowCover] = useState(false);
   const menu = () => {
-    console.log(props.book);
     book.current.pageFlip().flip(1);
   };
 
@@ -121,19 +119,19 @@ const Information1 = React.forwardRef((props, ref) => {
         <div className="apps">
           <p className="font-header">דוח 1</p>
           <a href="https://one.prat.idf.il/login" target="_blank">
-            <img className="applications-images" src="src\assets\doch.png" />
+            <img className="applications-images" src="assets/doch.png" />
           </a>
         </div>
         <div className="apps">
           <p className="font-header">זוזו</p>
           <a href="https://zuzu.prat.idf.il/" target="_blank">
-            <img className="applications-images" src="src\assets\zuzu.png" />
+            <img className="applications-images" src="assets/zuzu.png" />
           </a>
         </div>
         <div className="apps">
           <p className="font-header">אתר כוכבים</p>
           <a href="https://idf.mltp.co.il" target="_blank">
-            <img className="applications-images" src="src\assets\stars.png" />
+            <img className="applications-images" src="assets/stars.png" />
           </a>
         </div>
         <br />
@@ -143,7 +141,7 @@ const Information1 = React.forwardRef((props, ref) => {
             href="https://www.prat.idf.il/%D7%9B%D7%95%D7%9B%D7%91%D7%99%D7%9D-%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%95%D7%93%D7%9C%D7%A7/%D7%9C%D7%95%D7%9E%D7%93%D7%95%D7%AA-%D7%93%D7%A4%D7%99-%D7%A0%D7%97%D7%99%D7%AA%D7%94/%D7%A7%D7%9C%D7%99%D7%98%D7%94-%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99%D7%AA/?returnUrl=%2f%d7%9b%d7%95%d7%9b%d7%91%d7%99%d7%9d-%d7%a0%d7%a7%d7%95%d7%93%d7%95%d7%aa-%d7%95%d7%93%d7%9c%d7%a7%2f%d7%9c%d7%95%d7%9e%d7%93%d7%95%d7%aa-%d7%93%d7%a4%d7%99-%d7%a0%d7%97%d7%99%d7%aa%d7%94%2f%d7%a7%d7%9c%d7%99%d7%98%d7%94-%d7%93%d7%99%d7%92%d7%99%d7%98%d7%9c%d7%99%d7%aa%2f"
             target="_blank"
           >
-            <img className="applications-images" src="src\assets\solider.png" />
+            <img className="applications-images" src="assets/solider.png" />
           </a>
         </div>
         <div className="apps">
@@ -154,7 +152,7 @@ const Information1 = React.forwardRef((props, ref) => {
           >
             <img
               className="applications-images"
-              src="src\assets\calander.png"
+              src="assets/calander.png"
             />
           </a>
         </div>
@@ -166,19 +164,17 @@ const Information1 = React.forwardRef((props, ref) => {
           >
             <img
               className="applications-images"
-              src="src\assets\airplane.png"
+              src="assets/airplane.png"
             />
           </a>
         </div>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
 
-      {/* <img className="home-icon" src="src\assets\home-icon.png" /> */}
+
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+
+
+      {/* <img className="home-icon" src="assets/home-icon.png" /> */}
     </div>
   );
 });
@@ -191,21 +187,17 @@ const Information2 = React.forwardRef((props, ref) => {
       </button>
       <div className="imagess">
         <a href="https://meditik.medical.idf.il/home">
-          <img className="imgs" src="src\assets\afnayot.png" />
+          <img className="imgs" src="assets/afnayot.png" />
         </a>
         <a>
-          <img className="imgs" src="src\assets\portral.png" />
+          <img className="imgs" src="assets/portral.png" />
         </a>
         <a href="https://torim.prat.idf.il/login">
-          <img className="imgs" src="src\assets\torim.png" />
+          <img className="imgs" src="assets/torim.png" />
         </a>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
+
     </div>
   );
 });
@@ -242,12 +234,7 @@ const Information3 = React.forwardRef((props, ref) => {
           21:00-1:30/1:30-6:00
         </p>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -270,7 +257,7 @@ const Information4 = React.forwardRef((props, ref) => {
         קישור לשאטלים ממזכרת בתיה
       </a>
       <br />
-      <img id="bus-img" src="src\assets\bus.png" />
+      <img id="bus-img" src="assets/bus.png" />
       <br />
       <a
         className="link-driving"
@@ -283,12 +270,7 @@ const Information4 = React.forwardRef((props, ref) => {
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
         </p>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -398,12 +380,7 @@ const Information5 = React.forwardRef((props, ref) => {
           </CopyToClipboard>
         </p>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -421,7 +398,7 @@ const Information6 = React.forwardRef((props, ref) => {
         </CopyToClipboard>
         <CopyToClipboard text="0556629527">
           <button className="important-phones">
-            רלשית סגן מפקד היחידה-הילה פליישמן &#9990; 055-6629527
+            רלשית סגן מפקד יחידה-לירז זלצמן &#9990; 055-993-9856
           </button>
         </CopyToClipboard>
         <CopyToClipboard text="0542557290">
@@ -446,12 +423,7 @@ const Information6 = React.forwardRef((props, ref) => {
           </button>
         </CopyToClipboard>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -466,19 +438,14 @@ const Information7 = React.forwardRef((props, ref) => {
         <br />
         <br />
         <br />
-        <img className="phone" src="src\assets\icon-phone.png"></img>
-        ממונת יוהל”ם מאיה דליות 0526408885
-        <br /> <img className="phone" src="src\assets\icon-phone.png"></img>
+        <img className="phone" src="assets/icon-phone.png"></img>
+        ממונת יוהל”ם מירי שחורי 051-2980576
+        <br /> <img className="phone" src="assets/icon-phone.png"></img>
         מהות- 039482600 שלוחה 5 ואז שלוחה 2
       </p>
 
-      <img id="img-yoalam" src="src\assets\yohalam.png" />
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <img id="img-yoalam" src="assets/yohalam.png" />
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -491,8 +458,6 @@ const Information8 = React.forwardRef((props, ref) => {
       <div id="shekem-text">
         <b>תל נוף</b>
         <br />
-        {/* שעות פתיחה */}
-        {/* <br /> */}
         בימי א'-ד': 7:15-16:30
         <br />
         ביום ה': 7:15-15:50
@@ -502,19 +467,12 @@ const Information8 = React.forwardRef((props, ref) => {
         <br />
         <b>פלמחים</b>
         <br />
-        {/* שעות פתיחה */}
-        {/* <br /> */}
         9:00-21:00
         <br />
         עם הפסקות משתנות
       </div>
-      <img id="shekem-img" src="src\assets\caveret-icon.png" />
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <img id="shekem-img" src="assets/caveret-icon.png" />
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -525,22 +483,17 @@ const Information9 = React.forwardRef((props, ref) => {
         ✖
       </button>
       <p className="header-base">תל נוף</p>
-      <img id="clothes-icon" src="src\assets\clothes.png" />
+      <img id="clothes-icon" src="assets/clothes.png" />
       <p id="clothes-text">
         ביחידה לובשים חצי ב' ,דיונים וכנסים על ב' מלא לארוחת ערב ניתן לבוא על
         אזרחי
       </p>
-      <img id="bin-icon" src="src\assets\bin.png" />
+      <img id="bin-icon" src="assets/bin.png" />
       <p id="bin-text">
         בימי שני וחמישי יש מסדר במגורים ובחמישי יש מסדר במבנה ביה"ס
       </p>
       <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -568,13 +521,8 @@ const Information10 = React.forwardRef((props, ref) => {
         <br />
         בימי ג' יש שחייה לילית: 20:30-22:00
       </p>
-      <img id="pool" src="src\assets\pool.webp" />
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <img id="pool" src="assets/pool.webp" />
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -586,7 +534,7 @@ const Information11 = React.forwardRef((props, ref) => {
       </button>
       <br />
       <div className="morning-div">
-        <img id="sun-img" src="src\assets\sun.png" />
+        <img id="sun-img" src="assets/sun.png" />
         <p className="morning-text">
           בוקר
           <br />
@@ -596,7 +544,7 @@ const Information11 = React.forwardRef((props, ref) => {
 
       <br />
       <div className="morning-div">
-        <img id="half-sun-img" src="src\assets\half-sun.png" />
+        <img id="half-sun-img" src="assets/half-sun.png" />
         <p className="morning-text">
           צהריים
           <br />
@@ -607,19 +555,14 @@ const Information11 = React.forwardRef((props, ref) => {
       </div>
       <br />
       <div className="morning-div">
-        <img id="moon-img" src="src\assets\moon.png" />
+        <img id="moon-img" src="assets/moon.png" />
         <p className="morning-text">
           ערב
           <br />
           18:00-19:30
         </p>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -646,13 +589,8 @@ const Information12 = React.forwardRef((props, ref) => {
         <br />
         7:00-22:00
       </p>
-      <img id="gym-img" src="src\assets\gym.png" />
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <img id="gym-img" src="assets/gym.png" />
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -691,12 +629,7 @@ const Information13 = React.forwardRef((props, ref) => {
           6:00-10:00+18:00-22:00
         </p>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -719,7 +652,7 @@ const Information14 = React.forwardRef((props, ref) => {
         קישורים לשאטלים נוסעים בפלמחים
       </a>
       <br />
-      <img id="bus-img" src="src\assets\bus.png" />
+      <img id="bus-img" src="assets/bus.png" />
       <br />
 
       <div id="warning">
@@ -727,12 +660,7 @@ const Information14 = React.forwardRef((props, ref) => {
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
         </p>
       </div>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -743,17 +671,12 @@ const Information15 = React.forwardRef((props, ref) => {
         ✖
       </button>
       <p className="header-base">פלמחים</p>
-      <img id="clothes-icon" src="src\assets\clothes.png" />
+      <img id="clothes-icon" src="assets/clothes.png" />
       <p id="clothes-text">ביחידה לובשים אזרחי</p>
-      <img id="bin-icon" src="src\assets\bin.png" />
+      <img id="bin-icon" src="assets/bin.png" />
       <p id="bin-text">ביום חמישי מסדר בביס"ק ב13:00 במגורים בשעה משתנה</p>
       <p id="no-camera-text">!אין לצלם בגבולות היחידה</p>
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });
@@ -780,13 +703,8 @@ const Information16 = React.forwardRef((props, ref) => {
         10:00-14:00, 15:00-19:00
       </p>
 
-      <img id="pool" src="src\assets\pool.webp" />
-      <button
-        className="home-icon"
-        onClick={() => props.book.current.pageFlip().flip(1)}
-      >
-        🏠︎
-      </button>
+      <img id="pool" src="assets/pool.webp" />
+ <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(1)}/>
     </div>
   );
 });

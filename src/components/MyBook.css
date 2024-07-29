@@ -84,7 +84,7 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  top: -100%;
+  top: -15vh;
   z-index: 4;
 }
 .container-button-afnayot {
@@ -111,9 +111,11 @@ body {
 #portal {
   width: 35vw;
   height: 16vh;
-
-  /* border: #ffffff00;
-  background-color: #ffffff00; */
+}
+#portal-img {
+  width: 35vw;
+  height: 16vh;
+  z-index: 50;
 }
 #afnayot {
   width: 35vw;

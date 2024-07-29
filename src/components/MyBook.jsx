@@ -272,10 +272,10 @@ const Information2 = React.forwardRef((props, ref) => {
         </a>
         <CopyToClipboard text="0520990110">
         <a id="portal">
-            <img className="imgs" src="assets/portral.png" />
+            <img className="imgs" id="portal-img" src="assets/portral.png" onClick={()=> ""}/>
             <button className="container-button-portal" type="button"></button>
-        </a>
-        </CopyToClipboard>
+        </a> 
+       </CopyToClipboard>
         <br />
         <a id="torim" href="https://torim.prat.idf.il/home" target="_blank">
           <img className="imgs" src="assets/torim.png" />

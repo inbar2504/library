@@ -62,12 +62,10 @@ body {
 }
 .page {
   background-color: #d6d7d7;
-
 }
 
 .applications-images {
   width: 30%;
- 
 }
 .container-button {
   width: 30%;
@@ -79,7 +77,7 @@ body {
 .container-button-portal {
   width: 32vw;
   height: 14vh;
-  /* border: #ffffff00; */
+  border: #ffffff00;
   background-color: #ffffff00;
   position: relative;
   left: 50%;
@@ -96,7 +94,6 @@ body {
   left: 50%;
   top: -15vh;
   transform: translateX(-50%);
-
 }
 .container-button-torim {
   width: 31vw;
@@ -156,7 +153,6 @@ body {
   border: #ffffff00;
   background-color: #ffffff00;
   font-family: "horev";
-
 }
 .imagess {
   display: flex;
@@ -202,7 +198,7 @@ body {
   width: 90vw;
 }
 .link-driving {
-  color: #537C8E;
+  color: #537c8e;
   font-size: 4vmax;
   text-decoration: underline;
 }
@@ -247,7 +243,6 @@ body {
   font-size: 4vmax;
   font-family: "horev";
   background-color: #2dbdbd;
-  
 }
 #economy {
   position: relative;
@@ -276,7 +271,6 @@ body {
 .font-header {
   font-size: 4vmax;
   margin: 7%;
-
 }
 a {
   text-decoration: none;
@@ -285,7 +279,6 @@ a {
 .apps {
   width: 45vw;
   margin: 2%;
-
 }
 .applications {
   position: relative;
@@ -322,7 +315,6 @@ button {
   position: relative;
   top: 15%;
   color: black;
- 
 }
 .btns {
   background-color: rgba(255, 255, 255, 0);

@@ -541,8 +541,8 @@ Table {
   top: 12vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 90vw !important;
-  margin-right: 7vw;
+  width: 70vw !important;
+  /* margin-right: 7vw; */
 }
 
 .copy-icon {

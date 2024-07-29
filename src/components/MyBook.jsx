@@ -270,10 +270,12 @@ const Information2 = React.forwardRef((props, ref) => {
           <img className="imgs" src="assets/afnayot.png" />
           <button className="container-button-afnayot" type="submit"></button>
         </a>
+        <CopyToClipboard text="0520990110">
         <a id="portal">
-          <img className="imgs" src="assets/portral.png" />
-          <button className="container-button-portal" type="button"></button>
+            <img className="imgs" src="assets/portral.png" />
+            <button className="container-button-portal" type="button"></button>
         </a>
+        </CopyToClipboard>
         <br />
         <a id="torim" href="https://torim.prat.idf.il/home" target="_blank">
           <img className="imgs" src="assets/torim.png" />

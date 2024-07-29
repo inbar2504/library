@@ -93,7 +93,7 @@ body {
   background-color: #ffffff00;
   position: relative;
   left: 50%;
-  top: -92%;
+  top: -15vh;
   transform: translateX(-50%);
 
 }
@@ -126,10 +126,12 @@ body {
 #header-board {
   margin-top: -2px;
   text-align: center;
+  /* direction: rtl; */
   color: #2dbdbd;
-  /* position: absolute;
+  position: absolute;
   left: 50%;
-  transform: translateX(-50%); */
+  transform: translateX(-50%);
+  width: 90vw;
 }
 .header-page {
   font-size: 13vmin;
@@ -539,7 +541,8 @@ Table {
   direction: rtl;
   position: absolute;
   top: 12vh;
-  right: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80vw !important;
 }
 .copy-icon {

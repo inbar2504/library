@@ -28,7 +28,7 @@ export default function App() {
           infinite
           itemClass=""
           keyBoardControl
-          minimumTouchDrag={80}
+          minimumTouchDrag={70}
           pauseOnHover
           renderButtonGroupOutside={false}
           renderDotsOutside={false}

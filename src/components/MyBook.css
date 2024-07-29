@@ -526,8 +526,8 @@ h1 {
   direction: rtl;
   font-size: 8vmin;
   position: absolute;
-  top: 2vh;
-  right: 85vw;
+  top: 3.5vh;
+  right: 83vw;
   border: #ffffff00;
   background-color: #ffffff00;
 }
@@ -544,7 +544,9 @@ Table {
   left: 50%;
   transform: translateX(-50%);
   width: 80vw !important;
+  /* margin-right: 7vw; */
 }
+
 .copy-icon {
   position: relative;
   width: 50vw;

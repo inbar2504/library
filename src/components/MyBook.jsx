@@ -271,8 +271,8 @@ const Information2 = React.forwardRef((props, ref) => {
           <button className="container-button-afnayot" type="submit"></button>
         </a>
         <a id="portal">
-          <img className="imgs"  src="assets/portral.png" />
-          <button className="container-button-portal" type="submit"></button>
+          <img className="imgs" src="assets/portral.png" />
+          <button className="container-button-portal" type="button"></button>
         </a>
         <br />
         <a id="torim" href="https://torim.prat.idf.il/home" target="_blank">

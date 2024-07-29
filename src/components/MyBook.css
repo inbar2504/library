@@ -127,6 +127,9 @@ body {
   margin-top: -2px;
   text-align: center;
   color: #2dbdbd;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .header-page {
   font-size: 13vmin;

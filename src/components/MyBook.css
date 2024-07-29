@@ -79,7 +79,7 @@ body {
 .container-button-portal {
   width: 32vw;
   height: 14vh;
-  border: #ffffff00;
+  /* border: #ffffff00; */
   background-color: #ffffff00;
   position: relative;
   left: 50%;

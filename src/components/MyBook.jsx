@@ -137,6 +137,7 @@ const Table = React.forwardRef((props, ref) => {
     <table>
       <thead>
         <tr id="header-board">{heading}</tr>
+        <br />
       </thead>
       <tbody>
         {bodyy.map((rowContent, rowID) => (

@@ -73,10 +73,10 @@ export default function App() {
             className="books"
             src="assets/tuli-img.png"
           />
-          <img className="books" src="assets/brown-img.png" />
-          <img className="books" src="assets/blue-img.png" />
-          <img className="books" src="assets/bezh-img.png" />
-          <img className="books" src="assets/dark-img.png" />
+          <img className="books opacity-book" src="assets/brown-img.png" />
+          <img className="books opacity-book" src="assets/blue-img.png" />
+          <img className="books opacity-book" src="assets/bezh-img.png" />
+          <img className="books opacity-book" src="assets/dark-img.png" />
         </Carousel>
       ) : (
         " "

@@ -195,6 +195,7 @@ body {
   font-size: 4vmax;
   text-decoration: underline;
 }
+
 #bus-img {
   width: 20vw;
   animation: busAnimation 4s ease forwards;

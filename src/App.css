@@ -73,3 +73,6 @@ body {
   /* right: calc(4% + 1px); */
   display: none;
 }
+.opacity-book {
+  opacity: 0.3;
+}

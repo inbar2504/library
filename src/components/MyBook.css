@@ -56,42 +56,68 @@ body {
   top: 5vh;
   font-size: 11vmin;
 }
-/* .phone {
-  width: 10%;
-} */
-/* .stf__item {
-  display: none;
-  position: absolute;
-  transform-style: preserve-3d;
-  background-color: #d3d0d0;
-  width: 100vw !important;
-  height: 70vh !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
+
 .cover {
   background-color: #2dbdbd;
 }
 .page {
-  /* position: relative; */
-  /* top: 50% !important;
-  left: 50% !important; */
-  /* transform: translate(-50%, -50%) !important; */
-  /* width: 100vw !important;
-  height: 70vh !important; */
   background-color: #d6d7d7;
-  /* position: relative; */
-  /* width: 100% !important;
-  height: 70vh !important; */
 
-  /* height: 70vh !important; */
-  /* display: flex !important; */
 }
 
 .applications-images {
   width: 30%;
+ 
+}
+.container-button {
+  width: 30%;
+  height: 6vh;
+  margin-left: -30%;
+  border: #ffffff00;
+  background-color: #ffffff00;
+}
+.container-button-portal {
+  width: 32vw;
+  height: 14vh;
+  border: #ffffff00;
+  background-color: #ffffff00;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100%;
+}
+.container-button-afnayot {
+  width: 31vw;
+  height: 13vh;
+  border: #ffffff00;
+  background-color: #ffffff00;
+  position: relative;
+  left: 50%;
+  top: -92%;
+  transform: translateX(-50%);
+
+}
+.container-button-torim {
+  width: 31vw;
+  height: 13vh;
+  border: #ffffff00;
+  background-color: #ffffff00;
+  position: relative;
+  top: -15vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#portal {
+  width: 35vw;
+  height: 16vh;
+}
+#afnayot {
+  width: 35vw;
+  height: 16vh;
+}
+#torim {
+  width: 35vw;
+  height: 16vh;
 }
 .numbers-page {
   position: absolute;
@@ -113,11 +139,13 @@ body {
 .imgs {
   width: 35vw;
   padding: 0.5vh;
+  display: flex;
 }
 .shalishut-btns {
   border: #ffffff00;
   background-color: #ffffff00;
   font-family: "horev";
+
 }
 .imagess {
   display: flex;
@@ -165,6 +193,7 @@ body {
 .link-driving {
   color: #537C8E;
   font-size: 4vmax;
+  text-decoration: underline;
 }
 #bus-img {
   width: 20vw;
@@ -235,6 +264,7 @@ body {
 .font-header {
   font-size: 4vmax;
   margin: 7%;
+  text-decoration: underline;
 }
 a {
   text-decoration: none;
@@ -243,6 +273,7 @@ a {
 .apps {
   width: 45vw;
   margin: 2%;
+
 }
 .applications {
   position: relative;

@@ -30,7 +30,7 @@ const Page = React.forwardRef((props, ref) => {
     ['שק"ם', "11"],
     ["נהלי יחידה", "12"],
     ["בריכה", "14"],
-    ['חדר אוכל', "16"],
+    ["חדר אוכל", "16"],
     ["חדר כושר", "17"],
   ];
 
@@ -44,22 +44,86 @@ const Page = React.forwardRef((props, ref) => {
         ) : (
           ""
         )}
-        {props.showPage === 1 ? <Information1 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 2 ? <Information2 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 3 ? <Information3 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 5 ? <Information4 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 7 ? <Information5 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 8 ? <Information6 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 9 ? <Information7 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 10 ? <Information8 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 11 ? <Information9 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 13 ? <Information10 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 15 ? <Information11 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 16 ? <Information12 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 4 ? <Information13 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 6 ? <Information14 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 12 ? <Information15 book={book} setShowBook = {props.setShowBook}/> : ""}
-        {props.showPage === 14 ? <Information16 book={book} setShowBook = {props.setShowBook}/> : ""}
+        {props.showPage === 1 ? (
+          <Information1 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 2 ? (
+          <Information2 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 3 ? (
+          <Information3 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 5 ? (
+          <Information4 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 7 ? (
+          <Information5 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 8 ? (
+          <Information6 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 9 ? (
+          <Information7 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 10 ? (
+          <Information8 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 11 ? (
+          <Information9 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 13 ? (
+          <Information10 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 15 ? (
+          <Information11 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 16 ? (
+          <Information12 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 4 ? (
+          <Information13 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 6 ? (
+          <Information14 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 12 ? (
+          <Information15 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
+        {props.showPage === 14 ? (
+          <Information16 book={book} setShowBook={props.setShowBook} />
+        ) : (
+          ""
+        )}
         {/* <Table heading={heading} bodyy={bodyy} book={props.book}/>, */}
       </div>
     </div>
@@ -72,10 +136,7 @@ const Table = React.forwardRef((props, ref) => {
   return (
     <table>
       <thead>
-        <tr id="header-board">
-          {heading}
-        
-        </tr>
+        <tr id="header-board">{heading}</tr>
       </thead>
       <tbody>
         {bodyy.map((rowContent, rowID) => (
@@ -96,7 +157,7 @@ const TableRow = React.forwardRef((props, ref) => {
           key={rowID}
           onClick={() => props.book.current.pageFlip().flip(Number(row[1]))}
         >
-         <button className="btns">{val}</button> 
+          <button className="btns">{val}</button>
         </td>
       ))}
     </tr>
@@ -118,74 +179,74 @@ const Information1 = React.forwardRef((props, ref) => {
       </button>
       <div className="applications">
         <div className="apps">
-        
           <a href="https://one.prat.idf.il/login" target="_blank">
-          
-          <a className="font-header">דוח 1</a>
-          <br /><br />
+            <a className="font-header">דוח 1</a>
+            <br />
+            <br />
             <img className="applications-images" src="assets/doch.png" />
+            <button className="container-button" type="submit"></button>
           </a>
         </div>
         <div className="apps">
-          
           <a href="https://zuzu.prat.idf.il/" target="_blank">
-          <a className="font-header" target="_blank">זוזו</a>
-          <br /><br />
+            <a className="font-header" target="_blank">
+              זוזו
+            </a>
+            <br />
+            <br />
             <img className="applications-images" src="assets/zuzu.png" />
+            <button className="container-button" type="submit"></button>
           </a>
         </div>
         <div className="apps">
-          
           <a href="https://idf.mltp.co.il" target="_blank">
-          <a className="font-header">אתר כוכבים</a>
-          <br /><br />
+            <a className="font-header">אתר כוכבים</a>
+            <br />
+            <br />
             <img className="applications-images" src="assets/stars.png" />
+            <button className="container-button" type="submit"></button>
           </a>
         </div>
         <br />
         <div className="apps">
           <a
             href="https://www.prat.idf.il/%D7%9B%D7%95%D7%9B%D7%91%D7%99%D7%9D-%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%95%D7%93%D7%9C%D7%A7/%D7%9C%D7%95%D7%9E%D7%93%D7%95%D7%AA-%D7%93%D7%A4%D7%99-%D7%A0%D7%97%D7%99%D7%AA%D7%94/%D7%A7%D7%9C%D7%99%D7%98%D7%94-%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99%D7%AA/?returnUrl=%2f%d7%9b%d7%95%d7%9b%d7%91%d7%99%d7%9d-%d7%a0%d7%a7%d7%95%d7%93%d7%95%d7%aa-%d7%95%d7%93%d7%9c%d7%a7%2f%d7%9c%d7%95%d7%9e%d7%93%d7%95%d7%aa-%d7%93%d7%a4%d7%99-%d7%a0%d7%97%d7%99%d7%aa%d7%94%2f%d7%a7%d7%9c%d7%99%d7%98%d7%94-%d7%93%d7%99%d7%92%d7%99%d7%98%d7%9c%d7%99%d7%aa%2f"
-            target="_blank">
-              <button className="shalishut-btns">
-             <p className="font-header">קליטה דיגיטלית</p>
-             <br /><br />
-             <img className="applications-images" src="assets/solider.png" />
-            </button>
-            
+            target="_blank"
+          >
+            <a className="font-header">קליטה דיגיטלית</a>
+            <br />
+            <br />
+            <img className="applications-images" src="assets/solider.png" />
+            <button className="container-button" type="submit"></button>
           </a>
         </div>
         <div className="apps">
           <a className="font-header">לוח חופשות</a>
-          <br /><br />
+          <br />
+          <br />
           <a
             href="https://www.idf.il/%D7%9B%D7%AA%D7%91%D7%95%D7%AA-%D7%95%D7%A2%D7%93%D7%9B%D7%95%D7%A0%D7%99%D7%9D/2024/%D7%99%D7%A0%D7%95%D7%90%D7%A8/%D7%9C%D7%95%D7%97-%D7%97%D7%95%D7%A4%D7%A9%D7%95%D7%AA-%D7%A6%D7%94%D7%9C-2024/"
             target="_blank"
           >
-            <img
-              className="applications-images"
-              src="assets/calander.png"
-            />
+            <img className="applications-images" src="assets/calander.png" />
+            <button className="container-button" type="submit"></button>
           </a>
         </div>
         <div className="apps">
           <a className="font-header">טופס חול</a>
-          <br /><br />
+          <br />
+          <br />
           <a
             href="https://www.prat.idf.il/%D7%94%D7%A9%D7%9B%D7%A8-%D7%A9%D7%9C%D7%99/%D7%AA%D7%95%D7%A6%D7%90%D7%95%D7%AA-%D7%97%D7%99%D7%A4%D7%95%D7%A9/?search=%D7%97%D7%95%22%D7%9C&population="
             target="_blank"
           >
-            <img
-              className="applications-images"
-              src="assets/airplane.png"
-            />
+            <img className="applications-images" src="assets/airplane.png" />
+            <button className="container-button" type="submit"></button>
           </a>
         </div>
       </div>
 
-
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
-
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
 
       {/* <img className="home-icon" src="assets/home-icon.png" /> */}
     </div>
@@ -195,34 +256,36 @@ const Information2 = React.forwardRef((props, ref) => {
   const book = props.book;
   return (
     <div className="Information2" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <div className="imagess">
-        <a href="https://meditik.medical.idf.il/home" target="_blank">
+        <a
+          id="afnayot"
+          href="https://meditik.medical.idf.il/home"
+          target="_blank"
+        >
           <img className="imgs" src="assets/afnayot.png" />
+          <button className="container-button-afnayot" type="submit"></button>
         </a>
         <a id="portal">
-        <CopyToClipboard text="055555555">
-          <button type="submit">
-            <img className="imgs" src="assets/portral.png" />
-            </button>
-        </CopyToClipboard>
-          
+          <img className="imgs"  src="assets/portral.png" />
+          <button className="container-button-portal" type="submit"></button>
         </a>
-        <a href="https://torim.prat.idf.il/login" target="_blank">
+        <br />
+        <a id="torim" href="https://torim.prat.idf.il/home" target="_blank">
           <img className="imgs" src="assets/torim.png" />
+          <button className="container-button-torim" type="submit"></button>
         </a>
       </div>
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
-
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information3 = React.forwardRef((props, ref) => {
   return (
     <div className="Information3" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <b className="header-base">תל נוף</b>
@@ -231,13 +294,13 @@ const Information3 = React.forwardRef((props, ref) => {
           <b>רס"ר</b>
         </p>
         <p className="text-toranuyot">
-          רס"ר-עושים על ב' מלא ומתחילים בשעה 7:30 {" "}
+          רס"ר-עושים על ב' מלא ומתחילים בשעה 7:30{" "}
         </p>
       </div>
       <div className="sub">
         <p className="turanuyot-header">מטבח</p>
         <p className="text-toranuyot">
-          מטבח-עושים על חצי ב' ומתחילים בשעה 7:15 
+          מטבח-עושים על חצי ב' ומתחילים בשעה 7:15
         </p>
       </div>
       <div className="sub">
@@ -252,23 +315,23 @@ const Information3 = React.forwardRef((props, ref) => {
           21:00-1:30/1:30-6:00
         </p>
       </div>
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information4 = React.forwardRef((props, ref) => {
   return (
     <div className="Information4" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
+
       <b className="header-base">תל נוף</b>
       <br />
       <a
         className="link-driving"
         href="https://drive.google.com/file/d/1iUZCQBJJvF5USPaYwRe499nNEaeFFzBu/view"
-      >
+        target="_blank">
         קישור לשאטלים ממזכרת בתיה
       </a>
       <br />
@@ -277,7 +340,7 @@ const Information4 = React.forwardRef((props, ref) => {
       <a
         className="link-driving"
         href="https://drive.google.com/file/d/13bDaWAEzdSrPXObHEkz7ZfChsD6RSouV/view"
-      >
+        target="_blank">
         קישור להסעות מרחבי הארץ
       </a>
       <br />
@@ -286,7 +349,7 @@ const Information4 = React.forwardRef((props, ref) => {
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
         </p>
       </div>
-      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
@@ -302,7 +365,7 @@ const Information5 = React.forwardRef((props, ref) => {
   };
   return (
     <div className="Information5" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <span id="buttons-specials">
@@ -362,7 +425,7 @@ const Information5 = React.forwardRef((props, ref) => {
           <br />
           משך זמן של עד 30 ימים - רס"ן
           <br />
-הארכת משך הזמן למיוחדת של 45 ימים- סא"ל 
+          הארכת משך הזמן למיוחדת של 45 ימים- סא"ל
           <br />
           <b>--אישורים נדרשים--</b>
           <br />
@@ -371,14 +434,13 @@ const Information5 = React.forwardRef((props, ref) => {
         </p>
         <div id="private-special">
           <h2>מיוחדת אישית</h2>
-          עבור חייל אשר נתקל בבעיה אישית שאינה ניתנת למענה ע"י מיוחדת מסוג
-אחר
+          עבור חייל אשר נתקל בבעיה אישית שאינה ניתנת למענה ע"י מיוחדת מסוג אחר
           <br />
           <b>--גורם מאשר--</b>
           <br />
           משך זמן של עד 30 ימים - רס"ן
           <br />
-הארכת משך הזמן למיוחדת של 45 ימים- סא"ל 
+          הארכת משך הזמן למיוחדת של 45 ימים- סא"ל
           <br />
           <b>--אישורים נדרשים--</b>
           <br />
@@ -396,14 +458,14 @@ const Information5 = React.forwardRef((props, ref) => {
           </CopyToClipboard>
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information6 = React.forwardRef((props, ref) => {
   return (
     <div className="Information6" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <div>
@@ -424,29 +486,23 @@ const Information6 = React.forwardRef((props, ref) => {
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0587009400">
-          <p className="important-phones">
-            מבצעים &#9990; 07-33636669
-          </p>
+          <p className="important-phones">מבצעים &#9990; 07-33636669</p>
         </CopyToClipboard>
         <CopyToClipboard text="086443397">
-          <p className="important-phones">
-            נוהל 9 &#9990; 08-6443397
-          </p>
+          <p className="important-phones">נוהל 9 &#9990; 08-6443397</p>
         </CopyToClipboard>
         <CopyToClipboard text="0529253137">
-          <p className="important-phones">
-            רב בח"א 8 &#9990; 052-9253137
-          </p>
+          <p className="important-phones">רב בח"א 8 &#9990; 052-9253137</p>
         </CopyToClipboard>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information7 = React.forwardRef((props, ref) => {
   return (
     <div className="Information7" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <p id="yoalam">
@@ -461,14 +517,14 @@ const Information7 = React.forwardRef((props, ref) => {
       </p>
 
       <img id="img-yoalam" src="assets/yohalam.png" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information8 = React.forwardRef((props, ref) => {
   return (
     <div className="Information8" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <div id="shekem-text">
@@ -488,14 +544,14 @@ const Information8 = React.forwardRef((props, ref) => {
         עם הפסקות משתנות
       </div>
       <img id="shekem-img" src="assets/caveret-icon.png" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information9 = React.forwardRef((props, ref) => {
   return (
     <div className="Information9" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <p className="header-base">תל נוף</p>
@@ -509,14 +565,14 @@ const Information9 = React.forwardRef((props, ref) => {
         בימי שני וחמישי יש מסדר במגורים ובחמישי יש מסדר במבנה ביה"ס
       </p>
       <p className="no-camera-text">חל איסור צילום בגבולות היחידה</p>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information10 = React.forwardRef((props, ref) => {
   return (
     <div className="Information10" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <p className="header-base">תל נוף</p>
@@ -538,14 +594,14 @@ const Information10 = React.forwardRef((props, ref) => {
         בימי ג' יש שחייה לילית: 20:30-22:00
       </p>
       <img id="pool" src="assets/pool.webp" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information11 = React.forwardRef((props, ref) => {
   return (
     <div className="Information11" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <br />
@@ -578,14 +634,14 @@ const Information11 = React.forwardRef((props, ref) => {
           18:00-19:30
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information12 = React.forwardRef((props, ref) => {
   return (
     <div className="Information12" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <p id="gym-text">
@@ -606,14 +662,14 @@ const Information12 = React.forwardRef((props, ref) => {
         7:00-22:00
       </p>
       <img id="gym-img" src="assets/gym.png" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information13 = React.forwardRef((props, ref) => {
   return (
     <div className="Information3" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <b className="header-base">פלמחים</b>
@@ -645,41 +701,41 @@ const Information13 = React.forwardRef((props, ref) => {
           6:00-10:00+18:00-22:00
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information14 = React.forwardRef((props, ref) => {
   return (
     <div className="Information4" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <b className="header-base">פלמחים</b>
-<br />
+      <br />
       <a
         className="link-driving"
         href="https://drive.google.com/file/d/1HV71YMXPuzIDkyg0U2kHOJWH-Mthy4-5/view"
-      >
+        target="_blank">
         קישורים לשאטלים נוסעים בפלמחים
       </a>
       <br />
       <img id="bus-img" src="assets/bus.png" />
       <br />
-<br />
+      <br />
       <div id="warning">
         <p id="warning-text">
           ניתן לקחת טרמפים לבסיס אך ורק בהצגת חוגר ושומר סף
         </p>
       </div>
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information15 = React.forwardRef((props, ref) => {
   return (
     <div className="Information9" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <p className="header-base">פלמחים</p>
@@ -688,14 +744,14 @@ const Information15 = React.forwardRef((props, ref) => {
       <img id="bin-icon" src="assets/bin.png" />
       <p id="bin-text">ביום חמישי מסדר בביס"ק ב13:00 במגורים בשעה משתנה</p>
       <p className="no-camera-text">חל איסור צילום בגבולות היחידה</p>
-       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information16 = React.forwardRef((props, ref) => {
   return (
     <div className="Information10" ref={ref}>
-       <button className="close-book" onClick={() => props.setShowBook(false)}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
       <p className="header-base">פלמחים</p>
@@ -716,7 +772,7 @@ const Information16 = React.forwardRef((props, ref) => {
       </p>
 
       <img id="pool" src="assets/pool.webp" />
- <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)}/>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
@@ -796,7 +852,7 @@ export default function MyBook(props) {
             number="2"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="רפואה"
@@ -804,7 +860,7 @@ export default function MyBook(props) {
             number="3"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
 
           <Page
@@ -813,7 +869,7 @@ export default function MyBook(props) {
             number="4"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="תורנויות"
@@ -821,7 +877,7 @@ export default function MyBook(props) {
             number="5"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="היסעים"
@@ -829,7 +885,7 @@ export default function MyBook(props) {
             number="6"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="היסעים"
@@ -837,7 +893,7 @@ export default function MyBook(props) {
             number="7"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header='ת"ש'
@@ -845,7 +901,7 @@ export default function MyBook(props) {
             number="8"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="טלפונים חשובים"
@@ -853,7 +909,7 @@ export default function MyBook(props) {
             number="9"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header='יוהל"ם'
@@ -861,7 +917,7 @@ export default function MyBook(props) {
             number="10"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header='שק"ם'
@@ -869,7 +925,7 @@ export default function MyBook(props) {
             book={book}
             number="11"
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="נהלי יחידה"
@@ -877,7 +933,7 @@ export default function MyBook(props) {
             number="12"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="נהלי יחידה"
@@ -885,7 +941,7 @@ export default function MyBook(props) {
             number="13"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="בריכה"
@@ -893,7 +949,7 @@ export default function MyBook(props) {
             number="14"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="בריכה"
@@ -901,15 +957,15 @@ export default function MyBook(props) {
             number="15"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header='חדר אוכל'
+            header="חדר אוכל"
             showPage={15}
             book={book}
             number="16"
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="חדר כושר"
@@ -917,7 +973,7 @@ export default function MyBook(props) {
             number="17"
             book={book}
             showMenu={false}
-            setShowBook = {props.setShowBook}
+            setShowBook={props.setShowBook}
           ></Page>
           <PageCover>
             <h2 className="the-end">הסוף</h2>

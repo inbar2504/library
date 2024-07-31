@@ -38,9 +38,11 @@ body {
   width: 85%;
 }
 #img-yoalam {
-  position: relative;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  width: 90%;
+  margin-top: -25%;
 }
 #shekem-img {
   width: 100vw;
@@ -53,10 +55,15 @@ body {
 #shekem-text {
   position: relative;
   text-align: center;
-  top: 5vh;
+  top: 2vh;
   font-size: 11vmin;
 }
-
+#book-1-example {
+  width: 60vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .cover {
   background-color: #2dbdbd;
 }
@@ -76,23 +83,23 @@ body {
 }
 .container-button-portal {
   width: 32vw;
-  height: 14vh;
+  height: 17vh;
   border: #ffffff00;
   background-color: #ffffff00;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  top: -15vh;
+  top: -21vh;
   z-index: 4;
 }
 .container-button-afnayot {
-  width: 31vw;
+  width: 20vw;
   height: 13vh;
   border: #ffffff00;
   background-color: #ffffff00;
   position: relative;
   left: 50%;
-  top: -15vh;
+  top: -17vh;
   transform: translateX(-50%);
 }
 .container-button-torim {
@@ -110,17 +117,25 @@ body {
   height: 16vh;
 }
 #portal-img {
-  width: 35vw;
-  height: 16vh;
-  z-index: 50;
+  width: 24vw;
+  height: 11vh;
+  margin: 20%;
 }
 #afnayot {
-  width: 35vw;
-  height: 16vh;
+  /* width: 35vw;
+  height: 16vh; */
+  width: 23vw;
+  height: 12vh;
+  margin-bottom: 10%;
 }
 #torim {
   width: 35vw;
   height: 16vh;
+  margin: 5%;
+}
+#zimun-logo {
+  width: 20vw;
+  margin: 22%;
 }
 .numbers-page {
   position: absolute;
@@ -135,6 +150,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 90vw;
+  font-size: 9vmin;
 }
 .header-page {
   font-size: 13vmin;
@@ -145,10 +161,15 @@ body {
   transform: translateX(-50%);
 }
 .imgs {
-  width: 35vw;
-  padding: 0.5vh;
+  width: 25vw;
   display: flex;
 }
+.medi {
+  font-size: 7vmin;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
 .shalishut-btns {
   border: #ffffff00;
   background-color: #ffffff00;
@@ -158,6 +179,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -7%;
 }
 .Information3 {
   display: flex;
@@ -175,9 +197,8 @@ body {
   margin-top: 2vh;
   font-size: 4vmax;
   text-align: center;
-  color: #865840;
-  animation: warningAnimation 4s ease forwards;
-  width: 90vw;
+  color: #865840;  
+  width: 80vw;
 }
 #warning-icon {
   width: 20%;
@@ -193,6 +214,7 @@ body {
   font-size: 8vmin;
   margin-top: -35px;
   text-align: center;
+  color: #ceae7f;
 }
 .p-width {
   width: 90vw;
@@ -236,29 +258,36 @@ body {
   font-size: 7vmin;
   margin: 15px;
 }
+.tash-header {
+  font-size: 9vmin;
+  margin-bottom: 1vw;
+}
 #private {
   position: relative;
-  padding: 10px;
+  padding: 2%;
   border: 2px solid #2dbdbd;
   font-size: 4vmax;
   font-family: "horev";
   background-color: #2dbdbd;
+  width: 33.3vw;
 }
 #economy {
   position: relative;
-  padding: 10px;
+  padding: 2%;
   border: 2px solid #2dbdbd;
   font-size: 4vmax;
   font-family: "horev";
   background-color: rgb(214 215 215);
+  width: 33.3vw;
 }
 #tash {
   position: relative;
-  padding: 10px;
+  padding: 2%;
   border: 2px solid #2dbdbd;
   font-size: 4vmax;
   font-family: "horev";
   background-color: rgb(214 215 215);
+  width: 33.3vw;
 }
 .text-toranuyot {
   font-size: 3.5vmax;
@@ -321,6 +350,18 @@ button {
   border: rgba(255, 255, 255, 0);
   font-size: 7vmin;
   font-family: "horev";
+  text-shadow: 0px 0px 40px #2dbdbd;
+}
+.page-number {
+  text-align: center;
+  margin-bottom: 7%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1vh;
+  font-size: xx-large;
+  color: #626363;
+
 }
 .dl1 {
   position: relative;
@@ -378,23 +419,11 @@ h1 {
     opacity: 1;
   }
 }
-@keyframes noCameraAnimation {
-  0% {
-    font-size: 11vmin;
-  }
-  50% {
-    font-size: 8vmin;
-  }
-  100% {
-    font-size: 11vmin;
-  }
-}
-
 .open-book {
   animation: upscaleAnimation 1s ease forwards;
 }
 #clothes-icon {
-  width: 20%;
+  width: 15%;
   /* text-align: center; */
   position: relative;
   left: 50%;
@@ -414,7 +443,7 @@ h1 {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 15%;
+  width: 14%;
 }
 #bin-text {
   position: relative;
@@ -433,10 +462,9 @@ h1 {
 .no-camera-text {
   position: relative;
   left: 50%;
-  font-size: 11vmin;
+  font-size: 9vmin;
   color: #865840;
   transform: translateX(-50%);
-  animation: noCameraAnimation 3s ease forwards;
   text-align: center;
   width: 80vw;
 }
@@ -452,7 +480,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   /* position: relative; */
-  width: 20%;
+  width: 18%;
   margin-top: 5%;
   filter: drop-shadow(0 0 0.75rem yellow);
 }
@@ -461,7 +489,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   /* position: relative; */
-  width: 25%;
+  width: 22%;
   margin-top: 5%;
   filter: drop-shadow(0 0 0.75rem orange);
 }
@@ -470,7 +498,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   /* position: relative; */
-  width: 17%;
+  width: 15%;
   margin-top: 5%;
   filter: drop-shadow(0 0 0.75rem black);
 }
@@ -493,7 +521,12 @@ h1 {
 }
 #school-icon {
   width: 20%;
-  margin: 15px;
+  
+  /* margin: 15px; */
+  position: relative;
+  left: 50%;
+  top: 10vw;
+  transform: translateX(-50%);
 }
 .Information11 {
   display: flex;
@@ -504,9 +537,9 @@ h1 {
 }
 #gym-img {
   /* margin-top: -6vh; */
-  width: 70vw;
+  width: 37vw;
   position: relative;
-  bottom: 10vh;
+  bottom: 2vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -547,10 +580,12 @@ Table {
 
 .copy-icon {
   position: relative;
-  width: 50vw;
+  width: 70vw;
   font-size: 7vmin;
   font-family: "horev";
   background-color: rgba(255, 255, 255, 0);
+  margin: -4%;
+  font-weight: 300;
 }
 .important-phones {
   font-size: 7vmin;

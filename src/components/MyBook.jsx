@@ -292,7 +292,7 @@ const Information2 = React.forwardRef((props, ref) => {
             <img
               className="imgs"
               id="portal-img"
-              src="public\assets\portal.webp"
+              src="assets/portal.webp"
               onClick={() => ""}
             />
             <button className="container-button-portal" type="button"></button>
@@ -643,7 +643,7 @@ const Information10 = React.forwardRef((props, ref) => {
         <br />
         בימי ג' יש שחייה לילית: 20:30-22:00
       </p>
-      <img id="pool" src="public\pool-icon.png" />
+      <img id="pool" src="assets/pool-icon.png" />
       <span className="page-number">{props.pageNum}</span>
 
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
@@ -715,7 +715,7 @@ const Information12 = React.forwardRef((props, ref) => {
         <br />
         7:00-22:00
       </p>
-      <img id="gym-img" src="public\assets\gym.png" />
+      <img id="gym-img" src="assets/gym.png" />
       <span className="page-number">{props.pageNum}</span>
 
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
@@ -834,7 +834,7 @@ const Information16 = React.forwardRef((props, ref) => {
         10:00-14:00, 15:00-19:00
       </p>
 
-      <img id="pool" src="public\pool-icon.png" />
+      <img id="pool" src="assets/pool-icon.png" />
       <span className="page-number">{props.pageNum}</span>
 
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />

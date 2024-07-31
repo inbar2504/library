@@ -59,7 +59,7 @@ body {
   font-size: 11vmin;
 }
 #book-1-example {
-  width: 60vw;
+  width: 50vw;
   position: relative;
   left: 50%;
   transform: translateX(-50%);

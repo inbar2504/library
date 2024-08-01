@@ -1,0 +1,129 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-size: 100% 100%;
+  overflow-y: hidden;
+  color: black;
+}
+
+#header-book {
+  width: 60vw;
+  font-size: 25vmin;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.btns1 {
+    background-color: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+    font-size: 7vmin;
+    font-family: "horev";
+    text-shadow: 0px 0px 40px #865840;
+  }
+.header-page {
+    font-size: 13vmin;
+    text-align: center;
+    width: 55vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.cover1 {
+    background-color: #865840;
+  }
+.page {
+    background-color: #d6d7d7;
+}
+Table {
+    font-size: 7.5vmin;
+    direction: rtl;
+    position: absolute;
+    top: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw !important;
+}
+.page-number {
+    text-align: center;
+    margin-bottom: 7%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1vh;
+    font-size: xx-large;
+    color: #626363;
+}
+#school-icon {
+    width: 20%;
+    position: relative;
+    left: 50%;
+    top: 10vw;
+    transform: translateX(-50%);
+  }
+#header-board1 {
+    margin-top: -2px;
+    text-align: center;
+    color: #865840;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    font-size: 9vmin;
+}
+.open-book {
+    animation: upscaleAnimation 1s ease forwards;
+  }
+.home-icon {
+    position: absolute !important;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 13vmin;
+    left: 3vw;
+    direction: ltr;
+    border: #ffffff00;
+    height: 10vh;
+    top: 85%;
+  }
+.close-book {
+  direction: rtl;
+  font-size: 8vmin;
+  position: absolute;
+  top: 3.5vh;
+  right: 83vw;
+  border: #ffffff00;
+  background-color: #ffffff00;
+}
+.book-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: scaleX(-1); */
+    /* transform: translateX(-50%); */
+    /* transform: rotateY(180deg); */
+  }
+.the-end {
+  font-size: 25vmin;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1vh;
+}
+@keyframes upscaleAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+  
+      transform: scale(1);
+    }
+  }

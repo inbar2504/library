@@ -58,12 +58,7 @@ body {
   top: 2vh;
   font-size: 11vmin;
 }
-#book-1-example {
-  width: 50vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 .cover {
   background-color: #2dbdbd;
 }
@@ -363,23 +358,22 @@ button {
   color: #626363;
 
 }
-.dl1 {
+/* .dl1 {
   position: relative;
   top: 0vh;
   left: -15%;
   direction: rtl;
   font-size: 4.5vmax;
   font-weight: lighter;
-}
-.dl2 {
+} */
+/* .dl2 {
   position: relative;
   top: -58vh;
   left: 15vw;
   direction: ltr;
   font-size: 4.5vmax;
-  /* margin-top: -20%; */
   font-weight: lighter;
-}
+} */
 h1 {
   font-size: 13vmin;
   text-align: center;

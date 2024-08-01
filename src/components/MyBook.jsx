@@ -1,10 +1,11 @@
 import React, { useRef, useState, Component } from "react";
 import HTMLFlipBook from "react-pageflip";
 import "./MyBook.css";
-import "intro.js/introjs.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import HomeIcon from "./HomeIcon";
 import { Event } from "@mui/icons-material";
+
+
 
 const PageCover = React.forwardRef((props, ref) => {
   return (
@@ -903,26 +904,26 @@ const Information16 = React.forwardRef((props, ref) => {
 export default function MyBook(props) {
   const book = useRef();
 
-  const [inputText, setInputElement] = useState("");
-  const [menu, setMenu] = useState([
-    "חדר כושר",
-    'חד"א',
-    "בריכה",
-    "נהלי יחידה",
-    'שק"ם',
-    'יוהל"ם',
-    "טלפונים חשובים",
-    'ת"ש',
-    "היסעים",
-    "תורנויות",
-    "רפואה",
-    "שלישות",
-  ]);
+  // const [inputText, setInputElement] = useState("");
+  // const [menu, setMenu] = useState([
+  //   "חדר כושר",
+  //   'חד"א',
+  //   "בריכה",
+  //   "נהלי יחידה",
+  //   'שק"ם',
+  //   'יוהל"ם',
+  //   "טלפונים חשובים",
+  //   'ת"ש',
+  //   "היסעים",
+  //   "תורנויות",
+  //   "רפואה",
+  //   "שלישות",
+  // ]);
   // const [text, setText] = useState("ここに表示されます。");
-  const printText = () => {
-    setText(inputText);
-    setInputElement("");
-  };
+  // const printText = () => {
+  //   setText(inputText);
+  //   setInputElement("");
+  // };
 
   // const cars = [
   //   { id: 1, brand: "שלישות" },
@@ -942,6 +943,7 @@ export default function MyBook(props) {
   //const menu=["חדר כושר",'חד"א',"בריכה","נהלי יחידה",'שק"ם','יוהל"ם',"טלפונים חשובים",'ת"ש',"היסעים","תורנויות","רפואה","שלישות"];
   return (
     <>
+    
       <div className="book-container">
         <HTMLFlipBook
           width={550}

@@ -327,8 +327,6 @@ const Information8 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      
-
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -339,8 +337,6 @@ const Information9 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
-
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -351,8 +347,6 @@ const Information10 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
-
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -363,7 +357,6 @@ const Information11 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );

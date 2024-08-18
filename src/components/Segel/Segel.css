@@ -24,7 +24,7 @@ body {
     border: rgba(255, 255, 255, 0);
     font-size: 7vmin;
     font-family: "horev";
-    text-shadow: 0px 0px 40px #865840;
+    text-shadow: 0px 0px 40px #ceae7c;
   }
 .header-page {
     font-size: 13vmin;
@@ -35,7 +35,7 @@ body {
     transform: translateX(-50%);
   }
 .cover5 {
-    background-color: #865840;
+    background-color: #ceae7c;
   }
 .page {
     background-color: #d6d7d7;
@@ -69,7 +69,7 @@ Table {
 #header-board5 {
     margin-top: -2px;
     text-align: center;
-    color: #865840;
+    color: #ceae7c;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -115,6 +115,43 @@ Table {
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 1vh;
+}
+#segel-app {
+  position: relative;
+}
+.sub-name {
+  font-size: 2.5vmax;
+  margin-top: -2px;
+  text-align: center;
+  margin: 0px;
+  margin-top: 10px;
+  padding: 1px;
+  letter-spacing: 0.1px;
+}
+#segel {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+.app-sub {
+  border: solid #ceae7f;
+  border-radius: 20px;
+  width: 20vw;
+  height: 10vh;
+  margin: 0.8%;
+
+}
+.img-apps {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 5%;
+
 }
 @keyframes upscaleAnimation {
     0% {

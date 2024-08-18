@@ -7,6 +7,7 @@ body {
   background-size: 100% 100%;
   overflow-y: hidden;
   color: black;
+  font-size: 2.5rem;
 }
 
 #header-book {
@@ -19,12 +20,12 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.btns5 {
+.btns6 {
     background-color: rgba(255, 255, 255, 0);
     border: rgba(255, 255, 255, 0);
     font-size: 7vmin;
     font-family: "horev";
-    text-shadow: 0px 0px 40px #865840;
+    text-shadow: 0px 0px 40px #6f5f57;
   }
 .header-page {
     font-size: 13vmin;
@@ -34,8 +35,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-.cover5 {
-    background-color: #865840;
+.cover6 {
+    background-color: #6f5f57;
   }
 .page {
     background-color: #d6d7d7;
@@ -66,10 +67,10 @@ Table {
     top: 10vw;
     transform: translateX(-50%);
   }
-#header-board5 {
+#header-board6 {
     margin-top: -2px;
     text-align: center;
-    color: #865840;
+    color: #6f5f57;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -114,6 +115,37 @@ Table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 1vh;
+}
+.text-p {
+  width: 80vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 5vh;
+  text-align: center;
+}
+.text-p1 {
+  font-size: 8vmin;
+  width: 80vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 5vh;
+  text-align: right;
+  direction: rtl;
+}
+.special-header {
+   background: url("pen-brushes.svg");
+  padding:  2px  25px;  
+}
+
+.images-specials {
+  width: 30%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 5vh;
   margin-top: 1vh;
 }
 @keyframes upscaleAnimation {

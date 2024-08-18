@@ -3,7 +3,10 @@ import "./App.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MyBook from "./components/MyBook";
+import Specials from "./components/specials/Specials";
 import InfoCommander from "./components/InfoCommander";
+import Segel from "./components/Segel/Segel";
+import Officer from "./components/Officer/Officer";
 
 export default function App() {
   const [showBook, setShowBook] = useState(false);
@@ -11,7 +14,6 @@ export default function App() {
   const bookClicked = (event) => {
     setComponentName(event.target.getAttribute("id"));
     setShowBook(!showBook);
-    console.log(componentName);
   };
 
   return (
@@ -81,18 +83,27 @@ export default function App() {
             src="assets/brown-img.png"
             onClick={bookClicked}
           />
-          <img className="books opacity-book" src="assets/blue-img.png" />
-          <img className="books opacity-book" src="assets/bezh-img.png" />
-          <img className="books opacity-book" src="assets/dark-img.png" />
+          <img
+            className="books"
+            id="book4"
+            onClick={bookClicked}
+            src="assets/blue-img.png"
+          />
+          <img
+            className="books"
+            id="book5"
+            onClick={bookClicked}
+            src="assets/bezh-img.png"
+          />
+          <img
+            className="books"
+            id="book6"
+            src="assets/dark-img.png"
+            onClick={bookClicked}
+          />
         </Carousel>
       ) : (
-        //   <img
-        //   onClick={bookClicked}
-        //   // id="book1"
-        //   id="book-1-example"
-        //   className="books"
-        //   src="assets/tuli-img.png"
-        // />
+
         " "
       )}
 
@@ -104,6 +115,21 @@ export default function App() {
       )}
       {showBook && componentName == "book2" ? (
         <InfoCommander setShowBook={setShowBook} />
+      ) : (
+        ""
+      )}
+      {showBook && componentName == "book4" ? (
+        <Officer setShowBook={setShowBook} />
+      ) : (
+        ""
+      )}
+      {showBook && componentName == "book5" ? (
+        <Segel setShowBook={setShowBook} />
+      ) : (
+        ""
+      )}
+      {showBook && componentName == "book6" ? (
+        <Specials setShowBook={setShowBook} />
       ) : (
         ""
       )}

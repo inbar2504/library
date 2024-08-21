@@ -9,7 +9,7 @@ import { Event } from "@mui/icons-material";
 
 const PageCover = React.forwardRef((props, ref) => {
   return (
-    <div className="cover1" ref={ref} data-density="hard">
+    <div className="cover8" ref={ref} data-density="hard">
       <div>
         <button className="close-book" onClick={() => props.setShowBook(false)}>
           ✖

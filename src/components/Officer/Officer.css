@@ -24,6 +24,7 @@ body {
   border: rgba(255, 255, 255, 0);
   font-size: 7vmin;
   font-family: "horev";
+  font-weight: bold;
   text-shadow: 0px 0px 40px #537c8e;
 }
 .header-page {
@@ -119,6 +120,105 @@ Table {
 #mivne-img {
   width: 100vw;
 }
+
+.lohama-info {
+  color: white;
+  font-size: 6.5vmin;
+  border-radius: 21px;
+  width: 95%;
+  text-align: center;
+  position: relative;
+  left: -5%;
+  top: 5vh;
+  margin-top: 6vh;
+  height: 7vh;
+  background-color: #537c8e;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  animation: movingAnimation 2s ease forwards;
+}
+.miun-info {
+  color: white;
+  font-size: 6.5vmin;
+  border-radius: 21px;
+  width: 95%;
+  text-align: center;
+  position: relative;
+  left: -5%;
+  top: 0vh;
+  margin-top: 1vh;
+  height: 5vh;
+  background-color: #537c8e;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+#level1 {
+  background-color: #537c8e;
+  animation: level1Animation 2s ease forwards;
+}
+#level2 {
+  background-color: #658b9b;
+  animation: level2Animation 2s ease forwards;
+}
+#level3 {
+  background-color: #7699a8;
+  animation: level3Animation 2s ease forwards;
+}
+#level4 {
+  background-color: #8babb9;
+  animation: level4Animation 2s ease forwards;
+}
+#level5 {
+  background-color: #a1bdc9;
+  animation: level5Animation 2s ease forwards;
+}
+#level6 {
+  background-color: #b3ccd6;
+  animation: level6Animation 2s ease forwards;
+}
+#level7 {
+  background-color: #b5cdd7;
+  animation: level7Animation 2s ease forwards;
+}
+#level8 {
+  background-color: #cfe0e7;
+  animation: level8Animation 2s ease forwards;
+}
+.text {
+  font-size: 6.5vmin;
+  direction: rtl;
+  width: 80vw;
+}
+.blue-text {
+  color: #537c8e;
+}
+#blue-background {
+  background-color: #537c8e;
+}
+.blue-background {
+  border: 3px solid #537c8e;
+  border-radius: 10px;
+  padding: 2px;
+}
+.text1 {
+  text-align: center;
+  font-size: 7vmin;
+  width: 80vw;
+
+}
+#kazhin-img {
+  width: 30%;
+}
 @keyframes upscaleAnimation {
   0% {
     opacity: 0;
@@ -128,5 +228,77 @@ Table {
     opacity: 1;
 
     transform: scale(1);
+  }
+}
+@keyframes movingAnimation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -5%
+  }
+}
+@keyframes level1Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -65%
+  }
+}
+@keyframes level2Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -55%
+  }
+}
+@keyframes level3Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -45%
+  }
+}
+@keyframes level4Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -35%
+  }
+}
+@keyframes level5Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -25%
+  }
+}
+@keyframes level6Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -17%
+  }
+}
+@keyframes level7Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -10%
+  }
+}
+@keyframes level8Animation {
+  0% {
+    left: -90%
+  }
+  100% {
+    left: -5%
   }
 }

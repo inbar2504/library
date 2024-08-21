@@ -20,17 +20,21 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@shoelace-style/shoelace": "^2.15.1",
     "3d-react-carousal": "^5.0.0",
+    "bootstrap": "^5.3.3",
     "intro.js-react": "^1.0.0",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.3.1",
     "react-multi-carousel": "^2.8.5",
     "react-native-anchor-carousel": "^4.0.1",
     "react-pageflip": "^2.0.3",
+    "react-responsive-carousel": "^3.2.23",
+    "reactjs-flip-card": "^2.0.3",
     "styled-components": "^6.1.11",
     "stylis": "^4.3.2",
     "stylis-plugin-rtl": "^2.1.1",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.9"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

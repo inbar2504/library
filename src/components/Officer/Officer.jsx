@@ -22,11 +22,10 @@ const Page = React.forwardRef((props, ref) => {
   const heading = ["כל המידע במרחק נגיעה", ""];
   const bodyy = [
     ["סוגי קצונה", "2"],
-    ["מתאם לקצונה", "3"],
-    ["תהליך מיון לקצונה", "4"],
-    ["וועדת חריגים", "5"],
-    ['וועדת ערעורים', "6"],
-    ["קצונת מתנדבים", "7"],
+    ["תהליך מיון לקצונה", "3"],
+    ["וועדת חריגים", "4"],
+    ['וועדת ערעורים', "5"],
+    ["קצונת מתנדבים", "6"],
   ];
   const book = props.book;
   return (
@@ -149,7 +148,11 @@ const Information1 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      
+      <div>
+        <div className="lohama-info">קצונת לוחמה: מגמת להב + השלמת גפן/השלמת אתגר </div>
+        <div className="lohama-info">קצונת תומכלים: מגמת מעוז / נחשון + השלמה חיילית לפי המערך</div>
+        <div className="lohama-info">קצונת מתנדבים: מגמת נבו / השלמה חיילית לפי המערך</div>
+      </div>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -161,7 +164,16 @@ const Information2 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-
+      <div>
+        <div className="miun-info" id="level1">שלב 1 - כנס הסברה</div>
+        <div className="miun-info" id="level2">שלב 2 -שאלונים ממוחשבים</div>
+        <div className="miun-info" id="level3">שלב 3 - סדרת מיון</div>
+        <div className="miun-info" id="level4">שלב 4 - וועדה חיילית</div>
+        <div className="miun-info" id="level5">שלב 5 -סדרת יסודות</div>
+        <div className="miun-info" id="level6">שלב 6 - וועדת צרכים</div>
+        <div className="miun-info" id="level7">שלב 7 - לבה"ד</div>
+        <div className="miun-info" id="level8">שלב 8 - השלמה</div>
+      </div>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -172,7 +184,14 @@ const Information3 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-
+      <div className="text">
+        <p>אל וועדה זו עולים כל החיילים אשר לא מתאימים לקצונה מבחינת המתאם,פז"ם וכל מי שלא עבר שלב בחינה כלשהו אשר מעוניין לנסות ולעברו בשנית</p>
+        <span id="blue-background">בכדי לעלות לוועדה נדרש-</span>
+        <p className="blue-text">חווד מפקד ישיר + מפקד גף/מפקד יחידה</p>
+        <p className="blue-text">סיכום רעיון סא"ל - מפקד היחידה</p>
+        <p className="blue-text">מכתב אישי של החיל- החייל מפרט על רצונות לצאת לקצונה</p>
+        <p className="blue-text">טופס 102 מהמרפאה - אישור יציאה לקק"צ מבחינה רפואית (מתנדבים)</p>
+      </div>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -183,7 +202,13 @@ const Information4 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
+      <div className="text">
+        <p>וועדה זו מיועדת למי שעבר את שלבי המיון אך בוועדה החיילית הוחלט כי אינו מתאים לצאת לקצונה או נפל אחד השלבים שלאחר היום עיון. על מנת לעלות לוועדה נדרש-</p>
+        <p className="blue-background">סיכום ראיון סא"ל + חווד מפקד יחידה</p>
+        <p className="blue-background">מכתב אישי-במכתב זה החייל יפרט על רצונו לצאת לקצונה</p>
 
+      </div>
+      
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -191,11 +216,15 @@ const Information4 = React.forwardRef((props, ref) => {
 
 const Information5 = React.forwardRef((props, ref) => {
   return (
-    <div className="Information5" ref={ref}>
+    <div className="Information4" ref={ref}>
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-
+      <div className="text1">
+        <span>על מנת שחייל יתחיל את תהליך המיון לקצונה עליו להפיק טופס 102 שרק רופא אזרחי ומדור מתנדבים יכולים להפיק<br /> על מנת להפיק טופס זה נדרש מהחייל להביא אישור מרופאו האזרחי על כשירותו לבצע קק"צ או מצבו הרפואי<br /> בנוסף לכך על החייל לכתוב מכתב אישי בו הוא מביע את רצונו לצאת לקצונה. לאחר מכן נדרש להעביר את אישורים אלו למדור לקצונה</span>
+        <br /><br /><br />
+      <img id="kazhin-img" src="./assets/kazhin.png"/>
+      </div>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -265,7 +294,7 @@ export default function Officer(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="מתאם לקצונה"
+            header="תהליך מיון לקצונה"
             showPage={2}
             number="3"
             book={book}
@@ -274,7 +303,7 @@ export default function Officer(props) {
           ></Page>
 
           <Page
-            header="תהליך מיון לקצונה"
+            header="וועדת חריגים"
             showPage={3}
             number="4"
             book={book}
@@ -282,7 +311,7 @@ export default function Officer(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="וועדת חריגים"
+            header="וועדת ערעורים"
             showPage={4}
             number="5"
             book={book}
@@ -290,17 +319,9 @@ export default function Officer(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="וועדת ערעורים"
+            header="קצונת מתנדבים"
             showPage={5}
             number="6"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
-          <Page
-            header="קצונת מתנדבים"
-            showPage={6}
-            number="7"
             book={book}
             showMenu={false}
             setShowBook={props.setShowBook}

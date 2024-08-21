@@ -3,7 +3,7 @@ import "./App.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MyBook from "./components/MyBook";
-import Specials from "../components/Specials/Specials";
+import Specials from "./components/Specials/Specials";
 import InfoCommander from "./components/InfoCommander";
 import Segel from "./components/Segel/Segel";
 import Officer from "./components/Officer/Officer";

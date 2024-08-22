@@ -192,7 +192,7 @@ body {
   margin-top: 2vh;
   font-size: 4vmax;
   text-align: center;
-  color: #865840;  
+  color: #865840;
   width: 80vw;
 }
 #warning-icon {
@@ -357,7 +357,6 @@ button {
   bottom: -1vh;
   font-size: xx-large;
   color: #626363;
-
 }
 h1 {
   font-size: 13vmin;
@@ -506,9 +505,9 @@ h1 {
   width: 30vw;
 }
 .special-header1 {
-  background: url("./assets/pen-brushes1.svg");
- padding: 2px 25px; 
- width: 90vw; 
+  background: url("assets/pen-brushes1.svg");
+  padding: 2px 25px;
+  width: 90vw;
 }
 #school-icon {
   width: 20%;
@@ -564,7 +563,7 @@ Table {
   top: 1vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 85vw !important;
+  width: 77vw !important;
   /* margin-right: 7vw; */
 }
 tbody {

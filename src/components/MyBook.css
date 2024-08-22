@@ -564,7 +564,7 @@ Table {
   top: 1vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 70vw !important;
+  width: 85vw !important;
   /* margin-right: 7vw; */
 }
 tbody {

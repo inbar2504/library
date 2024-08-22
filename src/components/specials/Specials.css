@@ -48,7 +48,7 @@ Table {
   top: 12vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 70vw !important;
+  width: 85vw !important;
 }
 .page-number {
   text-align: center;

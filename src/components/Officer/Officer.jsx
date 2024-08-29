@@ -153,6 +153,7 @@ const Information1 = React.forwardRef((props, ref) => {
         <div className="lohama-info">קצונת תומכלים: מגמת מעוז / נחשון + השלמה חיילית לפי המערך</div>
         <div className="lohama-info">קצונת מתנדבים: מגמת נבו / השלמה חיילית לפי המערך</div>
       </div>
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -174,6 +175,7 @@ const Information2 = React.forwardRef((props, ref) => {
         <div className="miun-info" id="level7">שלב 7 - לבה"ד</div>
         <div className="miun-info" id="level8">שלב 8 - השלמה</div>
       </div>
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -192,6 +194,7 @@ const Information3 = React.forwardRef((props, ref) => {
         <p className="blue-text">מכתב אישי של החיל- החייל מפרט על רצונות לצאת לקצונה</p>
         <p className="blue-text">טופס 102 מהמרפאה - אישור יציאה לקק"צ מבחינה רפואית (מתנדבים)</p>
       </div>
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -208,7 +211,7 @@ const Information4 = React.forwardRef((props, ref) => {
         <p className="blue-background">מכתב אישי-במכתב זה החייל יפרט על רצונו לצאת לקצונה</p>
 
       </div>
-      
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -225,6 +228,7 @@ const Information5 = React.forwardRef((props, ref) => {
         <br /><br /><br />
       <img id="kazhin-img" src="./assets/kazhin.png"/>
       </div>
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -235,7 +239,7 @@ const Information6 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
@@ -246,7 +250,7 @@ const Information7 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );

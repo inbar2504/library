@@ -20,19 +20,12 @@ const PageCover = React.forwardRef((props, ref) => {
 const Page = React.forwardRef((props, ref) => {
   const heading = ["כל המידע במרחק נגיעה", ""];
   const bodyy = [
-    ["מיוחדת אישית", "2"],
-    ["מיוחדת לצורך לימודים", "3"],
-    ["מיוחדת מעבר דירה", "4"],
-    ['מיוחדת ביקור קרוב מחו"ל', "5"],
-    ["מיוחדת ביקור קרוב בחול (בודד)", "6"],
-    ["מיוחדת כלכלית", "7"],
-    ["אישורים נדרשים למיוחדת כלכלית", "8"],
-    ["זכאויות לחייל הנשוי", "9"],
-    ["מיוחדות לחייל הנשוי","10"],
-    ['תשמ"ש לחייל הנשוי',"11"],
-    ['מתי תיכנס כל הטבה',"12"],
-    ["ימי סידורים לחיילי סדיר","13"],
-    ["בתי החייל","14"]
+    ["מיוחדות", "2"],
+    ["הטבות לחייל הנשוי", "3"],
+    ["ימי סידורים", "7"],
+    ['בתי חייל', "8"],
+    ["חיילים בודדים", "9"],
+    ["אפשרויות סיוע כלכלי", "10"],
   ];
   const book = props.book;
   return (
@@ -54,7 +47,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 2 ? (
-          <Information2
+          <Information8
             book={book}
             pageNum={"3"}
             setShowBook={props.setShowBook}
@@ -63,7 +56,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 3 ? (
-          <Information3
+          <Information9
             book={book}
             pageNum={"4"}
             setShowBook={props.setShowBook}
@@ -72,7 +65,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 4 ? (
-          <Information4
+          <Information10
             book={book}
             pageNum={"5"}
             setShowBook={props.setShowBook}
@@ -81,7 +74,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 5 ? (
-          <Information5
+          <Information11
             book={book}
             pageNum={"6"}
             setShowBook={props.setShowBook}
@@ -90,7 +83,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 6 ? (
-          <Information6
+          <Information12
             book={book}
             pageNum={"7"}
             setShowBook={props.setShowBook}
@@ -99,7 +92,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 7 ? (
-          <Information7
+          <Information13
             book={book}
             pageNum={"8"}
             setShowBook={props.setShowBook}
@@ -108,7 +101,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 8 ? (
-          <Information8
+          <Information2
             book={book}
             pageNum={"9"}
             setShowBook={props.setShowBook}
@@ -117,7 +110,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 9 ? (
-          <Information9
+          <Information3
             book={book}
             pageNum={"10"}
             setShowBook={props.setShowBook}
@@ -125,8 +118,8 @@ const Page = React.forwardRef((props, ref) => {
         ) : (
           ""
         )}
-         {props.showPage === 10 ? (
-          <Information10
+        {props.showPage === 10 ? (
+          <Information4
             book={book}
             pageNum={"11"}
             setShowBook={props.setShowBook}
@@ -134,8 +127,8 @@ const Page = React.forwardRef((props, ref) => {
         ) : (
           ""
         )}
-         {props.showPage === 11 ? (
-          <Information11
+        {props.showPage === 11 ? (
+          <Information5
             book={book}
             pageNum={"12"}
             setShowBook={props.setShowBook}
@@ -144,7 +137,7 @@ const Page = React.forwardRef((props, ref) => {
           ""
         )}
         {props.showPage === 12 ? (
-          <Information12
+          <Information6
             book={book}
             pageNum={"13"}
             setShowBook={props.setShowBook}
@@ -152,8 +145,8 @@ const Page = React.forwardRef((props, ref) => {
         ) : (
           ""
         )}
-          {props.showPage === 13 ? (
-          <Information13
+        {props.showPage === 13 ? (
+          <Information7
             book={book}
             pageNum={"14"}
             setShowBook={props.setShowBook}
@@ -203,43 +196,281 @@ const TableRow = React.forwardRef((props, ref) => {
 });
 const Information1 = React.forwardRef((props, ref) => {
   const book = props.book;
-
+  function btnzClick(props) {
+    console.log(props);
+    document.getElementById(`number3-${props}`).style.display = "block";
+  }
   return (
     <div ref={ref}>
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <p className="text-p">חופשה לאור בעיה אישית/סוציאלית/חריגה</p>
-      <p className="text-p">
-        <span className="special-header">משך זכאות</span>
+      <div className="btns-div">
+        <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט</span>
+        <button className="btnz" id="one" onClick={() => btnzClick("one")}>
+         מיוחדת אישית
+        </button>
+        <button className="btnz" id="two" onClick={() => btnzClick("two")}>
+          מיוחדת לצורך לימודים
+        </button>
+        <button className="btnz" id="three" onClick={() => btnzClick("three")}>
+         מיוחדת מעבר דירה
+        </button>
+        <button className="btnz" id="four" onClick={() => btnzClick("four")}>
+          מיוחדת ביקור קרוב מחו"ל
+        </button>
+        <button className="btnz" id="five" onClick={() => btnzClick("five")}>
+          מיוחדת ביקור קרוב בחו"ל (בודד)
+        </button>
+        <button className="btnz" id="six" onClick={() => btnzClick("six")}>
+     מיוחדת כלכלית
+        </button>
+        <button className="btnz" id="seven" onClick={() => btnzClick("seven")}>
+         אישורים נדרשים למיוחדת כלכלית
+        </button>
+      </div>
+
+      <div id="number3-one">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("number3-one").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+<br />
+        <b>חופשה לאור בעיה אישית/סוציאלית/חריגה</b>
         <br />
-        עד 40 ימים בשנת שירות (אותו סל של כלכלית)
-      </p>
+        <span>
+          <br />
+          <span className="special-header"> משך זכאות</span>
+         
+          <br />
+          עד 40 ימים בשנת שירות (אותו סל של כלכלית)
+          <img
+            className="images-specials"
+            src="assets/specials/behaviour.png"
+          />
+        </span>
+      </div>
 
-      <img className="images-specials" src="assets/specials/behaviour.png" />
+      <div id="number3-two">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("number3-two").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+
+        <br />
+        <b> חופשה לאור היערכות לבחינת בגרות/פסיכומטרי/בחינות קבלה נוספות</b>
+        <br />
+        <span>
+          <br />
+         <span className="special-header"> משך זכאות</span>
+          <br />
+          עד ארבעה ימים עבור כל בחינה
+          <br />
+          <img className="images-specials" src="assets/specials/test.png" />
+        </span>
+      </div>
+
+      <div id="number3-three">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("number3-three").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <b>חופשה לחייל בודד/נשוי אשר עובר/מחפש דירה</b>
+        <br />
+        <span>
+        <br />
+        <span className="special-header">
+          משך זכאות
+          </span>
+          <br />
+          יומיים בשנת שירות
+          <br />
+          <img className="images-specials" src="assets/specials/open-box.png" />
+        </span>
+      </div>
+
+      <div id="number3-four">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("number3-four").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <b>חופשה לחייל אשר אחד מהוריו /בן זוגו מתגורר בחו"ל</b>
+        <br />
+        <span>
+        <br />
+          <span className="special-header">
+          משך זכאות
+          </span>
+          <br />
+          עשרים ואחת ימים במצטבר בשנת שירות
+          <br />
+          <img
+            className="images-specials"
+            src="assets/specials/ticket-flight.png"
+          />
+          <br />
+        </span>
+      </div>
+
+      <div id="number3-five">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("number3-five").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <b>חופשה לחייל בודד אשר קרוביו מדרגה ראשונה מתוררים בחו"ל</b>
+        <br />
+        <span>
+        <br />
+        <span className="special-header">
+          משך זכאות
+        </span>
+          <br />
+          שלושים ימים במצטבר בשנת שירות
+          <br />
+          <img className="images-specials" src="assets/specials/airplane.png" />
+        </span>
+      </div>
+
+      <div id="number3-six">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("number3-six").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+
+        <br />
+        <b>חופשה לאור מצוקה כלכלית על מנת שהחייל יצא לעבוד</b>
+        <br />
+        <span>
+        <br />
+        <span className="special-header">
+          משך זכאות
+          </span>
+          <br />
+          עד 40 ימים בשנת שירות (אותו סל של אישית)
+          <br />
+          <img
+            className="images-specials"
+            src="assets/specials/financial.png"
+          />
+        </span>
+      </div>
+
+      <div id="number3-seven">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("number3-seven").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <b>אישורים נדרשים למיוחדת כלכלית</b>
+        <br />
+        <span>
+          <ul className="text-p1">
+            <li>עובר ושב של החייל וההורים</li>
+            <li>פירוט כרטיסי אשראי של החייל וההורים-שלושה חודשים אחרונים </li>
+            <li>מכתב אישי</li>
+            <li>אישור מפקד</li>
+            <li>אישורים על חובות</li>
+          </ul>
+        </span>
+      </div>
+
       <span className="page-number">{props.pageNum}</span>
-
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information2 = React.forwardRef((props, ref) => {
   const book = props.book;
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
   return (
     <div ref={ref}>
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-
-      <p className="text-p">
-        חופשה לאור היערכות לבחינת בגרות/פסיכומטרי/בחינות קבלה נוספות
-      </p>
-      <p className="text-p">
-        <span className="special-header">משך זכאות</span>
-        <br />
-        עד ארבעה ימים עבור כל בחינה
-      </p>
-      <img className="images-specials" src="assets/specials/test.png" />
+     
+      <p className="center-header brown-header">ישנם שלושה סוגי בודדים</p>
+        <span className="rtl-text">
+          <ul className="text-p4">
+            <li>
+             <span className="brown-header"> בודד מובהק</span>
+              -החייל יעלה ארצה בגפו והוריו שוהים בחו"ל/נמצאים בשליחות בחו"ל/ירדו מהארץ
+              </li>
+            <li> 
+              <span className="brown-header"> בודד יתום</span>
+              </li>
+            <li>
+              <span className="brown-header"> 
+              בודד חסר עורף משפחתי
+              </span>
+              -הוכח כי קיים נתק בלתי ניתן לגישור בין החייל להוריו/הוכח כי החייל הורחק מהמסגרת המשפחתית וכי משפחת החייל אינה מספקת לו תמיכה כלכלית ומקום לינה נאות/מקרים חריגים
+              </li>
+          </ul>
+          <button className="pitronot-diur" onClick={() => btnzClick("pitronot-diur")}>פתרונות דיור-לחץ לפירוט</button>
+          <button className="pitronot-diur" onClick={() => btnzClick("financial")}>ההטבות הכלכליות הניתנות לחיילים בודדים-לחץ לפירוט</button>
+          <div id="pitronot-diur">
+            <button className="close-window" onClick={() => (document.getElementById("pitronot-diur").style.display = "none")} >✖</button>
+            <br />
+            <span>
+                לינה בבית החייל
+                <br />
+                אימוץ בקיבוץ
+                <br />
+                דירת אל"ח
+                <br />
+                שכ"ד
+                <br />
+                במידה והחייל שוכר דירה, יקבל החזרי שכר דירה בגובה 1300 ש"ח לכל היותר בהצגת חוזה למשרד הת"ש
+            </span>
+            </div>
+            <div id="financial">
+            <button className="close-window" onClick={() => (document.getElementById("financial").style.display = "none")} >✖</button>
+            <br /><br />
+            <span>
+                <span>תוספת כספית חודשית לשכר-מענק חודשי ע"ס 540 ש"ח</span>
+                <br /><br />
+                <span>שי לחג-תווי קנייה בסך 500 ש"ח (בפסח ובראש השנה)</span>
+                <br /><br />
+                <span>יום סידורים פעם בחודשיים-עפ"י הגדרה.יום סידורים פעם בחודש-נתון לשיקול דעת המפקד</span>
+                <br /><br />
+                <span>זכאות כספית בסך 150 ש"ח מדי חודש לרכישת מזון ברשתות שונות, בהצגת חוגר</span>
+                <br /><br />
+               <span>ניתן להגיש בקשה למימון כרטיס טיסה מלא לביקור הורים בחו"ל (לבודד חע"מ הבקשה תיחשב כחריגה)</span>
+            </span>
+            </div>
+        </span>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -252,13 +483,6 @@ const Information3 = React.forwardRef((props, ref) => {
         ✖
       </button>
 
-      <p className="text-p">חופשה לחייל בודד/נשוי אשר עובר/מחפש דירה</p>
-      <p className="text-p">
-        <span className="special-header">משך זכאות</span>
-        <br />
-        יומיים בשנת שירות
-      </p>
-      <img className="images-specials" src="assets/specials/open-box.png" />
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -271,16 +495,6 @@ const Information4 = React.forwardRef((props, ref) => {
         ✖
       </button>
 
-      <p className="text-p">חופשה לחייל אשר אחד מהוריו /בן זוגו מתגורר בחו"ל</p>
-      <p className="text-p">
-        <span className="special-header">משך זכאות</span>
-        <br />
-        עשרים ואחת ימים במצטבר בשנת שירות
-      </p>
-      <img
-        className="images-specials"
-        src="assets/specials/ticket-flight.png"
-      />
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -294,15 +508,6 @@ const Information5 = React.forwardRef((props, ref) => {
         ✖
       </button>
 
-      <p className="text-p">
-        חופשה לחייל בודד אשר קרוביו מדרגה ראשונה מתוררים בחו"ל
-      </p>
-      <p className="text-p">
-        <span className="special-header">משך זכאות</span>
-        <br />
-        שלושים ימים במצטבר בשנת שירות
-      </p>
-      <img className="images-specials" src="assets/specials/airplane.png" />
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -315,13 +520,6 @@ const Information6 = React.forwardRef((props, ref) => {
         ✖
       </button>
 
-      <p className="text-p">חופשה לאור מצוקה כלכלית על מנת שהחייל יצא לעבוד</p>
-      <p className="text-p">
-        <span className="special-header">משך זכאות</span>
-        <br />
-        עד 40 ימים בשנת שירות (אותו סל של אישית)
-      </p>
-      <img className="images-specials" src="assets/specials/financial.png" />
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -335,13 +533,7 @@ const Information7 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <ul className="text-p1">
-        <li>עובר ושב של החייל וההורים</li>
-        <li>פירוט כרטיסי אשראי של החייל וההורים-שלושה חודשים אחרונים </li>
-        <li>מכתב אישי</li>
-        <li>אישור מפקד</li>
-        <li>אישורים על חובות</li>
-      </ul>
+     
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -358,12 +550,9 @@ const Information8 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
-  
+
       <div className="btns-div">
-        <span className="font-header2">
-          בלחיצה על הכפתורים יופיע פירוט
-        </span>
+        <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט</span>
         <button className="btnz" id="one" onClick={() => btnzClick("one")}>
           מענק נישואין
         </button>
@@ -515,10 +704,7 @@ const Information8 = React.forwardRef((props, ref) => {
         <br />
         <b>-ראיון או"ם-</b>
         <br />
-        <span>
-        ראיון או"ם יובצע על ידי המפקד של החייל אחת לחצי שנה
-       
-        </span>
+        <span>ראיון או"ם יובצע על ידי המפקד של החייל אחת לחצי שנה</span>
       </div>
       <div id="num-eight">
         <button
@@ -532,10 +718,7 @@ const Information8 = React.forwardRef((props, ref) => {
         <br />
         <b>-הת"ש 3-</b>
         <br />
-        <span>
-      אב לילד יהיה זכאי להת"ש 3 מטכלי
-       
-        </span>
+        <span>אב לילד יהיה זכאי להת"ש 3 מטכלי</span>
       </div>
       <div id="num-nine">
         <button
@@ -550,8 +733,8 @@ const Information8 = React.forwardRef((props, ref) => {
         <b>-תווים לחוגר-</b>
         <br />
         <span>
-     חייל נשוי, זכאי תשמ"ש ברמ"פ א ומעלה, יהיה זכאי לתווים אוטומטים בחוגר ע"ס 150 ש"ח
-       
+          חייל נשוי, זכאי תשמ"ש ברמ"פ א ומעלה, יהיה זכאי לתווים אוטומטים בחוגר
+          ע"ס 150 ש"ח
         </span>
       </div>
       <span className="page-number">{props.pageNum}</span>
@@ -569,12 +752,9 @@ const Information9 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
 
       <div className="btns-div">
-        <span className="font-header2">
-          בלחיצה על הכפתורים יופיע פירוט
-        </span>
+        <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט</span>
         <button className="btnz" id="one" onClick={() => btnzClick("one")}>
           מיוחדת נישואין
         </button>
@@ -585,10 +765,10 @@ const Information9 = React.forwardRef((props, ref) => {
           מיוחדת לידה/ אימוץ
         </button>
         <button className="btnz" id="four" onClick={() => btnzClick("four")}>
-         מיוחדת טיפולי פוריות
+          מיוחדת טיפולי פוריות
         </button>
         <button className="btnz" id="five" onClick={() => btnzClick("five")}>
-         מיוחדת מחלת ילד
+          מיוחדת מחלת ילד
         </button>
         <button className="btnz" id="six" onClick={() => btnzClick("six")}>
           מיוחדת מחלת ילד -ממארת
@@ -610,9 +790,9 @@ const Information9 = React.forwardRef((props, ref) => {
         <span>
           10 ימים
           <br />
-       ניתן לנצל חודש לפני מועד הנישואין ועד עשרה ימים אחריו
-       <br />
-       יום הנישואין יהיה כחלק מעשרת ימי המיוחדת
+          ניתן לנצל חודש לפני מועד הנישואין ועד עשרה ימים אחריו
+          <br />
+          יום הנישואין יהיה כחלק מעשרת ימי המיוחדת
         </span>
       </div>
 
@@ -631,7 +811,7 @@ const Information9 = React.forwardRef((props, ref) => {
         <span>
           7 ימים
           <br />
-         לצורך בדיקות וטיפולים הקשורים להריון של בת הזוג
+          לצורך בדיקות וטיפולים הקשורים להריון של בת הזוג
         </span>
       </div>
 
@@ -648,9 +828,9 @@ const Information9 = React.forwardRef((props, ref) => {
         <b>-מיוחדת לידה/אימוץ-</b>
         <br />
         <span>
-         8 ימים
+          8 ימים
           <br />
-         ניתן לנצל חודש טרם מועד הלידההמיועד ועד חודש לאחר הלידה
+          ניתן לנצל חודש טרם מועד הלידההמיועד ועד חודש לאחר הלידה
         </span>
       </div>
 
@@ -667,7 +847,7 @@ const Information9 = React.forwardRef((props, ref) => {
         <b>-מיוחדת טיפולי פוריות-</b>
         <br />
         <span>
-         חייל זכאי לחופשה של 12 ימים בשנה וחיילת זכאית לחופשה של 16 ימים בשנה
+          חייל זכאי לחופשה של 12 ימים בשנה וחיילת זכאית לחופשה של 16 ימים בשנה
         </span>
       </div>
 
@@ -684,9 +864,10 @@ const Information9 = React.forwardRef((props, ref) => {
         <b>-מיוחדת מחלת ילד-</b>
         <br />
         <span>
-         8 ימים
-         <br />
-         ימי המיוחדת מתחדשים בכל שנת שירות והימים שלא נוצלו אינם נצברים לשנה הבאה
+          8 ימים
+          <br />
+          ימי המיוחדת מתחדשים בכל שנת שירות והימים שלא נוצלו אינם נצברים לשנה
+          הבאה
         </span>
       </div>
       <div id="number-six">
@@ -702,15 +883,13 @@ const Information9 = React.forwardRef((props, ref) => {
         <b>-מיוחדת מחלת ילד (ממארת)-</b>
         <br />
         <span>
-         60 ימים
+          60 ימים
           <br />
-         30 ימים ראשונים באישור רס"ן
-         ו30 ימים נוספים באישור סא"ל
-         ימי המיוחדת מתחדשים בכל שנת שירות
-
+          30 ימים ראשונים באישור רס"ן ו30 ימים נוספים באישור סא"ל ימי המיוחדת
+          מתחדשים בכל שנת שירות
         </span>
       </div>
-      
+
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -718,43 +897,47 @@ const Information9 = React.forwardRef((props, ref) => {
 });
 const Information10 = React.forwardRef((props, ref) => {
   const book = props.book;
-  
+
   return (
     <div ref={ref}>
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      
-     
+
       <ul className="text-p2">
-      <span id="center-p">קריטריונים:</span>
+        <span id="center-p">קריטריונים:</span>
         <li>
-        אשת חייל סטודנטית וסיימה שנה א' טרם נישואיה לחייל. עליה ללמוד לפחות 16 שעות שבועיות במוסד המוכר ע"י המועצה להשכלה גבוהה
+          אשת חייל סטודנטית וסיימה שנה א' טרם נישואיה לחייל. עליה ללמוד לפחות 16
+          שעות שבועיות במוסד המוכר ע"י המועצה להשכלה גבוהה
+        </li>
+        <li>אשת חייל עובדת-על אשת החייל לעבוד 160 שעות ולהרוויח 5000 ש"ח</li>
+        <li>אשת חייל חיילת או בשירות לאומי או בשנת שירות או במכינה</li>
+        <li>
+          אשת חייל תלמידת תיכון או קורס מקצועי- עליה ללמוד כל יום בשבוע שבע שעות
+          לפחות או 35 שעות שבועיות
         </li>
         <li>
-          אשת חייל עובדת-על אשת החייל לעבוד 160 שעות ולהרוויח 5000 ש"ח
+          אשת חייל עולה חדשה- מידה ונמצאת בארץ 3 שנים לכל היותר ולומדת עברית
+          באולפן או לימוד מקצועי
         </li>
-        <li>
-אשת חייל חיילת או בשירות לאומי או בשנת שירות או במכינה
-        </li>
-        <li>
-          אשת חייל תלמידת תיכון או קורס מקצועי- עליה ללמוד כל יום בשבוע שבע שעות לפחות או 35 שעות שבועיות
-        </li>
-        <li>
-          אשת חייל עולה חדשה- מידה ונמצאת בארץ 3 שנים לכל היותר ולומדת עברית באולפן או לימוד מקצועי
-        </li>
-        <li>
-          אשת חייל בהריון משבוע 14 ועד הלידה
-        </li>
+        <li>אשת חייל בהריון משבוע 14 ועד הלידה</li>
         <li>
           <span>
-          <button id="dgeshim-btn" onClick={() => {document.getElementById("dgeshim").style.display="block"}}> לחץ לדגשים נוספים</button>
+            <button
+              id="dgeshim-btn"
+              onClick={() => {
+                document.getElementById("dgeshim").style.display = "block";
+              }}
+            >
+              {" "}
+              לחץ לדגשים נוספים
+            </button>
           </span>
         </li>
       </ul>
-      
+
       <div id="dgeshim">
-      <button
+        <button
           className="close-window"
           onClick={() =>
             (document.getElementById("dgeshim").style.display = "none")
@@ -763,17 +946,24 @@ const Information10 = React.forwardRef((props, ref) => {
           ✖
         </button>
         <span>
-          <br/>
-       <ul id="text-p3">
-        <li className="li1">הזכאות לתשמ"ש אינה אוטומטית והינה מותנית בעמידה בקריטריונים ומבחני הכנסות</li>
-        <br/>
-        <li className="li1">יש לדווח על כלל החשבונות, ההכנסות והנכסים הנמצאים ברשות בני הזוג</li>
-        <br/>
-        <li className="li1">יש לדווח על כל שינוי בהכנסות גם לאחר שאושרה הבקשה!</li>
-       </ul>
+          <br />
+          <ul id="text-p3">
+            <li className="li1">
+              הזכאות לתשמ"ש אינה אוטומטית והינה מותנית בעמידה בקריטריונים ומבחני
+              הכנסות
+            </li>
+            <br />
+            <li className="li1">
+              יש לדווח על כלל החשבונות, ההכנסות והנכסים הנמצאים ברשות בני הזוג
+            </li>
+            <br />
+            <li className="li1">
+              יש לדווח על כל שינוי בהכנסות גם לאחר שאושרה הבקשה!
+            </li>
+          </ul>
         </span>
       </div>
-     
+
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -789,26 +979,23 @@ const Information11 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
 
       <div className="btns-div">
-        <span className="font-header2">
-          בלחיצה על הכפתורים יופיע פירוט
-        </span>
+        <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט</span>
         <button className="btnz" id="one" onClick={() => btnzClick("one")}>
-         מענק בזק/מענק חד פעמי
+          מענק בזק/מענק חד פעמי
         </button>
         <button className="btnz" id="two" onClick={() => btnzClick("two")}>
-         תק"ח
+          תק"ח
         </button>
         <button className="btnz" id="three" onClick={() => btnzClick("three")}>
           תו בזק
         </button>
         <button className="btnz" id="four" onClick={() => btnzClick("four")}>
-        מענק מתמשך
+          מענק מתמשך
         </button>
         <button className="btnz" id="five" onClick={() => btnzClick("five")}>
-         קרן סיוע פיקודית, מענק
+          קרן סיוע פיקודית, מענק
         </button>
       </div>
 
@@ -825,9 +1012,9 @@ const Information11 = React.forwardRef((props, ref) => {
         <b>-מענק בזק-</b>
         <br />
         <span>
-         לפני גזירת שכר, 72 שעות ממועד ההזנה
-         <br />
-         שבוע לאחר גזירת שכר (חמישה ימי עסקים ממועד הגזירה)-72 שעות ממועד ההזנה
+          לפני גזירת שכר, 72 שעות ממועד ההזנה
+          <br />
+          שבוע לאחר גזירת שכר (חמישה ימי עסקים ממועד הגזירה)-72 שעות ממועד ההזנה
         </span>
       </div>
 
@@ -844,11 +1031,11 @@ const Information11 = React.forwardRef((props, ref) => {
         <b>-תק"ח-</b>
         <br />
         <span>
-          במידה והוזן לפניי 19:00, תיכנס בבוקר למחרת 
+          במידה והוזן לפניי 19:00, תיכנס בבוקר למחרת
           <br />
-        הטבה שהוזננה לאחר 17:00, תיכנס תוך 72 שעות
-        <br />
-        *כל זכאות תקפה למשך 60 ימים
+          הטבה שהוזננה לאחר 17:00, תיכנס תוך 72 שעות
+          <br />
+          *כל זכאות תקפה למשך 60 ימים
         </span>
       </div>
 
@@ -865,7 +1052,8 @@ const Information11 = React.forwardRef((props, ref) => {
         <b>-תו בזק-</b>
         <br />
         <span>
-         בסמכות קת"ש יחידה קוד עד 300 ש"ח שתקף ל20 דקות בלבד בטלפון האישי של החייל. את הטבה זו יש לתעד תחת בקשת תו ידני תוך 72 שעות ממתן ההטבה
+          בסמכות קת"ש יחידה קוד עד 300 ש"ח שתקף ל20 דקות בלבד בטלפון האישי של
+          החייל. את הטבה זו יש לתעד תחת בקשת תו ידני תוך 72 שעות ממתן ההטבה
         </span>
       </div>
 
@@ -882,7 +1070,9 @@ const Information11 = React.forwardRef((props, ref) => {
         <b>-מענק מתמשך-</b>
         <br />
         <span>
-        במידה והוזן לפניי ה15 לחודש יכנס יום לאחר מועד ההזנה ושאר החודשים ב1 לחודש. במידה והוזן לאחר ה15 לחודש ייכנס בראשון לחודש העוקב וכך הלאה בהתאם למספר החודשים שאושרו. כל זכאות תקפה למימוש למשך 60 ימים מלאים
+          במידה והוזן לפניי ה15 לחודש יכנס יום לאחר מועד ההזנה ושאר החודשים ב1
+          לחודש. במידה והוזן לאחר ה15 לחודש ייכנס בראשון לחודש העוקב וכך הלאה
+          בהתאם למספר החודשים שאושרו. כל זכאות תקפה למימוש למשך 60 ימים מלאים
         </span>
       </div>
 
@@ -898,9 +1088,7 @@ const Information11 = React.forwardRef((props, ref) => {
         <br />
         <b>-קרן סיוע פיקודית-</b>
         <br />
-        <span>
-             תוך חמישה ימי עסקים     
-        </span>
+        <span>תוך חמישה ימי עסקים</span>
       </div>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
@@ -918,27 +1106,30 @@ const Information12 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
 
       <div className="btns-div">
-        <span className="smaller-text">החייל זכאי ל24 שעות בבית לצורך סידורים אישיים. החייל ישתחרר לביתו ביום שלפני יום הסידורים ויחזור ביום שאחריו</span>
-        <span className="font-header1">
-          בלחיצה על הכפתורים יופיע פירוט
+        <span className="smaller-text">
+          החייל זכאי ל24 שעות בבית לצורך סידורים אישיים. החייל ישתחרר לביתו ביום
+          שלפני יום הסידורים ויחזור ביום שאחריו
         </span>
+        <span className="font-header1">בלחיצה על הכפתורים יופיע פירוט</span>
         <button className="btnz" onClick={() => btnzClick("one")}>
-         חיילים מפונים
+          חיילים מפונים
         </button>
-        <button className="btnz"onClick={() => btnzClick("two")}>
-        חיילים בודדים
+        <button className="btnz" onClick={() => btnzClick("two")}>
+          חיילים בודדים
         </button>
         <button className="btnz" onClick={() => btnzClick("three")}>
-        חייל נשוי/ידוע בציבור
+          חייל נשוי/ידוע בציבור
         </button>
         <button className="btnz" onClick={() => btnzClick("four")}>
-       חייל נשוי/ ידוע בציבור + ילד
+          חייל נשוי/ ידוע בציבור + ילד
         </button>
         <br />
-    <span className="smaller-text">על המפקדים קיימת החובה להוציא את החיילים ליום סידורים למעט בתקופת לחימה וכוננות מבצעית גבוהה, וכן במקרים פרטניים</span>
+        <span className="smaller-text">
+          על המפקדים קיימת החובה להוציא את החיילים ליום סידורים למעט בתקופת
+          לחימה וכוננות מבצעית גבוהה, וכן במקרים פרטניים
+        </span>
       </div>
 
       <div id="number1-one">
@@ -953,9 +1144,7 @@ const Information12 = React.forwardRef((props, ref) => {
         <br />
         <b>-חיילים מפונים-</b>
         <br /> <br />
-        <span>
-        עד להגדרה אחרת, זכאים ליום סידורים אחת לחודש
-        </span>
+        <span>עד להגדרה אחרת, זכאים ליום סידורים אחת לחודש</span>
       </div>
 
       <div id="number1-two">
@@ -970,9 +1159,7 @@ const Information12 = React.forwardRef((props, ref) => {
         <br />
         <b>-חיילים בודדים-</b>
         <br /> <br />
-        <span>
-         זכאים ליום סידורים אחת לחודשיים, ללא שינוי בהנחיות
-        </span>
+        <span>זכאים ליום סידורים אחת לחודשיים, ללא שינוי בהנחיות</span>
       </div>
 
       <div id="number1-three">
@@ -987,9 +1174,7 @@ const Information12 = React.forwardRef((props, ref) => {
         <br />
         <b>-חייל נשוי/ידוע בציבור-</b>
         <br /> <br />
-        <span>
-       אשר משרת ביחידה סגורה זכאי ליום סידורים אחת לחודשיים
-        </span>
+        <span>אשר משרת ביחידה סגורה זכאי ליום סידורים אחת לחודשיים</span>
       </div>
 
       <div id="number1-four">
@@ -1004,13 +1189,9 @@ const Information12 = React.forwardRef((props, ref) => {
         <br />
         <b>-חייל נשוי/ידוע בציבור + ילד-</b>
         <br /> <br />
-        <span>
-      זכאי ליום סידורים אחתלחודשיים ללא תלות ברמת הפעילות
-        </span>
+        <span>זכאי ליום סידורים אחתלחודשיים ללא תלות ברמת הפעילות</span>
       </div>
 
-      
-  
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -1027,60 +1208,58 @@ const Information13 = React.forwardRef((props, ref) => {
         ✖
       </button>
       <table className="table-soldier">
-  <tr>
-    <th className="td">בית החייל</th>
-    <th className="td">כתובת</th>
-    <th className="td">מספר טלפון</th>
-  </tr>
-  <tr>
-    <td className="td">אילת</td>
-    <td className="td">בית השיטה 4</td>
-    <td className="td">0722702150</td>
-  </tr>
-  <tr>
-    <td className="td">קריית שמונה-מלון צפון</td>
-    <td className="td">שד' תל חי 94</td>
-    <td className="td">0722702285</td>
-  </tr>
-  <tr>
-    <td className="td">באר שבע</td>
-    <td className="td">בית לחם 2</td>
-    <td className="td">072-2702150</td>
-  </tr>
-  <tr>
-    <td className="td">טבריה</td>
-    <td className="td">גולני 12</td>
-    <td className="td">0722702180</td>
-  </tr>
-  <tr>
-    <td className="td">חיפה</td>
-    <td className="td">שד' בן גוריון 15</td>
-    <td className="td">0722702170</td>
-  </tr>
-  <tr>
-    <td className="td">תל אביב-בית השריון</td>
-    <td className="td">לוחמי גליפולי 51</td>
-    <td className="td">0722702230</td>
-  </tr>
-  <tr>
-    <td className="td">ירושלים</td>
-    <td className="td">האלוף דוד שאלתיאל 3</td>
-    <td className="td">0722702258</td>
-  </tr>
-  <tr>
-    <td className="td">רמת גן</td>
-    <td className="td">הרא"ה 8</td>
-    <td className="td">0722702283</td>
-  </tr>
-  <tr>
-    <td className="td">רמת גן</td>
-    <td className="td">רוקח 121</td>
-    <td className="td">0722702278</td>
-  </tr>
-</table>
+        <tr>
+          <th className="td">בית החייל</th>
+          <th className="td">כתובת</th>
+          <th className="td">מספר טלפון</th>
+        </tr>
+        <tr>
+          <td className="td">אילת</td>
+          <td className="td">בית השיטה 4</td>
+          <td className="td">0722702150</td>
+        </tr>
+        <tr>
+          <td className="td">קריית שמונה-מלון צפון</td>
+          <td className="td">שד' תל חי 94</td>
+          <td className="td">0722702285</td>
+        </tr>
+        <tr>
+          <td className="td">באר שבע</td>
+          <td className="td">בית לחם 2</td>
+          <td className="td">072-2702150</td>
+        </tr>
+        <tr>
+          <td className="td">טבריה</td>
+          <td className="td">גולני 12</td>
+          <td className="td">0722702180</td>
+        </tr>
+        <tr>
+          <td className="td">חיפה</td>
+          <td className="td">שד' בן גוריון 15</td>
+          <td className="td">0722702170</td>
+        </tr>
+        <tr>
+          <td className="td">תל אביב-בית השריון</td>
+          <td className="td">לוחמי גליפולי 51</td>
+          <td className="td">0722702230</td>
+        </tr>
+        <tr>
+          <td className="td">ירושלים</td>
+          <td className="td">האלוף דוד שאלתיאל 3</td>
+          <td className="td">0722702258</td>
+        </tr>
+        <tr>
+          <td className="td">רמת גן</td>
+          <td className="td">הרא"ה 8</td>
+          <td className="td">0722702283</td>
+        </tr>
+        <tr>
+          <td className="td">רמת גן</td>
+          <td className="td">רוקח 121</td>
+          <td className="td">0722702278</td>
+        </tr>
+      </table>
 
-      
-  
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -1120,7 +1299,7 @@ export default function Specials(props) {
             showMenu={true}
           ></Page>
           <Page
-            header="מיוחדת אישית"
+            header="מיוחדות"
             showPage={1}
             number="2"
             book={book}
@@ -1128,16 +1307,15 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="מיוחדת לצורך לימודים"
+            header="זכאויות לחייל הנשוי"
             showPage={2}
             number="3"
             book={book}
             showMenu={false}
             setShowBook={props.setShowBook}
           ></Page>
-
           <Page
-            header="מיוחדת מעבר דירה"
+            header="מיוחדות לחייל הנשוי"
             showPage={3}
             number="4"
             book={book}
@@ -1145,7 +1323,7 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header='מיוחדת ביקור קרוב מחו"ל'
+            header='תשמ"ש לחייל הנשוי'
             showPage={4}
             number="5"
             book={book}
@@ -1153,7 +1331,7 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header='מיוחדת ביקור קרוב בחו"ל (בודד)'
+            header="הטבות ומענקים"
             showPage={5}
             number="6"
             book={book}
@@ -1161,7 +1339,7 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="מיוחדת כלכלית"
+            header="ימי סידורים"
             showPage={6}
             number="7"
             book={book}
@@ -1169,7 +1347,7 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="אישורים נדרשים למיוחדת כלכלית"
+            header="בתי חייל"
             showPage={7}
             number="8"
             book={book}
@@ -1177,7 +1355,7 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="זכאויות לחייל הנשוי"
+            header="חיילים בודדים"
             showPage={8}
             number="9"
             book={book}
@@ -1185,41 +1363,9 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="מיוחדות לחייל הנשוי"
+            header="הלוואות"
             showPage={9}
             number="10"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
-           <Page
-            header='תשמ"ש לחייל הנשוי'
-            showPage={10}
-            number="11"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
-           <Page
-            header="מתי תיכנס כל הטבה"
-            showPage={11}
-            number="12"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
-          <Page
-            header='ימי סידורים לחיילי סדיר'
-            showPage={12}
-            number="13"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
-           <Page
-            header="בתי החייל"
-            showPage={13}
-            number="14"
             book={book}
             showMenu={false}
             setShowBook={props.setShowBook}

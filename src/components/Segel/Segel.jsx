@@ -226,7 +226,7 @@ const Information2 = React.forwardRef((props, ref) => {
             קייטנת קיץ
           </button>    
           <button className="app-sub1 z3" onClick={() => btnzClick("n3")}>
-            מלגות לילדי משרתי הקבע
+            מלגות לילדים
           </button>  
           <button className="app-sub1 z4" onClick={() => btnzClick("n4")}>
             החזרי נסיעות
@@ -241,7 +241,7 @@ const Information2 = React.forwardRef((props, ref) => {
             שי ליולדת
           </button>  
           <button className="app-sub1 z4" onClick={() => btnzClick("n8")}>
-            שי לילד/ה העולה לכיתה א
+            שי לילד בכיתה א
           </button>  
           <button className="app-sub1 z1" onClick={() => btnzClick("n9")}>
             נופש בזכאות

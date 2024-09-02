@@ -1170,7 +1170,7 @@ const Information10 = React.forwardRef((props, ref) => {
         ✖
       </button>
 
-      <ul className="text-p2">
+      <ul className="text-p5">
         <span id="center-p">קריטריונים:</span>
         <li>
           אשת חייל סטודנטית וסיימה שנה א' טרם נישואיה לחייל. עליה ללמוד לפחות 16

@@ -333,13 +333,13 @@ li::marker {
   animation: zAnimation 1s ease forwards;
 }
 .z2 {
-  animation: zAnimation 2s ease forwards;
+  animation: zAnimation 2.5s ease forwards;
 }
 .z3 {
-  animation: zAnimation 3s ease forwards;
+  animation: zAnimation 4s ease forwards;
 }
 .z4 {
-  animation: zAnimation 4s ease forwards;
+  animation: zAnimation 5.5s ease forwards;
 }
 @keyframes upscaleAnimation {
     0% {

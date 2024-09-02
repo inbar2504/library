@@ -136,13 +136,13 @@ Table {
   text-align: right;
   direction: rtl;
 }
-.text-p1 {
-  font-size: 8vmin;
+.text-p5 {
+  font-size: 6.5vmin;
   width: 80vw;
   position: relative;
-  left: 30%;
+  left: 50%;
   transform: translate(-50%);
-  margin-top: 5vh;
+  margin-top: -5vh;
   text-align: right;
   direction: rtl;
 }
@@ -170,6 +170,7 @@ Table {
   text-align: center;
   color: #6f5f57;
   font-size: 8vmin;
+
 }
 .images-specials {
   width: 25%;
@@ -198,7 +199,7 @@ li::marker {
   justify-content: center;
   align-items: center;
   background-color: #6f5f57;
-  width: 55vw;
+  width: 65vw;
   text-align: center;
   font-size: 7vmin;
   border-radius: 30px;

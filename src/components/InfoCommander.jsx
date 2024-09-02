@@ -43,7 +43,7 @@ const Page = React.forwardRef((props, ref) => {
       <h1 class="header-page">{props.header}</h1>
       <div>
         {props.showMenu ? (
-          <Table heading={heading} bodyy={bodyy} book={book} />
+          <Table heading={heading} bodyy={bodyy} book={book} setShowBook={props.setShowBook}/>
         ) : (
           ""
         )}
@@ -201,18 +201,24 @@ const Table = React.forwardRef((props, ref) => {
   const bodyy = props.bodyy;
 
   return (
-    <table>
-      <thead>
-        <tr id="header-board1">{heading}</tr>
-        <br />
-        <br />
-      </thead>
-      <tbody>
-        {bodyy.map((rowContent, rowID) => (
-          <TableRow rowContent={rowContent} key={rowID} book={props.book} />
-        ))}
-      </tbody>
-    </table>
+    <div>
+    <button className="close-book" onClick={() => props.setShowBook(false)}>
+        ✖
+      </button>
+        <table>
+          <thead>
+            <tr id="header-board1">{heading}</tr>
+            <br />
+            <br />
+          </thead>
+          <tbody>
+            {bodyy.map((rowContent, rowID) => (
+              <TableRow rowContent={rowContent} key={rowID} book={props.book} />
+            ))}
+          </tbody>
+      </table>
+    </div>
+   
   );
 });
 const TableRow = React.forwardRef((props, ref) => {
@@ -454,6 +460,7 @@ export default function InfoCommander(props) {
             number="1"
             book={book}
             showMenu={true}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="שלישות"

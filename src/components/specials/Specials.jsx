@@ -23,9 +23,11 @@ const Page = React.forwardRef((props, ref) => {
     ["מיוחדות", "2"],
     ["הטבות לחייל הנשוי", "3"],
     ["ימי סידורים", "7"],
-    ['בתי חייל', "8"],
+    ["בתי חייל", "8"],
     ["חיילים בודדים", "9"],
     ["אפשרויות סיוע כלכלי", "10"],
+    ["תשלומי משפחה", "11"],
+    ["בקשות סיוע", "12"],
   ];
   const book = props.book;
   return (
@@ -33,7 +35,7 @@ const Page = React.forwardRef((props, ref) => {
       <h1 class="header-page">{props.header}</h1>
       <div>
         {props.showMenu ? (
-          <Table heading={heading} bodyy={bodyy} book={book} />
+          <Table heading={heading} bodyy={bodyy} book={book} setShowBook={props.setShowBook}/>
         ) : (
           ""
         )}
@@ -163,6 +165,10 @@ const Table = React.forwardRef((props, ref) => {
   const bodyy = props.bodyy;
 
   return (
+    <div>
+ <button className="close-book" onClick={() => props.setShowBook(false)}>
+    ✖
+  </button>
     <table>
       <thead>
         <tr id="header-board6">{heading}</tr>
@@ -175,6 +181,8 @@ const Table = React.forwardRef((props, ref) => {
         ))}
       </tbody>
     </table>
+    </div>
+   
   );
 });
 const TableRow = React.forwardRef((props, ref) => {
@@ -197,7 +205,6 @@ const TableRow = React.forwardRef((props, ref) => {
 const Information1 = React.forwardRef((props, ref) => {
   const book = props.book;
   function btnzClick(props) {
-    console.log(props);
     document.getElementById(`number3-${props}`).style.display = "block";
   }
   return (
@@ -208,13 +215,13 @@ const Information1 = React.forwardRef((props, ref) => {
       <div className="btns-div">
         <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט</span>
         <button className="btnz" id="one" onClick={() => btnzClick("one")}>
-         מיוחדת אישית
+          מיוחדת אישית
         </button>
         <button className="btnz" id="two" onClick={() => btnzClick("two")}>
           מיוחדת לצורך לימודים
         </button>
         <button className="btnz" id="three" onClick={() => btnzClick("three")}>
-         מיוחדת מעבר דירה
+          מיוחדת מעבר דירה
         </button>
         <button className="btnz" id="four" onClick={() => btnzClick("four")}>
           מיוחדת ביקור קרוב מחו"ל
@@ -223,10 +230,10 @@ const Information1 = React.forwardRef((props, ref) => {
           מיוחדת ביקור קרוב בחו"ל (בודד)
         </button>
         <button className="btnz" id="six" onClick={() => btnzClick("six")}>
-     מיוחדת כלכלית
+          מיוחדת כלכלית
         </button>
         <button className="btnz" id="seven" onClick={() => btnzClick("seven")}>
-         אישורים נדרשים למיוחדת כלכלית
+          אישורים נדרשים למיוחדת כלכלית
         </button>
       </div>
 
@@ -239,13 +246,12 @@ const Information1 = React.forwardRef((props, ref) => {
         >
           ✖
         </button>
-<br />
+        <br />
         <b>חופשה לאור בעיה אישית/סוציאלית/חריגה</b>
         <br />
         <span>
           <br />
           <span className="special-header"> משך זכאות</span>
-         
           <br />
           עד 40 ימים בשנת שירות (אותו סל של כלכלית)
           <img
@@ -270,7 +276,7 @@ const Information1 = React.forwardRef((props, ref) => {
         <br />
         <span>
           <br />
-         <span className="special-header"> משך זכאות</span>
+          <span className="special-header"> משך זכאות</span>
           <br />
           עד ארבעה ימים עבור כל בחינה
           <br />
@@ -291,10 +297,8 @@ const Information1 = React.forwardRef((props, ref) => {
         <b>חופשה לחייל בודד/נשוי אשר עובר/מחפש דירה</b>
         <br />
         <span>
-        <br />
-        <span className="special-header">
-          משך זכאות
-          </span>
+          <br />
+          <span className="special-header">משך זכאות</span>
           <br />
           יומיים בשנת שירות
           <br />
@@ -315,10 +319,8 @@ const Information1 = React.forwardRef((props, ref) => {
         <b>חופשה לחייל אשר אחד מהוריו /בן זוגו מתגורר בחו"ל</b>
         <br />
         <span>
-        <br />
-          <span className="special-header">
-          משך זכאות
-          </span>
+          <br />
+          <span className="special-header">משך זכאות</span>
           <br />
           עשרים ואחת ימים במצטבר בשנת שירות
           <br />
@@ -343,10 +345,8 @@ const Information1 = React.forwardRef((props, ref) => {
         <b>חופשה לחייל בודד אשר קרוביו מדרגה ראשונה מתוררים בחו"ל</b>
         <br />
         <span>
-        <br />
-        <span className="special-header">
-          משך זכאות
-        </span>
+          <br />
+          <span className="special-header">משך זכאות</span>
           <br />
           שלושים ימים במצטבר בשנת שירות
           <br />
@@ -368,10 +368,8 @@ const Information1 = React.forwardRef((props, ref) => {
         <b>חופשה לאור מצוקה כלכלית על מנת שהחייל יצא לעבוד</b>
         <br />
         <span>
-        <br />
-        <span className="special-header">
-          משך זכאות
-          </span>
+          <br />
+          <span className="special-header">משך זכאות</span>
           <br />
           עד 40 ימים בשנת שירות (אותו סל של אישית)
           <br />
@@ -420,81 +418,291 @@ const Information2 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
+
       <p className="center-header brown-header">ישנם שלושה סוגי בודדים</p>
-        <span className="rtl-text">
-          <ul className="text-p4">
-            <li>
-             <span className="brown-header"> בודד מובהק</span>
-              -החייל יעלה ארצה בגפו והוריו שוהים בחו"ל/נמצאים בשליחות בחו"ל/ירדו מהארץ
-              </li>
-            <li> 
-              <span className="brown-header"> בודד יתום</span>
-              </li>
-            <li>
-              <span className="brown-header"> 
-              בודד חסר עורף משפחתי
-              </span>
-              -הוכח כי קיים נתק בלתי ניתן לגישור בין החייל להוריו/הוכח כי החייל הורחק מהמסגרת המשפחתית וכי משפחת החייל אינה מספקת לו תמיכה כלכלית ומקום לינה נאות/מקרים חריגים
-              </li>
-          </ul>
-          <button className="pitronot-diur" onClick={() => btnzClick("pitronot-diur")}>פתרונות דיור-לחץ לפירוט</button>
-          <button className="pitronot-diur" onClick={() => btnzClick("financial")}>ההטבות הכלכליות הניתנות לחיילים בודדים-לחץ לפירוט</button>
-          <div id="pitronot-diur">
-            <button className="close-window" onClick={() => (document.getElementById("pitronot-diur").style.display = "none")} >✖</button>
+      <span className="rtl-text">
+        <ul className="text-p4">
+          <li>
+            <span className="brown-header"> בודד מובהק</span>
+            -החייל יעלה ארצה בגפו והוריו שוהים בחו"ל/נמצאים בשליחות בחו"ל/ירדו
+            מהארץ
+          </li>
+          <li>
+            <span className="brown-header"> בודד יתום</span>
+          </li>
+          <li>
+            <span className="brown-header">בודד חסר עורף משפחתי</span>
+            -הוכח כי קיים נתק בלתי ניתן לגישור בין החייל להוריו/הוכח כי החייל
+            הורחק מהמסגרת המשפחתית וכי משפחת החייל אינה מספקת לו תמיכה כלכלית
+            ומקום לינה נאות/מקרים חריגים
+          </li>
+        </ul>
+        <button
+          className="pitronot-diur"
+          onClick={() => btnzClick("pitronot-diur")}
+        >
+          פתרונות דיור-לחץ לפירוט
+        </button>
+        <button
+          className="pitronot-diur"
+          onClick={() => btnzClick("financial")}
+        >
+          ההטבות הכלכליות הניתנות לחיילים בודדים-לחץ לפירוט
+        </button>
+        <div id="pitronot-diur">
+          <button
+            className="close-window"
+            onClick={() =>
+              (document.getElementById("pitronot-diur").style.display = "none")
+            }
+          >
+            ✖
+          </button>
+          <br />
+          <span>
+            לינה בבית החייל
+            <br />
+            אימוץ בקיבוץ
+            <br />
+            דירת אל"ח
+            <br />
+            שכ"ד
+            <br />
+            במידה והחייל שוכר דירה, יקבל החזרי שכר דירה בגובה 1300 ש"ח לכל היותר
+            בהצגת חוזה למשרד הת"ש
+          </span>
+        </div>
+        <div id="financial">
+          <button
+            className="close-window"
+            onClick={() =>
+              (document.getElementById("financial").style.display = "none")
+            }
+          >
+            ✖
+          </button>
+          <br />
+          <br />
+          <span>
+            <span>תוספת כספית חודשית לשכר-מענק חודשי ע"ס 540 ש"ח</span>
+            <br />
+            <br />
+            <span>שי לחג-תווי קנייה בסך 500 ש"ח (בפסח ובראש השנה)</span>
+            <br />
             <br />
             <span>
-                לינה בבית החייל
-                <br />
-                אימוץ בקיבוץ
-                <br />
-                דירת אל"ח
-                <br />
-                שכ"ד
-                <br />
-                במידה והחייל שוכר דירה, יקבל החזרי שכר דירה בגובה 1300 ש"ח לכל היותר בהצגת חוזה למשרד הת"ש
+              יום סידורים פעם בחודשיים-עפ"י הגדרה.יום סידורים פעם בחודש-נתון
+              לשיקול דעת המפקד
             </span>
-            </div>
-            <div id="financial">
-            <button className="close-window" onClick={() => (document.getElementById("financial").style.display = "none")} >✖</button>
-            <br /><br />
+            <br />
+            <br />
             <span>
-                <span>תוספת כספית חודשית לשכר-מענק חודשי ע"ס 540 ש"ח</span>
-                <br /><br />
-                <span>שי לחג-תווי קנייה בסך 500 ש"ח (בפסח ובראש השנה)</span>
-                <br /><br />
-                <span>יום סידורים פעם בחודשיים-עפ"י הגדרה.יום סידורים פעם בחודש-נתון לשיקול דעת המפקד</span>
-                <br /><br />
-                <span>זכאות כספית בסך 150 ש"ח מדי חודש לרכישת מזון ברשתות שונות, בהצגת חוגר</span>
-                <br /><br />
-               <span>ניתן להגיש בקשה למימון כרטיס טיסה מלא לביקור הורים בחו"ל (לבודד חע"מ הבקשה תיחשב כחריגה)</span>
+              זכאות כספית בסך 150 ש"ח מדי חודש לרכישת מזון ברשתות שונות, בהצגת
+              חוגר
             </span>
-            </div>
-        </span>
+            <br />
+            <br />
+            <span>
+              ניתן להגיש בקשה למימון כרטיס טיסה מלא לביקור הורים בחו"ל (לבודד
+              חע"מ הבקשה תיחשב כחריגה)
+            </span>
+          </span>
+        </div>
+      </span>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information3 = React.forwardRef((props, ref) => {
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
   return (
     <div ref={ref}>
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
+      <div className="btns-div">
+        <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט</span>
+        <button className="btnz" onClick={() => btnzClick("maut")}>
+          מהות הטבה
+        </button>
+        <button className="btnz" onClick={() => btnzClick("zacaim")}>
+          זכאים
+        </button>
+        <button className="btnz" onClick={() => btnzClick("bakashot")}>
+          בקשות נוספות
+        </button>
+        <button className="btnz" onClick={() => btnzClick("aka")}>
+          מענק אכ"א חריג
+        </button>
+      </div>
 
+      <div id="maut">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("maut").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <span>
+          מתן סכום כספי בגובה מרבי של 1200 ש"ח
+          <br />
+          החזר ההלוואה יורד ממשכורותו של החייל
+        </span>
+      </div>
+
+      <div id="zacaim">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("zacaim").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <span>
+          כאשר חייל מעלה בעיה כלכלית אשר נובעת מנסיבות לא מוצדקות לדוגמא: חובות
+          לרשת סלולארית,דוח חנייה ועוד
+          <br />
+          לאחר נבחנו עבורו כל ערוצי הסיוע הכלכליים האחרים ,במידת האפשר. בנוסף,
+          יש להתחשב ביתרת שירותו בשירות חובה לצורך חישוב יכולת החזר (שיעורי
+          התשלומים)
+        </span>
+      </div>
+      <div id="bakashot">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("bakashot").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <span>
+          עזרה בסעד משפטי, טיפול שיניים פרוטטי, סיוע במימון כרטיס טיסה לביקור
+          הורים, הלנות בבית החייל מטעמי פרט
+        </span>
+      </div>
+      <div id="aka">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("aka").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <span>
+          בקשות אלו ניתן להגיש דרך סגל הת"ש ישירות למרכז לשירות הפרט באכ"א, לאחר
+          מיצוי כלל האפשרויות במסגרת חיל האוויר
+        </span>
+      </div>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
 const Information4 = React.forwardRef((props, ref) => {
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
   return (
     <div ref={ref}>
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
 
+      <p id="tashmash">
+        חוקת התשמ"ש נועדה להבטיח את קיומן המינימאלי של משפחות החיילים הנזקקות
+        לכך. חיילים זכאים לבקש תשמ"ש עבור הוריהם או במידה ונשואים עבור נשותיהם,
+        באם הורים עבור ילדיהם
+        <br />
+     <ul>
+      <li> קביעת הזכאות תתתבצע על בסיס מבחן הכנסות</li>
+      <li> סכום התשמ"ש נע בין 171 ש"ח עד 4,502 ש"ח</li>
+     </ul>
+      </p>
+      <div className="btns-div">
+        <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט</span>
+        {/* <span className="font-header2"> הטבות כספיות עבור חיילים זכאי תשמ"ש</span> */}
+       
+        <button className="btnz" onClick={() => btnzClick("month")}>
+         מענק חודשי
+        </button>
+        <button className="btnz" onClick={() => btnzClick("last")}>
+         תווי קנייה מתמשכים
+        </button>
+        <button className="btnz" onClick={() => btnzClick("holiday")}>
+          תווי חג
+        </button>
+        <button className="btnz" onClick={() => btnzClick("financy")}>
+          דמי כלכלה 
+        </button>
+      </div>
+      <div id="month">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("month").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+
+        <span>
+          בגובה 88-200 ש"ח (תשמ"ש הורים) כנגזרת לרמ"פ
+        </span>
+      </div>
+      <div id="last">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("last").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+
+        <span>
+         לזכאי תשמ"ש הורים בכל רמות הפעילות או זכאי תשמ"ש נשוי ברמ"פ א' וא'+, קיימת זכאות כספית קבועה לרכישת מוצרי מזון בסך 150 ש"ח למימוש ברשתות קנייה שונות בהצגת תעודת חוגר
+        </span>
+      </div>
+      <div id="holiday">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("holiday").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+
+        <span>
+        בפסח ובראש השנה - תווים בסך 500 ש"ח לקניה ברשתות השונות
+        </span>
+      </div>
+      <div id="financy">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("financy").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+
+        <span>
+        חייל הזכאי לתשמ"ש שנמצא בחופשת מחלה בביתו למשך שלושה ימים לפחות ברצף, זכאי לדמי כלכלה עבור ימים אלו. סכום יום:27.6 ש"ח
+        </span>
+      </div>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -502,12 +710,70 @@ const Information4 = React.forwardRef((props, ref) => {
 });
 
 const Information5 = React.forwardRef((props, ref) => {
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
   return (
     <div ref={ref}>
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-
+      <br />
+      <div className="btns-div">
+        <span className="font-header2">בלחיצה על הכפתורים יופיע פירוט על בקשות סיוע המאושרות ע"י המפקד</span>
+        <br />
+        <button className="btnz" onClick={() => btnzClick("help1")}>
+         חופשה משפחתית
+        </button>
+        <button className="btnz" onClick={() => btnzClick("help2")}>
+         היתר עבוד פרטית
+        </button>
+        <button className="btnz" onClick={() => btnzClick("help3")}>
+         תווי קנייה חד פעמיים
+        </button>
+      </div>
+      <div id="help1">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("help1").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+<br />
+        <span>
+       ניתנת בגין פציעה/מחלה/אשפוז של קרוב מדרגה ראשונה בלבד. נדגיש כי חופשה זו תינתן לחייל על חשבון המערכת.סמכות אישור-עד 28 ימים רס"ן. עד 30 ימים נוספים - סא"ל
+        </span>
+      </div>
+      <div id="help2">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("help2").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br />
+        <span>
+       מאושר לחייל המוכיח מצוקה כלכלית. לשם כך על החייל להמציא אישורים כלכליים שלו ושל הוריו. מלבד חיילים במקצועות מסוימים, זכאי תשמ"ש, בודדים ועתודאים מעל גיל 22.סמכות אישור-רס"ן
+        </span>
+      </div>
+      <div id="help3">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("help3").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+<br />
+        <span>
+       סמכות לאשר באופן חד פעמי כסף שנכנס לחוגר למימוש ברשתות מזון שונת, יכול לאשר מ150 ש"ח - 300 ש"ח
+        </span>
+      </div>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -533,7 +799,7 @@ const Information7 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
+
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -1098,7 +1364,6 @@ const Information11 = React.forwardRef((props, ref) => {
 const Information12 = React.forwardRef((props, ref) => {
   const book = props.book;
   function btnzClick(props) {
-    console.log("heuyeye");
     document.getElementById(`number1-${props}`).style.display = "block";
   }
   return (
@@ -1297,6 +1562,7 @@ export default function Specials(props) {
             number="1"
             book={book}
             showMenu={true}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="מיוחדות"
@@ -1363,9 +1629,25 @@ export default function Specials(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="הלוואות"
+            header="אפשרויות סיוע כלכלי"
             showPage={9}
             number="10"
+            book={book}
+            showMenu={false}
+            setShowBook={props.setShowBook}
+          ></Page>
+          <Page
+            header="תשלומי משפחה"
+            showPage={10}
+            number="11"
+            book={book}
+            showMenu={false}
+            setShowBook={props.setShowBook}
+          ></Page>
+           <Page
+            header="בקשות סיוע"
+            showPage={11}
+            number="12"
             book={book}
             showMenu={false}
             setShowBook={props.setShowBook}

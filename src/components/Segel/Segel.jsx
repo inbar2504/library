@@ -21,11 +21,23 @@ const PageCover = React.forwardRef((props, ref) => {
 });
 const Page = React.forwardRef((props, ref) => {
   const heading = ["כל המידע במרחק נגיעה", ""];
+  const bodyy = [
+    ["סגל בקליק", "2"],
+    ["זכאויות", "3"],
+    ["עיכוב בדרגה", "4"],
+    ["דרגות נגדים", "5"],
+    ["דרגות קצינים", "6"]
+  ];
   const book = props.book;
   return (
     <div className="page" ref={ref}>
       <h1 class="header-page">{props.header}</h1>
       <div>
+      {props.showMenu ? (
+          <Table heading={heading} bodyy={bodyy} book={book} setShowBook={props.setShowBook}/>
+        ) : (
+          ""
+        )}
         {props.showPage === 1 ? (
           <Information1
             book={book}
@@ -35,9 +47,87 @@ const Page = React.forwardRef((props, ref) => {
         ) : (
           ""
         )}
-        
+        {props.showPage === 2 ? (
+          <Information2
+            book={book}
+            pageNum={"3"}
+            setShowBook={props.setShowBook}
+          />
+        ) : (
+          ""
+        )} 
+         {props.showPage === 3 ? (
+          <Information3
+            book={book}
+            pageNum={"4"}
+            setShowBook={props.setShowBook}
+          />
+        ) : (
+          ""
+        )} 
+        {props.showPage === 4 ? (
+          <Information4
+            book={book}
+            pageNum={"5"}
+            setShowBook={props.setShowBook}
+          />
+        ) : (
+          ""
+        )} 
+        {props.showPage === 5 ? (
+          <Information5
+            book={book}
+            pageNum={"6"}
+            setShowBook={props.setShowBook}
+          />
+        ) : (
+          ""
+        )} 
       </div>
     </div>
+  );
+});
+
+const Table = React.forwardRef((props, ref) => {
+  const heading = props.heading;
+  const bodyy = props.bodyy;
+
+  return (
+    <div>
+ <button className="close-book" onClick={() => props.setShowBook(false)}>
+    ✖
+  </button>
+    <table>
+      <thead>
+        <tr id="header-board8">{heading}</tr>
+        <br />
+        <br />
+      </thead>
+      <tbody>
+        {bodyy.map((rowContent, rowID) => (
+          <TableRow rowContent={rowContent} key={rowID} book={props.book} />
+        ))}
+      </tbody>
+    </table>
+    </div>
+   
+  );
+});
+const TableRow = React.forwardRef((props, ref) => {
+  const row = props.rowContent;
+  const book = props.book;
+
+  return (
+    <tr>
+      {row.map((val, rowID) => (
+        <td
+          key={rowID}
+          onClick={() => props.book.current.pageFlip().flip(Number(row[1]))}
+        >
+          <button className="btns6">{val}</button>
+        </td>
+      ))}
+    </tr>
   );
 });
 
@@ -49,7 +139,7 @@ const Information1 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <div id="segel">
+      <div className="flex-container">
           <a className="app-sub" href="https://mofet-frontend.wiz.digital.idf.il/m/UUCSEARBGJ">
             <p className="sub-name">הוצאות נלוות</p>
             <img className="img-apps" src="./assets/segel/credit-card.png" />
@@ -109,13 +199,473 @@ const Information1 = React.forwardRef((props, ref) => {
           </a>  
       </div>
       
-
+      <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
 
     </div>
   );
 });
+const Information2 = React.forwardRef((props, ref) => {
+  const book = props.book;
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
+  return (
+    <div className="Information2" ref={ref}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
+        ✖
+      </button>
+      <div id="explain">לחצו לפירוט על הזכאויות</div>
+      
+      <span className="flex-container">
+        
+          <button className="app-sub1 z1" onClick={() => btnzClick("n1")}>
+            מעונות יום
+          </button>
+          <button className="app-sub1 z2" onClick={() => btnzClick("n2")}>
+            קייטנת קיץ
+          </button>    
+          <button className="app-sub1 z3" onClick={() => btnzClick("n3")}>
+            מלגות לילדי משרתי הקבע
+          </button>  
+          <button className="app-sub1 z4" onClick={() => btnzClick("n4")}>
+            החזרי נסיעות
+          </button>  
+          <button className="app-sub1 z1" onClick={() => btnzClick("n5")}>
+            ימי מחלה
+          </button>  
+          <button className="app-sub1 z2" onClick={() => btnzClick("n6")}>
+            שי לחג
+          </button>  
+          <button className="app-sub1 z3" onClick={() => btnzClick("n7")}>
+            שי ליולדת
+          </button>  
+          <button className="app-sub1 z4" onClick={() => btnzClick("n8")}>
+            שי לילד/ה העולה לכיתה א
+          </button>  
+          <button className="app-sub1 z1" onClick={() => btnzClick("n9")}>
+            נופש בזכאות
+          </button>  
+          <button className="app-sub1 z2" onClick={() => btnzClick("n10")}>
+            כרטיס אשראי חבר
+          </button>  
+          <button className="app-sub1 z3" onClick={() => btnzClick("n11")}>
+            כרטיס חבר הצהוב
+          </button>  
+          <button className="app-sub1 z4" onClick={() => btnzClick("n12")}>
+            כרטיס חבר כחול
+          </button>  
+          <button className="app-sub1 z1" onClick={() => btnzClick("n13")}>
+            כרטיס אפור אט"ל
+          </button>  
+          <button className="app-sub1 z2" onClick={() => btnzClick("n14")}>
+           גמול השתלמות
+          </button>  
+          <button className="app-sub1 z3" onClick={() => btnzClick("n15")}>
+           גמו"ש א
+          </button> 
+          <button className="app-sub1 z4" onClick={() => btnzClick("n16")}>
+           גמו"ש ב
+          </button> 
+      </span>
+      <div id="n1">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n1").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --מעונות יום--
+        <br />
+         תוספת כספית המיועדת להוריה לילד מתחת לגיל 5 בגין השתתפות בדמי מעונות הילד. הזכאות תינתן רק לאחד מבני הזוג (נדרש בהגשת מסמכים דרך שלישות היחידה) החזרים ניתנים בגין 10 חודשים בשנה: החל מה-1 בספמטבר ועד ה-30 ביוני
+      </div>
+      <div id="n2">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n2").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --קייטנת קיץ--
+        <br />
+        משולם במחזור אחד בלבד בחודשי הקיץ יולי/אוגוסט עבור ילדים מגיל 3 חודשים עד גיל 18. ניתןלהצהיר על מטפלת קיץ עבור ילדים מגיל 3 חודשים עד גיל 12
+      </div>
+      <div id="n3">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n3").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --מלגות לילדי משרתי קבע--
+        <br />
+       מענק חד פעמי שמקבל איש קבע עבור כל ילד מטרום חובה עד כיתה י"ב -התשלום נכנס באופן אוטומטי לשכר של אוגוסט/ספטמבר.הזכאות ניתנת למשרת קבע בוותק שירות של 4 שנים ומעלה
+      </div>
+      <div id="n4">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n4").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --החזרי נסיעות--
+        <br />
+          כל משרת קבע אשר לא מחזיק ברכב, זכאי לקבל החזרי נסיעות. לצורך קבלה יש לגשת למשרד השלישות להזנת ההחזרים
+      </div>
+      <div id="n5">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n5").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --ימי מחלה--
+        <br />
+        איש הקבע זכאי ל-30 ימי מחלה בשנה (כלל סוגי חופשת המחלה מנוכים מסל זה -מחלת ילד,בן זוג וכ'ו) עובד יקבל תשלום מלא בגין היעדרותו מהעבודה עקב מחלה החל מהיום הראשון להיעדרותו.בנוסף קיימת חעובד זכאות ל2 ימי מחלה עפ"י הצהרה בשנה
+      </div>
+      <div id="n6">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n6").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --שי לחג--
+        <br />
+        איש הקבע זכאי לשי זה בחג הפסח ובראש השנה (500 שח) ופעם בשנה לקבע ראשוני בלבד בחג החנוכה (360 שח) נטען בכרטיס "חבר" הצהוב
+      </div>
+      <div id="n7">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n7").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --שי ליולדת--
+        <br />
+        השי מוזן לכרטיס "חבר" ברגע שהוזן הילד ברשומה הצהל"ית (300 שח)
+      </div>
+      <div id="n8">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n8").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --שי לילד/ה העולה לכיתה א--
+        <br />
+        משרת קבע אשר מלאו לילדו 6 שנים, יזוכה בשי על סך 180 שח וזאתלרגל עלייתו לכיתה א'.השי מוזן לכרטיס "חבר" במהלך החודשים יולי-אוגוסט
+      </div>
+      <div id="n9">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n9").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --נופש בזכאות--
+        <br />
+       איש הקבע זכאי לנופש מסובסד לאחר 4 שנות שירות (חובה+קבע) מספר הלילות תלוי ומשתנה לכל אחד ע"פ אופי שירותו
+      </div>
+      <div id="n10">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n10").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --כרטיס אשראי חבר--
+        <br />
+       הזמנת כרטיס אשראי חבר "כרטיס שחור" ,מתבצעת עצמאית בטלפון 
+       <br />
+       1-700-503-002
+       <br />
+       לאחר הזמנת הכרטיס ישלחו כרטיסי חבר טעמים וכרטיס ההטבות
+      </div>
+      <div id="n11">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n11").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --כרטיס חבר הצהוב--
+        <br />
+       כרטיס רב פעמי הניתן לטעינה עצמית בהנחה של כ-30% ל-1000 שח הראשונים בחודש ושל 20% ל-1000 שח נוספים
+      </div>
+      <div id="n12">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n12").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --כרטיס חבר כחול--
+        <br />
+       חבר טעמים : מזכה את איש הקבע בהנחה של כ-30% במסעדות
+      </div>
+      <div id="n13">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n13").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --כרטיס אפור אט"ל--
+        <br /> 
+    נקודות ספורט,אישיות,מדים... הנקודות מיועדות למשרתי קבע בלבד לצורך רכישת פריטי לבוש אישי, צבאי וספורט לצור שמירה על הופעה תקינה וארוח חיים בריא. להזמנת הכרטיס האפור ניתן ליצור קשר בטלפון 03-7374800
+      </div>
+      <div id="n14">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n14").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --גמול השתלמות--
+        <br />
+      גמול השתלמות הינו רכיב שכר אזרחי המשולם בהתאם להנחיות נציבות שירות המדינה בשכר זכאות לגמו"ש נקבעת עפ"י מספר קריטריונים כגון: השכךה,דרגת שכר,ותק במקצוע וצבירת 400 שעות מזכות ושעות משלימות במידת הצורך. משרתי הקע בגין קורסים והשתלמויות המוכרים לצורך זה
+      </div>
+      <div id="n15">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n15").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --מי זכאי לגמו"ש א--
+        <ul className="text-p2">
+            <li>קצינים לאחר סיום בה"ד 1 החל משנת 2015 באופן אוטומטי לתלוש השכר </li>
+            <li>נגדים/קצינים בדרג מנהלי בדרגה סרן/רס"ר שהשלימו לפחות 11/12 שנו"ל</li>
+            <li>נגדים בדרגה אקדמית ניתן להגיש החל משנת הקבע הראשונה בהשלמת 400 שעות</li>
+            <li>צבירה של 400 שעות מזכאות בטווח של 5 שנים (200 העשרתי ו-200 מקצועי)</li>
+          </ul>
+      </div>
+      <div id="n16">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("n16").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+        --מי זכאי לגמו"ש ב--
+       <br />
+       זכאים רק קצינים לאחר השלמה של תואר ראשון לפחות והשלמת 400 שעות לימוד (200 מקצועי ו-200 השערתי)/נגדים מהדור הישן שהשלימו גמו"ש א
+      </div>
+      <span className="page-number">{props.pageNum}</span>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
 
+    </div>
+  );
+});
+const Information3 = React.forwardRef((props, ref) => {
+  const book = props.book;
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
+  return (
+    <div className="Information3" ref={ref}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
+        ✖
+      </button>
+      <span>לחץ לפירוט</span>
+      <br />
+      <button className="app-sub3" onClick={() => btnzClick("b1")}>
+           עיכוב עקב חקירה או משפט
+          </button>
+         <span id="darga-color">
+           משרת קבע יעוכב בדרגתו למשך שנה במקרים הבאים
+           </span>
+           <ul className="text-p3">
+            <li>נשפט בבית דין צבאי/בית משפט ונמצא אשם</li>
+            <li>נשפט בבית דין/בית משפט לתעבורה,נמצא אשם וקיבל עונש מחבוש/מאסר בפועל</li>
+            <li>נשפט בדמ"ש ,נמצא אשם וקיבל עונש מחבוש בפועל</li>
+          </ul>
+             
+      <div id="b1">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("b1").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+      נגד אשר מתנהלת נגדו חקירה של מצ"ח/ מ"י/ ווח"ק ,יעוכב בדרגה עד למועד סיום החקירה,אלא אם ס.פצ"ר חווה את דעתו שאין מניעה לקידום-או אז ניתן לדון בדרגה באופן חריג, ע"י מחה"ס
+      </div>    
+      <span className="page-number">{props.pageNum}</span>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
+
+    </div>
+  );
+});
+const Information4 = React.forwardRef((props, ref) => {
+  const book = props.book;
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
+  return (
+    <div className="Information4" ref={ref}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
+        ✖
+      </button>
+      <p className="rtl-p">
+        <span className="header-dargot-nagadim">בדרגת סמ"ר</span>
+        <br />
+        נוהל רגיל,לוחמים ומסלול בכיר - דרגת הכניסה המינימאלית לקבע
+      </p>
+   <p className="rtl-p">
+   <span className="header-dargot-nagadim">בדרגת רס"ל</span>
+    <br />
+    נוהל רגיל - 24 חודשי שירות. נגד יחידה לאחר פז"ם של שנה וחצי בדרגת סמ"ר
+    <br />
+    לוחמים- נגד לוחם-שנה וחצי
+    <br />
+  נגד לוחם מיוחד-שנה
+  <br />
+  תנאי מעבר עיקריים-מעבר קורס כניסה לקבע בחיל
+   </p>
+      <span className="page-number">{props.pageNum}</span>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
+
+    </div>
+  );
+});
+const Information5 = React.forwardRef((props, ref) => {
+  const book = props.book;
+  function btnzClick(props) {
+    document.getElementById(props).style.display = "block";
+  }
+  return (
+    <div className="Information5" ref={ref}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
+        ✖
+      </button>
+      <div id="center-p1">לחצו לפירוט על כל אחת מן הדרגות</div>
+      <span className="flex-container1">
+      <button className="app-sub-k" onClick={() => btnzClick("k1")}>
+        סג"מ סגן
+      </button>
+      <button className="app-sub-k" onClick={() => btnzClick("k2")}>
+        סגן סרן
+      </button>
+      <button className="app-sub-k" onClick={() => btnzClick("k3")}>
+       סרן רס"ן
+      </button>
+      </span>
+      <div id="k1">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("k1").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+       נוהל רגיל:
+        פז"ם של שנה בדרגת סג"מ/כניסה לקבע
+       <br /><br />
+       נוהל יחידות מיוחדות בלבד-669 ושלדג - מבצע תפקיד לחימה ייעודי יש לשוחח עם הח"מ טרם פתיחת הבקשה:
+       שישה חודשי שירות לפחות בדרגת סג"מ
+      </div>
+      <div id="k2">
+        <button
+          className="close-window"
+          onClick={() =>
+            (document.getElementById("k2").style.display = "none")
+          }
+        >
+          ✖
+        </button>
+        <br /><br />
+       נוהל רגיל:
+        פז"מ של 3 שנים בדרגת סגן (ללא חל"ת/מחבוש) וביצוע דמ"ש ק.שיפוט זוטר טרם מועד הזכאות(תקף לשנה)
+       <br /><br />
+       נוהל יחידות מיוחדות בלבד-669 ושלדג - מבצע תפקיד לחימה ייעודי יש לשוחח עם הח"מ טרם פתיחת הבקשה:
+       שישה חודשי שירות לפחות בדרגת סג"מ
+      </div>
+      {/* <table className="table-soldier">
+        <tr>
+          <th className="td">דרגה רצויה/נוהל</th>
+          <th className="td">נוהל רגיל</th>
+          <th className="td">נוהל מפקדי-מותנה בנשיאת מינוי מפקד לוחם</th>
+          <th className="td">נוהל יחידות מיוחדות(669,שלדג) מבצע תפקידי לחימה ייעודי יש לשוחח עם הח"מ טרם פתיחת בקשה</th>
+        </tr>
+        <tr>
+          <th className="td">סג"מ סגן</th>
+          <th className="td">פז"ם של שנה בדרגת סג"מ/כניסה לקבע</th>
+          <th className="td"> </th>
+          <th className="td">שישה חודשי שירות לפחות בדרגת שג"מ</th>
+        </tr>
+        <tr>
+        <th className="td">סגן סרן</th>
+          <th className="td">פזם של 3 שנים בדרגת סגן (ללא חל"ת/מחבוש) וביצוע דמ"ש ק.שיפוט זוטר טרם מועד הזכאות(זכאות לשנה)</th>
+          <th className="td"></th>
+          <th className="td"></th>
+        </tr>
+        <tr>
+        <th className="td"></th>
+          <th className="td"></th>
+          <th className="td"></th>
+          <th className="td"></th>
+        </tr>
+      </table> */}
+      <span className="page-number">{props.pageNum}</span>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
+
+    </div>
+  );
+});
 export default function Segel(props) {
   const book = useRef();
   return (
@@ -142,9 +692,45 @@ export default function Segel(props) {
             <b id="header-book">סגל</b>
           </PageCover>
           <Page
+            header="תוכן עניינים"
+            id="page1"
+            number="1"
+            book={book}
+            showMenu={true}
+            setShowBook={props.setShowBook}
+          ></Page>
+           <Page
             header="סגל בקליק"
             showPage={1}
             number="2"
+            book={book}
+            setShowBook={props.setShowBook}
+          ></Page>
+           <Page
+            header="זכאויות"
+            showPage={2}
+            number="3"
+            book={book}
+            setShowBook={props.setShowBook}
+          ></Page>
+           <Page
+            header="עיכוב בדרגה"
+            showPage={3}
+            number="4"
+            book={book}
+            setShowBook={props.setShowBook}
+          ></Page>
+          <Page
+            header="דרגות נגדים"
+            showPage={4}
+            number="5"
+            book={book}
+            setShowBook={props.setShowBook}
+          ></Page>
+          <Page
+            header="דרגות קצינים"
+            showPage={5}
+            number="6"
             book={book}
             setShowBook={props.setShowBook}
           ></Page>

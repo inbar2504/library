@@ -26,6 +26,7 @@ const Page = React.forwardRef((props, ref) => {
     ["וועדת חריגים", "4"],
     ['וועדת ערעורים', "5"],
     ["קצונת מתנדבים", "6"],
+    ["מתאם קצונה", "7"]
   ];
   const book = props.book;
   return (
@@ -33,7 +34,7 @@ const Page = React.forwardRef((props, ref) => {
       <h1 class="header-page">{props.header}</h1>
       <div>
         {props.showMenu ? (
-          <Table heading={heading} bodyy={bodyy} book={book} />
+          <Table heading={heading} bodyy={bodyy} book={book} setShowBook={props.setShowBook}/>
         ) : (
           ""
         )}
@@ -100,6 +101,15 @@ const Page = React.forwardRef((props, ref) => {
         ) : (
           ""
         )}
+         {props.showPage === 8 ? (
+          <Information8
+            book={book}
+            pageNum={"9"}
+            setShowBook={props.setShowBook}
+          />
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
@@ -109,7 +119,11 @@ const Table = React.forwardRef((props, ref) => {
   const bodyy = props.bodyy;
 
   return (
-    <table>
+   <div>
+       <button className="close-book" onClick={() => props.setShowBook(false)}>
+    ✖
+  </button>
+  <table>
       <thead>
         <tr id="header-board7">{heading}</tr>
         <br />
@@ -121,6 +135,8 @@ const Table = React.forwardRef((props, ref) => {
         ))}
       </tbody>
     </table>
+   </div>
+    
   );
 });
 const TableRow = React.forwardRef((props, ref) => {
@@ -239,6 +255,41 @@ const Information6 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
+      <table className="table-officer">
+        <tr>
+          <th className="td1">סוגי מתאם</th>
+          <th className="td1">הסבר</th>
+        </tr>
+        <tr>
+          <td className="td1">3</td>
+          <td className="td1">התאמה גבוהה מאוד לקצונה</td>
+        </tr>
+        <tr>
+          <td className="td1">2</td>
+          <td className="td1">התאמה גבוהה לקצונה</td>
+        </tr>
+        <tr>
+          <td className="td1"></td>
+          <td className="td1">עובר סף בצה"ל אך נדרש וועדת חריגים בחה"א עקב איתור גבוה יותר</td>
+        </tr>
+        <tr>
+          <td className="td1">ג</td>
+          <td className="td1">חריג קצונה</td>
+        </tr>
+        <tr>
+          <td className="td1">ב</td>
+          <td className="td1">חריג קצונה מטכל"י</td>
+        </tr>
+        <tr>
+          <td className="td1">א</td>
+          <td className="td1">חריג קצונה מטכל"י מובהק</td>
+        </tr>
+        <tr>
+          <td className="td1">0</td>
+          <td className="td1">נתונים טרם נקבעו</td>
+        </tr>
+      
+      </table>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -250,12 +301,25 @@ const Information7 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
+     
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
   );
 });
-
+const Information8 = React.forwardRef((props, ref) => {
+  return (
+    <div className="Information8" ref={ref}>
+      <button className="close-book" onClick={() => props.setShowBook(false)}>
+        ✖
+      </button>
+     
+    
+      <span className="page-number">{props.pageNum}</span>
+      <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
+    </div>
+  );
+});
 export default function Officer(props) {
   const book = useRef();
 
@@ -288,6 +352,7 @@ export default function Officer(props) {
             number="1"
             book={book}
             showMenu={true}
+            setShowBook={props.setShowBook}
           ></Page>
           <Page
             header="סוגי קצונה"
@@ -326,6 +391,14 @@ export default function Officer(props) {
             header="קצונת מתנדבים"
             showPage={5}
             number="6"
+            book={book}
+            showMenu={false}
+            setShowBook={props.setShowBook}
+          ></Page>
+          <Page
+            header="מתאם לקצונה"
+            showPage={6}
+            number="7"
             book={book}
             showMenu={false}
             setShowBook={props.setShowBook}

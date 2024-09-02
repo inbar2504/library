@@ -189,7 +189,7 @@ Table {
   margin: 0.8%;
 }
 .app-sub1 {
-  font-size: 6.5vmin;
+  font-size: 6vmin;
   font-family: "horev";
   border: solid #ceae7f;
   background-color: #ceae7c;
@@ -204,13 +204,12 @@ Table {
   font-family: "horev";
   border: solid #ceae7f;
   background-color: #ceae7c;
-  color: white; 
-  width: 28vw;
-  height: 7vh;
+  color: white;
+  width: 50vw;
+  height: 6vh;
   margin: 0.8%;
-  margin-top: 5vh;
+  margin-top: 3vh;
   border-radius: 6px;
-
 }
 .app-sub3 {
   font-size: 8vmin;
@@ -218,8 +217,8 @@ Table {
   border: solid #ceae7f;
   background-color: #ceae7c;
   color: white; 
-  width: 33vw;
-  height: 9vh;
+  width: 70vw;
+  height: 6vh;
   margin: 0.8%;
   border-radius: 9px;
   margin-top: -3vh;
@@ -247,11 +246,6 @@ Table {
   margin-top: 5%;
 
 }
-/* button {
-  font-size: 7vmin;
-  font-family: "horev";
-  
-} */
 #explain {
   color: #ceae7c;
   text-align: center;

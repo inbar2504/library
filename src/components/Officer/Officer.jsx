@@ -269,7 +269,7 @@ const Information6 = React.forwardRef((props, ref) => {
           <td className="td1">התאמה גבוהה לקצונה</td>
         </tr>
         <tr>
-          <td className="td1"></td>
+          <td className="td1">1</td>
           <td className="td1">עובר סף בצה"ל אך נדרש וועדת חריגים בחה"א עקב איתור גבוה יותר</td>
         </tr>
         <tr>

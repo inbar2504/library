@@ -270,7 +270,7 @@ const Information0 = React.forwardRef((props, ref) => {
         <span className="special-header1">לביה"ס לכא"מ</span>
         <br />
         <br />
-        ספר זה מוגש בכדי להקל על התאקלמותך ביחידה ולאפשר קליטה בצורה קלה יותר
+        ספר זה מוגש בכדי להקל על התאקלמותך ולאפשר קליטה בצורה קלה יותר
         ביחידה
         <br />
         <br />
@@ -427,19 +427,19 @@ const Information3 = React.forwardRef((props, ref) => {
           <b>רס"ר</b>
         </p>
         <p className="text-toranuyot">
-          רס"ר-עושים על ב' מלא ומתחילים בשעה 7:30{" "}
+          רס"ר-חצי ב' ומתחילים בשעה 7:30{" "}
         </p>
       </div>
       <div className="sub">
         <p className="turanuyot-header">מטבח</p>
         <p className="text-toranuyot">
-          מטבח-עושים על חצי ב' ומתחילים בשעה 7:15
+          מטבח- חצי ב' ומתחילים בשעה 7:15
         </p>
       </div>
       <div className="sub">
         <p className="turanuyot-header">שמירות תומכ"ל</p>
         <p className="text-toranuyot">
-          שמירות תומכ"ל- שמירה על ב' מלא
+          שמירות תומכ"ל- חצי ב
           <br />
           21:00-23:15
           <br />
@@ -616,28 +616,44 @@ const Information6 = React.forwardRef((props, ref) => {
       <div>
         <CopyToClipboard text="0587009400">
           <p className="important-phones">
-            רלשית מפקד יחידה-נעמה בן גל &#9990; 058-7009400
+            רלשית מפקד יחידה-נעמה בן גל 
+            <button className="btns-phones" id="copy-btn5" onClick={() => document.getElementById("copy-btn5").innerText = "copied"}> copy </button>
+            058-7009400
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0556629527">
           <p className="important-phones">
-            רלשית סגן מפקד יחידה-לירז זלצמן &#9990; 055-993-9856
+            רלשית סגן מפקד יחידה-לירז זלצמן 
+            <button className="btns-phones" id="copy-btn4" onClick={() => document.getElementById("copy-btn4").innerText = "copied"}> copy </button>
+             055-993-9856
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0542557290">
           <p className="important-phones">
-            {" "}
-            שלישה-מיקה זית &#9990; 054-2557290
+            
+            שלישה-מיקה זית 
+            <button className="btns-phones" id="copy-btn3" onClick={() => document.getElementById("copy-btn3").innerText = "copied"}> copy </button>
+             054-2557290
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0587009400">
-          <p className="important-phones">מבצעים &#9990; 07-33636669</p>
+          <p className="important-phones">מבצעים 
+          <button className="btns-phones" id="copy-btn2" onClick={() => document.getElementById("copy-btn2").innerText = "copied"}> copy </button>
+            07-33636669</p>
         </CopyToClipboard>
-        <CopyToClipboard text="086443397">
-          <p className="important-phones">נוהל 9 &#9990; 08-6443397</p>
+        <CopyToClipboard text="054-4634823">
+        <p className="important-phones">
+            אלון משק שלישות
+           <button className="btns-phones" id="copy-btn1" onClick={() => document.getElementById("copy-btn1").innerText = "copied"}> copy </button>
+             054-4634823
+             </p>
         </CopyToClipboard>
-        <CopyToClipboard text="0529253137">
-          <p className="important-phones">רב בח"א 8 &#9990; 052-9253137</p>
+        <CopyToClipboard text="0546466259">
+          <p className="important-phones">
+            מישל משקית שלישות
+           <button className="btns-phones" id="copy-btn" onClick={() => document.getElementById("copy-btn").innerText = "copied"}> copy </button>
+             054-6466259
+             </p>
         </CopyToClipboard>
       </div>
       <span className="page-number">{props.pageNum}</span>
@@ -837,13 +853,13 @@ const Information13 = React.forwardRef((props, ref) => {
           <b>רס"ר</b>
         </p>
         <p className="text-toranuyot">
-          רס"ר- עושים על חצי ב נמצאים בתורנות שבוע שלם פעמיים בשירות{" "}
+          רס"ר- חצי ב' נמצאים בתורנות שבוע שלם פעמיים בשירות{" "}
         </p>
       </div>
       <div className="sub">
         <p className="turanuyot-header">מטבח</p>
         <p className="text-toranuyot">
-          מטבח-עושים על חצי ב
+          'מטבח- חצי ב
           <br />
           7:00-17:30 |8:30-20:30 | 10:30-22:30
         </p>
@@ -851,7 +867,7 @@ const Information13 = React.forwardRef((props, ref) => {
       <div className="sub">
         <p className="turanuyot-header">שמירות תומכ"ל</p>
         <p className="text-toranuyot">
-          שמירות תומכ"ל- שמירה על ב' מלא
+          שמירות תומכ"ל-ב' מלא
           <br />
           10:00-14:00+22:00-2:00
           <br />

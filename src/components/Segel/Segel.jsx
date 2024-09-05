@@ -13,7 +13,7 @@ const PageCover = React.forwardRef((props, ref) => {
         <button className="close-book" onClick={() => props.setShowBook(false)}>
           ✖
         </button>
-        <img id="school-icon" src="assets/school-icon.png" />
+        <img id="school-icon" src="assets/school-icon1.png" />
         <div>{props.children}</div>
       </div>
     </div>

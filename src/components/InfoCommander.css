@@ -45,7 +45,7 @@ Table {
     font-size: 7.5vmin;
     direction: rtl;
     position: absolute;
-    top: 12vh;
+    top: 11vh;
     left: 50%;
     transform: translateX(-50%);
     width: 83vw !important;
@@ -161,7 +161,7 @@ li::marker {
     color: #626363;
 }
 #school-icon {
-    width: 20%;
+    width: 30%;
     position: relative;
     left: 50%;
     top: 10vw;

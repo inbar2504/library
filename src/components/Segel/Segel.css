@@ -81,7 +81,7 @@ Table {
     color: #626363;
 }
 #school-icon {
-    width: 20%;
+    width: 30%;
     position: relative;
     left: 50%;
     top: 10vw;
@@ -119,6 +119,15 @@ Table {
   right: 83vw;
   border: #ffffff00;
   background-color: #ffffff00;
+}
+.close-window {
+  direction: rtl;
+  font-size: 6vmin;
+  position: absolute;
+  top: 0vh;
+  left: 0%;
+  border: #ceae7c;
+  background-color: #ceae7c;
 }
 .book-container {
     height: 100%;
@@ -281,8 +290,8 @@ Table {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f2ecdf;
-  color: #6f5f57;
-  border: 2px solid #6f5f57;
+  color: #d0b184;
+  border: 2px solid #d0b184;
   z-index: 4;
   font-size: 8vmin;
   z-index: 5;
@@ -298,8 +307,8 @@ Table {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f2ecdf;
-  color: #6f5f57;
-  border: 2px solid #6f5f57;
+  color: #d0b184;
+  border: 2px solid #d0b184;
   z-index: 4;
 }
 .header-dargot-nagadim {
@@ -322,8 +331,8 @@ Table {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f2ecdf;
-  color: #6f5f57;
-  border: 2px solid #6f5f57;
+  color: #d0b184;
+  border: 2px solid #d0b184;
   z-index: 4;
   font-size: 8vmin;
   z-index: 5;

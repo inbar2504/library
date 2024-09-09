@@ -45,10 +45,10 @@ Table {
     font-size: 7.5vmin;
     direction: rtl;
     position: absolute;
-    top: 11vh;
+    top: 12vh;
     left: 50%;
     transform: translateX(-50%);
-    width: 83vw !important;
+    width: 70vw !important;
 }
 .app-sub-c {
   font-size: 7vmin;
@@ -87,7 +87,7 @@ Table {
 
 }
 li::marker {
-  color: #865840;
+  color: black;
 }
 #press-5 {
   font-size: 7vmin;
@@ -199,7 +199,7 @@ li::marker {
   border: #ffffff00;
   background-color: #ffffff00;
 }
-.close-window {
+.close-window1 {
   direction: rtl;
   font-size: 6vmin;
   position: absolute;
@@ -207,6 +207,14 @@ li::marker {
   left: 0%;
   border: #865840;
   background-color: #865840;
+}
+.arrow-img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 6vh;
+  animation: blindingAnimation 2s ease forwards;
+
 }
 .book-container {
     height: 100%;
@@ -237,3 +245,12 @@ li::marker {
       transform: scale(1);
     }
   }
+  @keyframes blindingAnimation {
+    0% {
+top: -7vh;
+    }
+    100% {
+      top: 3vh;
+    }
+  }
+  

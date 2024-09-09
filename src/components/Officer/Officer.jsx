@@ -202,14 +202,14 @@ const Information3 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <div className="text">
+      <ul className="text">
         <p>אל וועדה זו עולים כל החיילים אשר לא מתאימים לקצונה מבחינת המתאם,פז"ם וכל מי שלא עבר שלב בחינה כלשהו אשר מעוניין לנסות ולעברו בשנית</p>
-        <span id="blue-background">בכדי לעלות לוועדה נדרש-</span>
-        <p className="blue-text">חווד מפקד ישיר + מפקד גף/מפקד יחידה</p>
-        <p className="blue-text">סיכום רעיון סא"ל - מפקד היחידה</p>
-        <p className="blue-text">מכתב אישי של החיל- החייל מפרט על רצונות לצאת לקצונה</p>
-        <p className="blue-text">טופס 102 מהמרפאה - אישור יציאה לקק"צ מבחינה רפואית (מתנדבים)</p>
-      </div>
+        <span id="blue-background">בכדי לעלות לוועדה נדרש-</span><br /><br />
+        <li className="blue-text">חווד מפקד ישיר + מפקד גף/מפקד יחידה</li>
+        <li className="blue-text">סיכום רעיון סא"ל - מפקד היחידה</li>
+        <li className="blue-text">מכתב אישי של החיל- החייל מפרט על רצונות לצאת לקצונה</li>
+        <li className="blue-text">טופס 102 מהמרפאה - אישור יציאה לקק"צ מבחינה רפואית (מתנדבים)</li>
+      </ul>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -221,7 +221,9 @@ const Information4 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <div className="text">
+      
+      <div className="text text-p9">
+
         <p>וועדה זו מיועדת למי שעבר את שלבי המיון אך בוועדה החיילית הוחלט כי אינו מתאים לצאת לקצונה או נפל אחד השלבים שלאחר היום עיון. על מנת לעלות לוועדה נדרש-</p>
         <p className="blue-background">סיכום ראיון סא"ל + חווד מפקד יחידה</p>
         <p className="blue-background">מכתב אישי-במכתב זה החייל יפרט על רצונו לצאת לקצונה</p>

@@ -68,7 +68,7 @@ Table {
     top: 12vh;
     left: 50%;
     transform: translateX(-50%);
-    width: 83vw !important;
+    width: 70vw !important;
 }
 .page-number {
     text-align: center;
@@ -338,7 +338,7 @@ Table {
   z-index: 5;
 }
 li::marker {
-  color: #ceae7c;
+  color: black;
 }
 .z1 {
   animation: zAnimation 1s ease forwards;

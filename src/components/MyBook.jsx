@@ -224,7 +224,7 @@ const Table = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <table>
+      <table className="table-myBook">
         <thead>
           <tr id="header-board">{heading}</tr>
           <br />

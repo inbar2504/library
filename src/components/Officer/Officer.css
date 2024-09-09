@@ -40,6 +40,17 @@ body {
 .page {
   background-color: #d6d7d7;
 }
+.text-p9 {
+  font-size: 7vmin;
+  position: relative;
+  left: 40vw;
+  transform: translate(-50%);
+  text-align: right;
+  direction: rtl;
+}
+li::marker {
+  color: black;
+}
 Table {
   font-size: 7.5vmin;
   direction: rtl;
@@ -47,7 +58,7 @@ Table {
   top: 12vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 83vw !important;
+  width: 75vw !important;
 }
 .page-number {
   text-align: center;

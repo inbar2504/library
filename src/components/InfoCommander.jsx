@@ -24,7 +24,7 @@ const Page = React.forwardRef((props, ref) => {
   const heading = ["כל המידע במרחק נגיעה", ""];
   const bodyy = [
     ["נוהל קליטת חייל ", "2"],
-    ["קלירנס", "3"],
+    ["תנועות כוח אדם", "3"],
     ["חופשות", "4"],
     ["שלישות", "5"],
     ['נוהל ביקורי מאושפזים', "6"]
@@ -142,9 +142,11 @@ const Information1 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <br />
+     
+      <img className="arrow-img" src="assets/arrow.png"/>
       <div className="flex-container5">
-        <span id="press-5">לחצו כדי לגלות מה עליכם לעשות ב </span><br />
+      
+        {/* <span id="press-5">לחצו כדי לגלות מה עליכם לעשות ב </span><br /> */}
       <button className="app-sub-c" onClick={() => btnzClick("c1")}>
    סיום קורס/טירונות 
       </button>
@@ -163,7 +165,7 @@ const Information1 = React.forwardRef((props, ref) => {
       </div>
       <div id="c1">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("c1").style.display = "none")
           }
@@ -175,7 +177,7 @@ const Information1 = React.forwardRef((props, ref) => {
       </div>
       <div id="c2">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("c2").style.display = "none")
           }
@@ -193,7 +195,7 @@ const Information1 = React.forwardRef((props, ref) => {
       </div>
       <div id="c3">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("c3").style.display = "none")
           }
@@ -211,7 +213,7 @@ const Information1 = React.forwardRef((props, ref) => {
       </div>
       <div id="c4">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("c4").style.display = "none")
           }
@@ -222,7 +224,7 @@ const Information1 = React.forwardRef((props, ref) => {
       </div> 
       <div id="c5">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("c5").style.display = "none")
           }
@@ -247,9 +249,9 @@ const Information2 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <br />
+      <img className="arrow-img" src="assets/arrow.png"/>
       <span className="flex-container5">
-        <span id="press-5">לחצו כדי לגלות מה עליכם לעשות ב </span><br />
+        {/* <span id="press-5">לחצו כדי לגלות מה עליכם לעשות ב </span><br /> */}
       <button className="app-sub-t" onClick={() => btnzClick("t1")}>
     קליטת חייל
       </button>
@@ -266,7 +268,7 @@ const Information2 = React.forwardRef((props, ref) => {
       </span>
       <div id="t1">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("t1").style.display = "none")
           }
@@ -285,7 +287,7 @@ const Information2 = React.forwardRef((props, ref) => {
       </div>
       <div id="t2">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("t2").style.display = "none")
           }
@@ -296,7 +298,7 @@ const Information2 = React.forwardRef((props, ref) => {
       </div>
       <div id="t3">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("t3").style.display = "none")
           }
@@ -317,7 +319,7 @@ const Information2 = React.forwardRef((props, ref) => {
       </div>
       <div id="t4">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("t4").style.display = "none")
           }
@@ -357,8 +359,8 @@ const Information3 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-     
-      <div id="press-6">לחצו כדי לראות פירוט על </div><br />
+      <img className="arrow-img" src="assets/arrow.png"/>
+      {/* <div id="press-6">לחצו כדי לראות פירוט על </div><br /> */}
       <div className="flex-container5">
       
       <button className="app-sub-t" onClick={() => btnzClick("h1")}>
@@ -373,7 +375,7 @@ const Information3 = React.forwardRef((props, ref) => {
       </div>
       <div id="h1">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("h1").style.display = "none")
           }
@@ -390,7 +392,7 @@ const Information3 = React.forwardRef((props, ref) => {
       </div>
       <div id="h2">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("h2").style.display = "none")
           }
@@ -410,7 +412,7 @@ const Information3 = React.forwardRef((props, ref) => {
       </div>
       <div id="h3">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("h3").style.display = "none")
           }
@@ -443,7 +445,8 @@ const Information4 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <div id="press-6"> לחצו לפירוט על </div><br />
+      <img className="arrow-img" src="assets/arrow.png"/>
+      {/* <div id="press-6"> לחצו לפירוט על </div><br /> */}
       <span className="flex-container5">
       
         
@@ -466,7 +469,7 @@ const Information4 = React.forwardRef((props, ref) => {
 
       <div id="s1">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("s1").style.display = "none")
           }
@@ -478,7 +481,7 @@ const Information4 = React.forwardRef((props, ref) => {
       </div>
       <div id="s2">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("s2").style.display = "none")
           }
@@ -499,7 +502,7 @@ const Information4 = React.forwardRef((props, ref) => {
       </div>
       <div id="s3">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("s3").style.display = "none")
           }
@@ -520,7 +523,7 @@ const Information4 = React.forwardRef((props, ref) => {
       </div>
       <div id="s4">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("s4").style.display = "none")
           }
@@ -531,7 +534,7 @@ const Information4 = React.forwardRef((props, ref) => {
       </div> 
       <div id="s5">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("s5").style.display = "none")
           }
@@ -556,8 +559,8 @@ const Information5 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      
-      <div id="press-6"> לחצו לפירוט על </div><br />
+      <img className="arrow-img" src="assets/arrow.png"/>
+      {/* <div id="press-6"> לחצו לפירוט על </div><br /> */}
       <span className="flex-container5">
       
         
@@ -574,7 +577,7 @@ const Information5 = React.forwardRef((props, ref) => {
 
       <div id="g1">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("g1").style.display = "none")
           }
@@ -586,7 +589,7 @@ const Information5 = React.forwardRef((props, ref) => {
       </div>
       <div id="g2">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("g2").style.display = "none")
           }
@@ -611,7 +614,7 @@ const Information5 = React.forwardRef((props, ref) => {
       </div>
       <div id="g3">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("g3").style.display = "none")
           }
@@ -633,7 +636,7 @@ const Information5 = React.forwardRef((props, ref) => {
       </div>
       <div id="s4">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("s4").style.display = "none")
           }
@@ -644,7 +647,7 @@ const Information5 = React.forwardRef((props, ref) => {
       </div> 
       <div id="s5">
         <button
-          className="close-window"
+          className="close-window1"
           onClick={() =>
             (document.getElementById("s5").style.display = "none")
           }
@@ -702,7 +705,7 @@ export default function InfoCommander(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="קלירנס"
+            header="תנועות כוח אדם"
             showPage={2}
             number="3"
             book={book}

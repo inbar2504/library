@@ -179,7 +179,7 @@ Table {
   top: 35vh;
 }
 li::marker {
-  color: #6f5f57;
+  color: black;
 }
 .btns-div {
   display: flex;

@@ -1,4 +1,5 @@
-import React, { useRef, useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 import "./App.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -15,17 +16,38 @@ export default function App() {
     setComponentName(event.target.getAttribute("id"));
     setShowBook(!showBook);
   };
-  const DEPLOY_URL = "http://localhost:5173/library/";
- useEffect(() => {
-  const params = new URLSearchParams(window.location.search);
-  const cleaned = params.get('cleaned');
 
-  if (!cleaned) {
-    params.set('cleaned', '1');
-    const newUrl = `${window.location.pathname}?${params.toString()}`;
-    window.location.replace(newUrl);
-  } 
-}, []);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const cleaned = params.get("prod");
+
+    if (!cleaned) {
+      Swal.fire({
+        title: "ברוכים הבאים לספריית השלישות!",
+        text: "לחצו כדי להתחיל :)",
+        confirmButtonText: "התחלנו",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        customClass: {
+          title: "swal-title",
+          htmlContainer: "swal-text",
+          confirmButton: "swal-confirm-button",
+        },
+      }).then((result) => {
+        if (result.isConfirmed) {
+          params.set("prod", "1");
+          const newUrl = `${window.location.pathname}?${params.toString()}`;
+
+          // Open new tab
+          window.open(newUrl, "_blank");
+
+          // Remove history in current tab
+          window.location.replace(window.location.pathname);
+        }
+      });
+    }
+  }, []);
+
   return (
     <>
       <img src="assets/frame-books.png" id="top-books" />

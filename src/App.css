@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  background: #EFF1E4;
+  background: #eff1e4;
   font-family: "horev";
   color: #000000;
   padding: 0;
@@ -55,7 +55,6 @@ body {
   position: absolute;
   left: 0%;
   top: 0%;
-  
 }
 #bottom-books {
   width: 100%;
@@ -74,4 +73,18 @@ body {
 }
 .opacity-book {
   opacity: 0.4;
+}
+
+.swal-title {
+  font-size: 44px;
+}
+
+.swal-text {
+  font-size: 32px;
+}
+
+.swal-confirm-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: aquamarine;
 }

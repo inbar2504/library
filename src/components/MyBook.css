@@ -365,7 +365,7 @@ h1 {
 }
 .btns-phones {
   background-color: rgba(255, 255, 255, 0);
-  border-color:  rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
   color: black;
 }
 @keyframes upscaleAnimation {
@@ -448,7 +448,7 @@ h1 {
   transform: translateX(-50%);
   text-align: center;
   width: 80vw;
-  margin-top:-3vh;
+  margin-top: -3vh;
 }
 #pool {
   position: absolute;

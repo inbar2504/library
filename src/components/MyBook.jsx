@@ -41,11 +41,12 @@ const Page = React.forwardRef((props, ref) => {
       <h1 class="header-page">{props.header}</h1>
       <div>
         {props.showMenu ? (
-          <Table 
-          heading={heading} 
-          bodyy={bodyy} 
-          book={book} 
-          setShowBook={props.setShowBook} />
+          <Table
+            heading={heading}
+            bodyy={bodyy}
+            book={book}
+            setShowBook={props.setShowBook}
+          />
         ) : (
           ""
         )}
@@ -270,8 +271,7 @@ const Information0 = React.forwardRef((props, ref) => {
         <span className="special-header1">לביה"ס לכא"מ</span>
         <br />
         <br />
-        ספר זה מוגש בכדי להקל על התאקלמותך ולאפשר קליטה בצורה קלה יותר
-        ביחידה
+        ספר זה מוגש בכדי להקל על התאקלמותך ולאפשר קליטה בצורה קלה יותר ביחידה
         <br />
         <br />
         בספר מידע חשוב על הבסיס ונהלי שגרה ביחידה
@@ -426,15 +426,11 @@ const Information3 = React.forwardRef((props, ref) => {
         <p className="turanuyot-header">
           <b>רס"ר</b>
         </p>
-        <p className="text-toranuyot">
-          רס"ר-חצי ב' ומתחילים בשעה 7:30{" "}
-        </p>
+        <p className="text-toranuyot">רס"ר-חצי ב' ומתחילים בשעה 7:30 </p>
       </div>
       <div className="sub">
         <p className="turanuyot-header">מטבח</p>
-        <p className="text-toranuyot">
-          מטבח- חצי ב' ומתחילים בשעה 7:15
-        </p>
+        <p className="text-toranuyot">מטבח- חצי ב' ומתחילים בשעה 7:15</p>
       </div>
       <div className="sub">
         <p className="turanuyot-header">שמירות תומכ"ל</p>
@@ -616,44 +612,99 @@ const Information6 = React.forwardRef((props, ref) => {
       <div>
         <CopyToClipboard text="0587009400">
           <p className="important-phones">
-            רלשית מפקד יחידה-נעמה בן גל 
-            <button className="btns-phones" id="copy-btn5" onClick={() => document.getElementById("copy-btn5").innerText = "copied"}> copy </button>
+            רלשית מפקד יחידה-נעמה בן גל
+            <button
+              className="btns-phones"
+              id="copy-btn5"
+              onClick={() =>
+                (document.getElementById("copy-btn5").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
             058-7009400
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0556629527">
           <p className="important-phones">
-            רלשית סגן מפקד יחידה-לירז זלצמן 
-            <button className="btns-phones" id="copy-btn4" onClick={() => document.getElementById("copy-btn4").innerText = "copied"}> copy </button>
-             055-993-9856
+            רלשית סגן מפקד יחידה-לירז זלצמן
+            <button
+              className="btns-phones"
+              id="copy-btn4"
+              onClick={() =>
+                (document.getElementById("copy-btn4").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
+            055-993-9856
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0542557290">
           <p className="important-phones">
-            
-            שלישה-מיקה זית 
-            <button className="btns-phones" id="copy-btn3" onClick={() => document.getElementById("copy-btn3").innerText = "copied"}> copy </button>
-             054-2557290
+            שלישה-מיקה זית
+            <button
+              className="btns-phones"
+              id="copy-btn3"
+              onClick={() =>
+                (document.getElementById("copy-btn3").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
+            054-2557290
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0587009400">
-          <p className="important-phones">מבצעים 
-          <button className="btns-phones" id="copy-btn2" onClick={() => document.getElementById("copy-btn2").innerText = "copied"}> copy </button>
-            07-33636669</p>
+          <p className="important-phones">
+            מבצעים
+            <button
+              className="btns-phones"
+              id="copy-btn2"
+              onClick={() =>
+                (document.getElementById("copy-btn2").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
+            07-33636669
+          </p>
         </CopyToClipboard>
         <CopyToClipboard text="054-4634823">
-        <p className="important-phones">
+          <p className="important-phones">
             אלון משק שלישות
-           <button className="btns-phones" id="copy-btn1" onClick={() => document.getElementById("copy-btn1").innerText = "copied"}> copy </button>
-             054-4634823
-             </p>
+            <button
+              className="btns-phones"
+              id="copy-btn1"
+              onClick={() =>
+                (document.getElementById("copy-btn1").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
+            054-4634823
+          </p>
         </CopyToClipboard>
         <CopyToClipboard text="0546466259">
           <p className="important-phones">
             מישל משקית שלישות
-           <button className="btns-phones" id="copy-btn" onClick={() => document.getElementById("copy-btn").innerText = "copied"}> copy </button>
-             054-6466259
-             </p>
+            <button
+              className="btns-phones"
+              id="copy-btn"
+              onClick={() =>
+                (document.getElementById("copy-btn").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
+            054-6466259
+          </p>
         </CopyToClipboard>
       </div>
       <span className="page-number">{props.pageNum}</span>

@@ -21,11 +21,13 @@ export default function App() {
     const params = new URLSearchParams(window.location.search);
     const cleaned = params.get("prod");
 
-    if (!cleaned) {
+    const hasHistory = window.history.length > 1;
+
+    if (!cleaned || hasHistory) {
       Swal.fire({
-        title: "ברוכים הבאים לספריית השלישות!",
-        text: "לחצו כדי להתחיל :)",
-        confirmButtonText: "התחלנו",
+        title: "ברוכים הבאים לספריית השלישות של בית הספר לכוחות אוויר מיוחדים!",
+        text: "פה תקבלו מידע על נושאים הקשורים לשלישות",
+        confirmButtonText: "התחלה",
         allowOutsideClick: false,
         allowEscapeKey: false,
         customClass: {

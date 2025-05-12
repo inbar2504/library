@@ -76,6 +76,7 @@ body {
 }
 
 .swal-title {
+  direction: rtl;
   font-size: 44px;
 }
 
@@ -84,7 +85,9 @@ body {
 }
 
 .swal-confirm-button {
-  font-size: 16px;
+  font-family: "horev";
+  font-size: 40px;
   padding: 10px 20px;
-  background-color: aquamarine;
+  background-color: rgb(134 88 64);
+  border-radius: 20px;
 }

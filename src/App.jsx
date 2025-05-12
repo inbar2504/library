@@ -15,7 +15,17 @@ export default function App() {
     setComponentName(event.target.getAttribute("id"));
     setShowBook(!showBook);
   };
+  const DEPLOY_URL = "http://localhost:5173/library/";
+ useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  const cleaned = params.get('cleaned');
 
+  if (!cleaned) {
+    params.set('cleaned', '1');
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.location.replace(newUrl);
+  } 
+  
   return (
     <>
       <img src="assets/frame-books.png" id="top-books" />

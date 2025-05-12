@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState ,useEffect} from "react";
 import "./App.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

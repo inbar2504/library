@@ -25,7 +25,7 @@ export default function App() {
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.location.replace(newUrl);
   } 
-  
+}, []);
   return (
     <>
       <img src="assets/frame-books.png" id="top-books" />

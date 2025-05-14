@@ -237,6 +237,7 @@ const Table = React.forwardRef((props, ref) => {
           ))}
         </tbody>
       </table>
+      <span className="page-number">1</span>
     </div>
   );
 });
@@ -610,9 +611,9 @@ const Information6 = React.forwardRef((props, ref) => {
         ✖
       </button>
       <div>
-        <CopyToClipboard text="0587009400">
+        <CopyToClipboard text="052-3334441">
           <p className="important-phones">
-            רלשית מפקד יחידה-נעמה בן גל
+            רלשית מפקד יחידה-נויה סאסי
             <button
               className="btns-phones"
               id="copy-btn5"
@@ -623,12 +624,12 @@ const Information6 = React.forwardRef((props, ref) => {
               {" "}
               copy{" "}
             </button>
-            058-7009400
+            052-3334441
           </p>
         </CopyToClipboard>
-        <CopyToClipboard text="0556629527">
+        <CopyToClipboard text="0586910910">
           <p className="important-phones">
-            רלשית סגן מפקד יחידה-לירז זלצמן
+          רלשית סגן מפקד יחידה- דנה חסון 
             <button
               className="btns-phones"
               id="copy-btn4"
@@ -639,12 +640,12 @@ const Information6 = React.forwardRef((props, ref) => {
               {" "}
               copy{" "}
             </button>
-            055-993-9856
+            058-6910910
           </p>
         </CopyToClipboard>
-        <CopyToClipboard text="0542557290">
+        <CopyToClipboard text="0587780688">
           <p className="important-phones">
-            שלישה-מיקה זית
+            שלישה-גאיה שוורץ 
             <button
               className="btns-phones"
               id="copy-btn3"
@@ -655,7 +656,7 @@ const Information6 = React.forwardRef((props, ref) => {
               {" "}
               copy{" "}
             </button>
-            054-2557290
+058-7780688
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0587009400">
@@ -674,25 +675,9 @@ const Information6 = React.forwardRef((props, ref) => {
             07-33636669
           </p>
         </CopyToClipboard>
-        <CopyToClipboard text="054-4634823">
+        <CopyToClipboard text="0509119896">
           <p className="important-phones">
-            אלון משק שלישות
-            <button
-              className="btns-phones"
-              id="copy-btn1"
-              onClick={() =>
-                (document.getElementById("copy-btn1").innerText = "copied")
-              }
-            >
-              {" "}
-              copy{" "}
-            </button>
-            054-4634823
-          </p>
-        </CopyToClipboard>
-        <CopyToClipboard text="0546466259">
-          <p className="important-phones">
-            מישל משקית שלישות
+            שירה עמרם- משקית שלישות
             <button
               className="btns-phones"
               id="copy-btn"
@@ -703,9 +688,26 @@ const Information6 = React.forwardRef((props, ref) => {
               {" "}
               copy{" "}
             </button>
-            054-6466259
+            050-9119896
           </p>
         </CopyToClipboard>
+        <CopyToClipboard text="054-3698400">
+          <p className="important-phones">
+            גל חן-משקית שלישות
+            <button
+              className="btns-phones"
+              id="copy-btn1"
+              onClick={() =>
+                (document.getElementById("copy-btn1").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
+054-3698400
+          </p>
+        </CopyToClipboard>
+       
       </div>
       <span className="page-number">{props.pageNum}</span>
 
@@ -727,7 +729,7 @@ const Information7 = React.forwardRef((props, ref) => {
         <br />
         <br />
         <img className="phone" src="assets/icon-phone.png"></img>
-        ממונת יוהל”ם מירי שחורי 0512980576
+        ממונת יוהל”ם מירי שחורי 051-2980576
         <br /> <img className="phone" src="assets/icon-phone.png"></img>
         מהות- 039482600 שלוחה 5 ואז שלוחה 2
       </p>

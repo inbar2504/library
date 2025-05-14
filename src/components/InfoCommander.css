@@ -35,7 +35,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-.cover8 {
+.cover10 {
     background-color: #865840;
   }
 .page {
@@ -84,7 +84,6 @@ Table {
   margin-top: -3vh;
   left: 50%;
   transform: translate(-50%);
-
 }
 li::marker {
   color: black;

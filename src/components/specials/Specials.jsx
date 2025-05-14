@@ -181,6 +181,7 @@ const Table = React.forwardRef((props, ref) => {
         ))}
       </tbody>
     </table>
+    <span className="page-number">1</span>
     </div>
    
   );

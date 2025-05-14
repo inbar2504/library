@@ -99,7 +99,7 @@ const Table = React.forwardRef((props, ref) => {
   </button>
     <table>
       <thead>
-        <tr id="header-board8">{heading}</tr>
+        <tr id="header-board11">{heading}</tr>
         <br />
         <br />
       </thead>
@@ -109,6 +109,7 @@ const Table = React.forwardRef((props, ref) => {
         ))}
       </tbody>
     </table>
+    <span className="page-number">1</span>
     </div>
    
   );

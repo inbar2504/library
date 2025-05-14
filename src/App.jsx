@@ -8,6 +8,9 @@ import Specials from "./components/specials/Specials";
 import InfoCommander from "./components/InfoCommander";
 import Segel from "./components/Segel/Segel";
 import Officer from "./components/Officer/Officer";
+import Free from "./components/Free/Free";
+import Wing from "./components/Wing/Wing";
+import Education from "./components/Education/Education";
 
 export default function App() {
   const [showBook, setShowBook] = useState(false);
@@ -57,7 +60,7 @@ const historyLength = window.history.lenght;
 
   return (
     <>
-      <img src="assets/frame-books.png" id="top-books" />
+      <img src="assets/frame-books1.png" id="top-books" />
       <h1 id="header">ספריית השלישות</h1>
       {!showBook ? (
         <Carousel
@@ -163,7 +166,7 @@ const historyLength = window.history.lenght;
         " "
       )}
 
-      <img src="assets/frame-books.png" id="bottom-books" />
+      <img src="assets/frame-books1.png" id="bottom-books" />
       {showBook && componentName == "book1" ? (
         <MyBook setShowBook={setShowBook} />
       ) : (
@@ -190,17 +193,17 @@ const historyLength = window.history.lenght;
         ""
       )}
        {showBook && componentName == "book7" ? (
-        <Specials setShowBook={setShowBook} />
+        <Free setShowBook={setShowBook} />
       ) : (
         ""
       )}
        {showBook && componentName == "book8" ? (
-        <Specials setShowBook={setShowBook} />
+        <Wing setShowBook={setShowBook} />
       ) : (
         ""
       )}
        {showBook && componentName == "book9" ? (
-        <Specials setShowBook={setShowBook} />
+        <Education setShowBook={setShowBook} />
       ) : (
         ""
       )}

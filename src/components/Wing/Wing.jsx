@@ -1,13 +1,13 @@
 import React, { useRef, useState, Component } from "react";
 import HTMLFlipBook from "react-pageflip";
-import "./Officer.css";
+import "./Wing.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import HomeIcon from "../HomeIcon";
 import { Event } from "@mui/icons-material";
 
 const PageCover = React.forwardRef((props, ref) => {
   return (
-    <div className="cover4" ref={ref} data-density="hard">
+    <div className="cover8" ref={ref} data-density="hard">
       <div>
         <button className="close-book" onClick={() => props.setShowBook(false)}>
           ✖
@@ -21,12 +21,9 @@ const PageCover = React.forwardRef((props, ref) => {
 const Page = React.forwardRef((props, ref) => {
   const heading = ["כל המידע במרחק נגיעה", ""];
   const bodyy = [
-    ["סוגי קצונה", "2"],
-    ["תהליך מיון לקצונה", "3"],
-    ["וועדת חריגים", "4"],
-    ['וועדת ערעורים', "5"],
-    ["קצונת מתנדבים", "6"],
-    ["מתאם קצונה", "7"]
+    ["חיל האוויר", "2"],
+    ["כנף 7", "3"],
+    ["נופלי היחידות", "4"]
   ];
   const book = props.book;
   return (
@@ -65,51 +62,7 @@ const Page = React.forwardRef((props, ref) => {
         ) : (
           ""
         )}
-         {props.showPage === 4 ? (
-          <Information4
-            book={book}
-            pageNum={"5"}
-            setShowBook={props.setShowBook}
-          />
-        ) : (
-          ""
-        )}
-        {props.showPage === 5 ? (
-          <Information5
-            book={book}
-            pageNum={"6"}
-            setShowBook={props.setShowBook}
-          />
-        ) : (
-          ""
-        )}
-        {props.showPage === 6 ? (
-          <Information6
-            book={book}
-            pageNum={"7"}
-            setShowBook={props.setShowBook}
-          />
-        ) : (
-          ""
-        )}
-        {props.showPage === 7 ? (
-          <Information7
-            book={book}
-            pageNum={"8"}
-            setShowBook={props.setShowBook}
-          />
-        ) : (
-          ""
-        )}
-         {props.showPage === 8 ? (
-          <Information8
-            book={book}
-            pageNum={"9"}
-            setShowBook={props.setShowBook}
-          />
-        ) : (
-          ""
-        )}
+         
       </div>
     </div>
   );
@@ -125,7 +78,7 @@ const Table = React.forwardRef((props, ref) => {
   </button>
   <table>
       <thead>
-        <tr id="header-board7">{heading}</tr>
+        <tr id="header-board8">{heading}</tr>
         <br />
         <br />
       </thead>
@@ -165,11 +118,14 @@ const Information1 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <div>
-        <div className="lohama-info">קצונת לוחמה: מגמת להב + השלמת גפן/השלמת אתגר </div>
-        <div className="lohama-info">קצונת תומכלים: מגמת מעוז / נחשון + השלמה חיילית לפי המערך</div>
-        <div className="lohama-info">קצונת מתנדבים: מגמת נבו / השלמה חיילית לפי המערך</div>
-      </div>
+     <div style={{ fontSize: "8vmin",textAlign: "center", padding: "7%",direction :"rtl" }}>חיל האוויר הישראלי שומר על שמי המדינה– בשקט, בדיוק ובמהירות.
+        עם מטוסי קרב מתקדמים וטכנולוגיה מהשורה הראשונה, הוא מכה עוד לפני שהאויב קולט. 
+        הוא לא רק תוקף– גם מציל, מגלה, מגן, ומספק עיניים לצה"ל מכל כיוון.
+        מהמדבר ועד לירח, כשצריך – הוא תמיד שם, גבוה מעל כולם.
+        </div>
+        <img style={{ width: "25%", position: "relative", left: "50%",  transform: "translateX(-50%)"}} src="assets/IAF.png" />
+        
+
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -182,16 +138,12 @@ const Information2 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <div>
-        <div className="miun-info" id="level1">שלב 1 - כנס הסברה</div>
-        <div className="miun-info" id="level2">שלב 2 -שאלונים ממוחשבים</div>
-        <div className="miun-info" id="level3">שלב 3 - סדרת מיון</div>
-        <div className="miun-info" id="level4">שלב 4 - וועדה חיילית</div>
-        <div className="miun-info" id="level5">שלב 5 -סדרת יסודות</div>
-        <div className="miun-info" id="level6">שלב 6 - וועדת צרכים</div>
-        <div className="miun-info" id="level7">שלב 7 - לבה"ד</div>
-        <div className="miun-info" id="level8">שלב 8 - השלמה</div>
+      <div style={{ fontSize: "8vmin",textAlign: "center", padding: "7%",direction :"rtl" }}>
+      כנף 7 היא כנף כוחות האוויר המיוחדים של חיל האוויר הישראלי. 
+      הכנף כוללת בתוכה את ביה"ס לכא"מ , ואת היחידות- שלדג,669,יה"ק וסוי.
+      ביה"ס מכשיר את הלוחמים במהלך מסלולם
       </div>
+      <img style={{ width: "25%", position: "relative", left: "50%",  transform: "translateX(-50%)"}} src="assets/kanaf7.png" />
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -203,14 +155,7 @@ const Information3 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <ul className="text">
-        <p>אל וועדה זו עולים כל החיילים אשר לא מתאימים לקצונה מבחינת המתאם,פז"ם וכל מי שלא עבר שלב בחינה כלשהו אשר מעוניין לנסות ולעברו בשנית</p>
-        <span id="blue-background">בכדי לעלות לוועדה נדרש-</span><br /><br />
-        <li className="blue-text">חווד מפקד ישיר + מפקד גף/מפקד יחידה</li>
-        <li className="blue-text">סיכום רעיון סא"ל - מפקד היחידה</li>
-        <li className="blue-text">מכתב אישי של החיל- החייל מפרט על רצונות לצאת לקצונה</li>
-        <li className="blue-text">טופס 102 מהמרפאה - אישור יציאה לקק"צ מבחינה רפואית (מתנדבים)</li>
-      </ul>
+     
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -223,13 +168,7 @@ const Information4 = React.forwardRef((props, ref) => {
         ✖
       </button>
       
-      <div className="text text-p9">
-
-        <p>וועדה זו מיועדת למי שעבר את שלבי המיון אך בוועדה החיילית הוחלט כי אינו מתאים לצאת לקצונה או נפל אחד השלבים שלאחר היום עיון. על מנת לעלות לוועדה נדרש-</p>
-        <p className="blue-background">סיכום ראיון סא"ל + חווד מפקד יחידה</p>
-        <p className="blue-background">מכתב אישי-במכתב זה החייל יפרט על רצונו לצאת לקצונה</p>
-
-      </div>
+    
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -242,11 +181,7 @@ const Information5 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <div className="text1">
-        <span>על מנת שחייל יתחיל את תהליך המיון לקצונה עליו להפיק טופס 102 שרק רופא אזרחי ומדור מתנדבים יכולים להפיק<br /> על מנת להפיק טופס זה נדרש מהחייל להביא אישור מרופאו האזרחי על כשירותו לבצע קק"צ או מצבו הרפואי<br /> בנוסף לכך על החייל לכתוב מכתב אישי בו הוא מביע את רצונו לצאת לקצונה. לאחר מכן נדרש להעביר את אישורים אלו למדור לקצונה</span>
-        <br /><br /><br />
-      <img id="kazhin-img" src="./assets/kazhin.png"/>
-      </div>
+      
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -258,41 +193,7 @@ const Information6 = React.forwardRef((props, ref) => {
       <button className="close-book" onClick={() => props.setShowBook(false)}>
         ✖
       </button>
-      <table className="table-officer">
-        <tr>
-          <th className="td1">סוגי מתאם</th>
-          <th className="td1">הסבר</th>
-        </tr>
-        <tr>
-          <td className="td1">3</td>
-          <td className="td1">התאמה גבוהה מאוד לקצונה</td>
-        </tr>
-        <tr>
-          <td className="td1">2</td>
-          <td className="td1">התאמה גבוהה לקצונה</td>
-        </tr>
-        <tr>
-          <td className="td1">1</td>
-          <td className="td1">עובר סף בצה"ל אך נדרש וועדת חריגים בחה"א עקב איתור גבוה יותר</td>
-        </tr>
-        <tr>
-          <td className="td1">ג</td>
-          <td className="td1">חריג קצונה</td>
-        </tr>
-        <tr>
-          <td className="td1">ב</td>
-          <td className="td1">חריג קצונה מטכל"י</td>
-        </tr>
-        <tr>
-          <td className="td1">א</td>
-          <td className="td1">חריג קצונה מטכל"י מובהק</td>
-        </tr>
-        <tr>
-          <td className="td1">0</td>
-          <td className="td1">נתונים טרם נקבעו</td>
-        </tr>
       
-      </table>
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>
@@ -323,7 +224,7 @@ const Information8 = React.forwardRef((props, ref) => {
     </div>
   );
 });
-export default function Officer(props) {
+export default function Wing(props) {
   const book = useRef();
 
   return (
@@ -347,7 +248,7 @@ export default function Officer(props) {
           mobileScrollSupport={true}
         >
           <PageCover setShowBook={props.setShowBook} book={book}>
-            <b id="header-book">קצונה</b>
+            <b id="header-book">רוח הכנף</b>
           </PageCover>
           <Page
             header="תוכן עניינים"
@@ -358,7 +259,7 @@ export default function Officer(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="סוגי קצונה"
+            header="חיל האוויר"
             showPage={1}
             number="2"
             book={book}
@@ -366,7 +267,7 @@ export default function Officer(props) {
             setShowBook={props.setShowBook}
           ></Page>
           <Page
-            header="תהליך מיון לקצונה"
+            header="כנף 7"
             showPage={2}
             number="3"
             book={book}
@@ -375,37 +276,14 @@ export default function Officer(props) {
           ></Page>
 
           <Page
-            header="וועדת חריגים"
+            header="נופלי היחידות"
             showPage={3}
             number="4"
             book={book}
             showMenu={false}
             setShowBook={props.setShowBook}
           ></Page>
-          <Page
-            header="וועדת ערעורים"
-            showPage={4}
-            number="5"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
-          <Page
-            header="קצונת מתנדבים"
-            showPage={5}
-            number="6"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
-          <Page
-            header="מתאם לקצונה"
-            showPage={6}
-            number="7"
-            book={book}
-            showMenu={false}
-            setShowBook={props.setShowBook}
-          ></Page>
+         
           <PageCover setShowBook={props.setShowBook} book={book}>
             <h2 className="the-end">הסוף</h2>
           </PageCover>

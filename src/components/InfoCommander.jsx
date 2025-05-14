@@ -9,13 +9,15 @@ import { Event } from "@mui/icons-material";
 
 const PageCover = React.forwardRef((props, ref) => {
   return (
-    <div className="cover8" ref={ref} data-density="hard">
+    <div className="cover10" ref={ref} data-density="hard">
       <div>
         <button className="close-book" onClick={() => props.setShowBook(false)}>
           ✖
         </button>
         <img id="school-icon" src="assets/school-icon1.png" />
+        <span className="page-number">1</span>
         <div>{props.children}</div>
+        
       </div>
     </div>
   );
@@ -111,6 +113,7 @@ const Table = React.forwardRef((props, ref) => {
             ))}
           </tbody>
       </table>
+      <span className="page-number">1</span>
     </div>
    
   );

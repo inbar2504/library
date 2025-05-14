@@ -18,15 +18,20 @@ export default function App() {
   };
 
   useEffect(() => {
+    const ua = navigator.userAgent;
+
+const isSafari = /Safari/.test(ua) && !/Chrome|CriOS|FxiOS/.test(ua);
+const historyLength = window.history.lenght;
+
     const params = new URLSearchParams(window.location.search);
     const cleaned = params.get("prod");
-
-    const hasHistory = window.history.length > 1;
+    const hasHistory = isSafari ? historyLength > 2 : historyLength > 1;
+    // const hasHistory = window.history.length > 1;
 
     if (!cleaned || hasHistory) {
       Swal.fire({
         title: "ברוכים הבאים לספריית השלישות של בית הספר לכוחות אוויר מיוחדים!",
-        text: "פה תקבלו מידע על נושאים הקשורים לשלישות",
+        text: "הספרייה תלווה אותך מרגע הגעתך ועד שחרורך",
         confirmButtonText: "התחלה",
         allowOutsideClick: false,
         allowEscapeKey: false,
@@ -109,31 +114,49 @@ export default function App() {
             onClick={bookClicked}
             id="book1"
             className="books"
-            src="assets/tuli-img.png"
+            src="assets/bordo-img1.png"
           />
           <img
             className="books"
             id="book2"
-            src="assets/brown-img.png"
+            src="assets/brown-img1.png"
             onClick={bookClicked}
           />
           <img
             className="books"
             id="book4"
             onClick={bookClicked}
-            src="assets/blue-img.png"
+            src="assets/blue-img1.png"
           />
           <img
             className="books"
             id="book5"
             onClick={bookClicked}
-            src="assets/bezh-img.png"
+            src="assets/bezh-img1.png"
           />
           <img
             className="books"
             id="book6"
-            src="assets/dark-img.png"
+            src="assets/dark-img1.png"
             onClick={bookClicked}
+          />
+           <img
+            className="books"
+            id="book7"
+            onClick={bookClicked}
+            src="assets/tuli-img1.png"
+          />
+           <img
+            className="books"
+            id="book8"
+            onClick={bookClicked}
+            src="assets/cyan-img1.png"
+          />
+           <img
+            className="books"
+            id="book9"
+            onClick={bookClicked}
+            src="assets/pink-img1.png"
           />
         </Carousel>
       ) : (
@@ -162,6 +185,21 @@ export default function App() {
         ""
       )}
       {showBook && componentName == "book6" ? (
+        <Specials setShowBook={setShowBook} />
+      ) : (
+        ""
+      )}
+       {showBook && componentName == "book7" ? (
+        <Specials setShowBook={setShowBook} />
+      ) : (
+        ""
+      )}
+       {showBook && componentName == "book8" ? (
+        <Specials setShowBook={setShowBook} />
+      ) : (
+        ""
+      )}
+       {showBook && componentName == "book9" ? (
         <Specials setShowBook={setShowBook} />
       ) : (
         ""

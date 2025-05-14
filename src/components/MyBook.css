@@ -60,7 +60,7 @@ body {
 }
 
 .cover {
-  background-color: #2dbdbd;
+  background-color: #7d2525;
 }
 .page {
   background-color: #d6d7d7;
@@ -138,7 +138,7 @@ body {
 #header-board {
   text-align: center;
   /* direction: rtl; */
-  color: #2dbdbd;
+  color: #7d2525;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -201,7 +201,7 @@ body {
   width: 20%;
 }
 .sub {
-  border: 2px solid #2dbdbd;
+  border: 2px solid #7d2525;
   width: 80vw;
   border-radius: 20px;
   text-align: center;
@@ -227,7 +227,7 @@ body {
   animation: busAnimation 4s ease forwards;
 }
 .specials {
-  border: 2px solid #2dbdbd;
+  border: 2px solid #7d2525;
   font-size: 3vmax;
   text-align: center;
   width: 99%;
@@ -262,16 +262,16 @@ body {
 #private {
   position: relative;
   padding: 2%;
-  border: 2px solid #2dbdbd;
+  border: 2px solid #7d2525;
   font-size: 4vmax;
   font-family: "horev";
-  background-color: #2dbdbd;
+  background-color: #7d2525;
   width: 33.3vw;
 }
 #economy {
   position: relative;
   padding: 2%;
-  border: 2px solid #2dbdbd;
+  border: 2px solid #7d2525;
   font-size: 4vmax;
   font-family: "horev";
   background-color: rgb(214 215 215);
@@ -280,7 +280,7 @@ body {
 #tash {
   position: relative;
   padding: 2%;
-  border: 2px solid #2dbdbd;
+  border: 2px solid #7d2525;
   font-size: 4vmax;
   font-family: "horev";
   background-color: rgb(214 215 215);
@@ -511,9 +511,11 @@ h1 {
   width: 30vw;
 }
 .special-header1 {
-  background: url("pen-brushes1.svg");
+  /* background: url("pen-brushes1.svg"); */
   padding: 2px 25px;
   width: 90vw;
+  color: #7d2525;
+  /* font-size: 10vmin; */
 }
 #school-icon {
   width: 30%;

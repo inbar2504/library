@@ -1213,18 +1213,7 @@ export default function MyBook(props) {
 
         <br></br>
         <br></br>
-        {/* <div className="formContainer">
-          <input
-            className="form-control"
-            value={inputText}
-            onChange={(e) => setInputElement(e.target.value)}
-            type="text"
-            placeholder="入力してボタンを押してください。"
-          />
-          <button className="btn" onClick={printText}>
-            表示する
-          </button>
-        </div> */}
+        
       </div>
     </>
   );

@@ -15,7 +15,6 @@ const PageCover = React.forwardRef((props, ref) => {
           ✖
         </button>
         <img id="school-icon" src="assets/school-icon1.png" />
-        <span className="page-number">1</span>
         <div>{props.children}</div>
         
       </div>

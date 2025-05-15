@@ -645,7 +645,7 @@ const Information6 = React.forwardRef((props, ref) => {
         </CopyToClipboard>
         <CopyToClipboard text="0587780688">
           <p className="important-phones">
-            שלישה-גאיה שוורץ 
+          גאיה שוורץ-קצינת שלישות
             <button
               className="btns-phones"
               id="copy-btn3"
@@ -657,22 +657,6 @@ const Information6 = React.forwardRef((props, ref) => {
               copy{" "}
             </button>
 058-7780688
-          </p>
-        </CopyToClipboard>
-        <CopyToClipboard text="0587009400">
-          <p className="important-phones">
-            מבצעים
-            <button
-              className="btns-phones"
-              id="copy-btn2"
-              onClick={() =>
-                (document.getElementById("copy-btn2").innerText = "copied")
-              }
-            >
-              {" "}
-              copy{" "}
-            </button>
-            07-33636669
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0509119896">
@@ -707,6 +691,23 @@ const Information6 = React.forwardRef((props, ref) => {
 054-3698400
           </p>
         </CopyToClipboard>
+        <CopyToClipboard text="0587009400">
+          <p className="important-phones">
+            מבצעים
+            <button
+              className="btns-phones"
+              id="copy-btn2"
+              onClick={() =>
+                (document.getElementById("copy-btn2").innerText = "copied")
+              }
+            >
+              {" "}
+              copy{" "}
+            </button>
+            07-33636669
+          </p>
+        </CopyToClipboard>
+       
        
       </div>
       <span className="page-number">{props.pageNum}</span>

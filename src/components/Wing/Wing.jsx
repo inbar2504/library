@@ -22,8 +22,8 @@ const Page = React.forwardRef((props, ref) => {
   const heading = ["כל המידע במרחק נגיעה", ""];
   const bodyy = [
     ["חיל האוויר", "2"],
-    ["כנף 7", "3"],
-    ["נופלי היחידות", "4"]
+    ["כנף 7", "3"]
+    // ["נופלי היחידות", "4"]
   ];
   const book = props.book;
   return (
@@ -121,7 +121,6 @@ const Information1 = React.forwardRef((props, ref) => {
      <div style={{ fontSize: "8vmin",textAlign: "center", padding: "7%",direction :"rtl" }}>חיל האוויר הישראלי שומר על שמי המדינה– בשקט, בדיוק ובמהירות.
         עם מטוסי קרב מתקדמים וטכנולוגיה מהשורה הראשונה, הוא מכה עוד לפני שהאויב קולט. 
         הוא לא רק תוקף– גם מציל, מגלה, מגן, ומספק עיניים לצה"ל מכל כיוון.
-        מהמדבר ועד לירח, כשצריך – הוא תמיד שם, גבוה מעל כולם.
         </div>
         <img style={{ width: "25%", position: "relative", left: "50%",  transform: "translateX(-50%)"}} src="assets/IAF.png" />
         
@@ -139,9 +138,9 @@ const Information2 = React.forwardRef((props, ref) => {
         ✖
       </button>
       <div style={{ fontSize: "8vmin",textAlign: "center", padding: "7%",direction :"rtl" }}>
-      כנף 7 היא כנף כוחות האוויר המיוחדים של חיל האוויר הישראלי. 
-      הכנף כוללת בתוכה את ביה"ס לכא"מ , ואת היחידות- שלדג,669,יה"ק וסוי.
-      ביה"ס מכשיר את הלוחמים במהלך מסלולם
+      כנף 7 היא כנף כוחות האוויר המיוחדים של חיל האוויר. 
+      הכנף כוללת בתוכה את ביה"ס לכא"מ, ואת היחידות- שלדג,669,יה"ק וSOI.
+      ביה"ס אמון על הכשרת הלוחמים במסלולים השונים
       </div>
       <img style={{ width: "25%", position: "relative", left: "50%",  transform: "translateX(-50%)"}} src="assets/kanaf7.png" />
       <span className="page-number">{props.pageNum}</span>
@@ -275,7 +274,7 @@ export default function Wing(props) {
             setShowBook={props.setShowBook}
           ></Page>
 
-          <Page
+          {/* <Page
             header="נופלי היחידות"
             showPage={3}
             number="4"
@@ -283,7 +282,7 @@ export default function Wing(props) {
             showMenu={false}
             setShowBook={props.setShowBook}
           ></Page>
-         
+          */}
           <PageCover setShowBook={props.setShowBook} book={book}>
             <h2 className="the-end">הסוף</h2>
           </PageCover>

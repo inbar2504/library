@@ -268,6 +268,7 @@ const Information2 = React.forwardRef((props, ref) => {
 הכרטיס תקף עד 3 שנים ממועד השחרור.
 
       </div>
+      <img style={{ width: "50%", position: "relative", left: "50%",  transform: "translateX(-50%)"}} src="assets/max.png" />
       <span className="page-number">{props.pageNum}</span>
       <HomeIcon setPageToMenu={() => props.book.current.pageFlip().flip(2)} />
     </div>

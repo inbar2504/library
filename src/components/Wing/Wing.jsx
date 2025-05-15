@@ -139,7 +139,7 @@ const Information2 = React.forwardRef((props, ref) => {
       </button>
       <div style={{ fontSize: "8vmin",textAlign: "center", padding: "7%",direction :"rtl" }}>
       כנף 7 היא כנף כוחות האוויר המיוחדים של חיל האוויר. 
-      הכנף כוללת בתוכה את ביה"ס לכא"מ, ואת היחידות- שלדג,669,יה"ק וSOI.
+      הכנף כוללת בתוכה את ביה"ס לכא"מ, ואת היחידות- שלדג,669,יה"ק ו-SOI.
       ביה"ס אמון על הכשרת הלוחמים במסלולים השונים
       </div>
       <img style={{ width: "25%", position: "relative", left: "50%",  transform: "translateX(-50%)"}} src="assets/kanaf7.png" />

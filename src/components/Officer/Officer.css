@@ -25,6 +25,7 @@ body {
   font-size: 7vmin;
   font-family: "horev";
   font-weight: bold;
+  text-align: right;
 }
 .header-page {
   font-size: 13vmin;

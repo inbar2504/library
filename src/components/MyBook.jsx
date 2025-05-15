@@ -677,7 +677,7 @@ const Information6 = React.forwardRef((props, ref) => {
         </CopyToClipboard>
         <CopyToClipboard text="0509119896">
           <p className="important-phones">
-            שירה עמרם- משקית שלישות
+            שירה עמרם- נגדת משא"ן
             <button
               className="btns-phones"
               id="copy-btn"
